@@ -1,0 +1,36 @@
+title: TEST Panel
+widget_dimensions: [120, 110]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 8
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - downstairs_nest(2x1)
+  # - sensor.downstairs_thermostat_hvac_state
+
+downstairs_nest:
+  widget_type: nest
+  entity: climate.downstairs
+  title: Downstairs Nest
+  step: 1
+  units: "F"
+  precision: 0
+  
+test_sonos:
+  widget_type: combosonos
+  entity: media_player.family_room
+  truncate_name: 64
+  title: test
+  title2: sonos
+  
+  
+  
+  

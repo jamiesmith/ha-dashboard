@@ -1,0 +1,15 @@
+widget_type: base_day_forecast
+entity: {{entity}}
+fields:
+  title: ""
+  value: ""
+  icon: ""
+  icon_style: $style_inactive
+static_css:
+  title_style: $style_title
+  widget_style: $background_style
+css:
+  icon_style_active: $style_active
+  icon_style_inactive: $style_inactive
+
+  

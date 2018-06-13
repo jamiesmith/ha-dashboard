@@ -1,0 +1,109 @@
+.widget-basenest-{{id}} {
+	position: relative;
+}
+
+.widget-basenest-{{id}} .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basenest-{{id}} .title2 {
+	position: absolute;
+	top: 23px;
+	width: 100%;
+}
+
+.widget-basenest-{{id}} .level {
+	font-size: 250%;
+	display: inline-block;
+}
+
+.widget-basenest-{{id}} .unit {
+	font-size: 100%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.widget-basenest-{{id}} .levelunit {
+	position: absolute;
+	top: 43px;
+	width: 100%;
+}
+
+.widget-basenest-{{id}} .heat-icon {
+	position: absolute;
+	bottom: 0px;
+	font-size: 20px;
+	width: 32px;
+	color: white;
+}
+
+.widget-basenest-{{id}} .cool-icon {
+	position: absolute;
+	bottom: 0px;
+	font-size: 20px;
+	width: 32px;
+	color: white;
+}
+
+.widget-basenest-{{id}} .level2 {
+	display: inline-block;
+}
+
+.widget-basenest-{{id}} .unit2 {
+	font-size: 65%;
+	font-weight: 400;
+	display: inline-block;
+	vertical-align: top;
+
+}
+
+.widget-basenest-{{id}} .levelunit2 {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+}
+
+/* Heat */
+
+.widget-basenest-{{id}} .heat-icon.minus {
+	left: 8px;
+}
+
+.widget-basenest-{{id}} .heat-icon.minus i {
+	padding-top: 10px;
+	padding-right: 30px;
+}
+
+.widget-basenest-{{id}} .heat-icon.plus {
+	left: 8px;
+}
+
+.widget-basenest-{{id}} .heat-icon.plus i {
+	padding-bottom:  30px;
+	padding-right: 30px;
+}
+
+/* cool */
+
+.widget-basenest-{{id}} .cool-icon.minus {
+	right: 24px;
+}
+
+.widget-basenest-{{id}} .cool-icon.minus i {
+	padding-top: 10px;
+	padding-left: 30px;
+}
+
+.widget-basenest-{{id}} .cool-icon.plus {
+	right: 24px;
+}
+
+.widget-basenest-{{id}} .cool-icon.plus i {
+	padding-bottom:  30px;
+	padding-left: 30px;
+}

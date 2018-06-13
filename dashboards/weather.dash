@@ -1,0 +1,112 @@
+title: Weather Panel
+widget_dimensions: [120, 120]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+columns: 8
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:      
+  - forecast_1(2x1), weather_now(2x2), weather_hourly_summary(2x2)
+  - forecast_2(2x1)
+  - forecast_3(2x1), weather_frame(4x3)
+  - forecast_4(2x1)
+  - forecast_5(2x1)
+  - forecast_6(2x1), spacer(4x1)
+
+
+weather_frame:
+  # Generate your link - https://www.wunderground.com/weather-radar/united-states/
+  widget_type: iframe
+  title: Radar
+  refresh: 200
+  frame_style: ""
+  img_list:
+    - https://icons.wxug.com/data/weather-maps/radar/united-states/charlotte-north-carolina-region-current-radar-animation.gif
+  
+
+forecast_0:
+    widget_type: day_forecast
+    entity: sensor.forecast_0
+
+forecast_1:
+    widget_type: day_forecast
+    entity: sensor.forecast_1
+
+forecast_2:
+    widget_type: day_forecast
+    entity: sensor.forecast_2
+
+forecast_3:
+    widget_type: day_forecast
+    entity: sensor.forecast_3
+
+forecast_4:
+    widget_type: day_forecast
+    entity: sensor.forecast_4
+
+forecast_5:
+    widget_type: day_forecast
+    entity: sensor.forecast_5
+
+forecast_6:
+    widget_type: day_forecast
+    entity: sensor.forecast_6
+
+clock:
+    widget_type: clock
+
+weather:
+    widget_type: weather
+    units: "&deg;F"
+    show_forecast: 1
+
+weather_daily_summary:
+  title: Daily
+  widget_type: weather_summary
+  entity: sensor.dark_sky_daily_summary
+  
+weather_hourly_summary:
+  title: hourly
+  widget_type: weather_summary
+  entity: sensor.dark_sky_hourly_summary
+  
+weather_summary:
+  title: summary
+  widget_type: weather_summary
+  entity: sensor.dark_sky_summary
+
+
+weather_now:
+  widget_type: weather
+  
+sample_weather:
+  widget_type: weather
+  title: Today
+  show_foreacast: 1
+  prefer_icons: 1
+  forecast_title: Tomorrow
+  sensors:
+    icon: sensor.dark_sky_icon
+    temperature: sensor.dark_sky_temperature
+    apparent_temperature: sensor.dark_sky_apparent_temperature
+    humidity: sensor.dark_sky_humidity
+    precip_probability: sensor.dark_sky_precip_probability
+    precip_intensity: sensor.dark_sky_precip_intensity
+    precip_type: sensor.dark_sky_precip
+    pressure: sensor.dark_sky_pressure
+    wind_speed: sensor.dark_sky_wind_speed
+    wind_bearing: sensor.dark_sky_wind_bearing
+    forecast_icon: sensor.dark_sky_icon_1
+    forecast_temperature_min: sensor.dark_sky_daily_low_temperature_1
+    forecast_temperature_max: sensor.dark_sky_daily_high_temperature_1
+    forecast_precip_probability: sensor.dark_sky_precip_probability_1
+    forecast_precip_type: sensor.dark_sky_precip_1
+
+    

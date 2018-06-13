@@ -1,0 +1,20 @@
+log:
+  logfile: STDOUT
+  errorfile: STDERR
+appdaemon:
+  threads: 10
+  ad_port: 5050
+  # dash_force_compile: true
+  plugins:
+    HASS:
+      type: hass
+      ha_url: http://nuclet:8123
+      ha_key: !secret http_password
+  disable_apps: 1
+  
+hadashboard:
+   dash_url: http://0.0.0.0:5050
+   dash_dir: /conf/dashboards
+   dash_force_compile: 1
+   dash_compile_on_start: 1
+     

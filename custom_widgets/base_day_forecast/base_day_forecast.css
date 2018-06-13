@@ -1,0 +1,40 @@
+.widget-base_day_forecast-{{id}} {
+base_day_forecast.position: relative;
+}
+.widget-base_day_forecast-{{id}} .title {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+}
+.widget-base_day_forecast-{{id}} .title2 {
+    position: absolute;
+    top: 23px;
+    width: 100%;
+}
+.widget-base_day_forecast-{{id}} .iconcontainer.icon {
+   position: absolute;
+   bottom: 25%;
+   width: 100%;
+}
+
+h1.title.left-title{
+    text-align:left;
+    box-sizing:border-box;
+    padding-left: 15px;
+    top: 17px;
+}
+h2.value.left-value{
+    box-sizing: border-box;
+    padding-left: 15px;
+    font-size: 175% !important;
+    top: 35px !important;
+    bottom: auto;
+    position: absolute;
+    left: 0;
+}
+
+.icon.right-icon{
+    text-align:right;
+    padding-right:15px;
+    box-sizing:border-box;
+}
