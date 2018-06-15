@@ -102,7 +102,9 @@ small_garage_door:
 
 upstairs_nest:
   widget_type: nest
-  entity: climate.upstairs
+  nest_entity: climate.upstairs
+  state_entity: sensor.upstairs_thermostat_hvac_state
+  fan_entity: binary_sensor.upstairs_thermostat_fan
   title: Upstairs
   step: 1
   units: "F"
@@ -110,7 +112,9 @@ upstairs_nest:
 
 downstairs_nest:
   widget_type: nest
-  entity: climate.downstairs
+  nest_entity: climate.downstairs
+  state_entity: sensor.downstairs_thermostat_hvac_state
+  fan_entity: binary_sensor.downstairs_thermostat_fan
   title: Downstairs
   step: 1
   units: "F"

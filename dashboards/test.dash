@@ -13,13 +13,16 @@ global_parameters:
       step: 5
 
 layout:
-  - downstairs_nest(2x1)
+  - nest(2x1)
   # - sensor.downstairs_thermostat_hvac_state
 
-downstairs_nest:
+nest:
   widget_type: nest
-  entity: climate.downstairs
-  title: Downstairs Nest
+  entity: climate.upstairs
+  nest_entity: climate.upstairs
+  state_entity: sensor.upstairs_thermostat_hvac_state
+  fan_entity: binary_sensor.upstairs_thermostat_fan
+  title: Upstairs Nest
   step: 1
   units: "F"
   precision: 0

@@ -12,6 +12,6 @@ docker run --name=appdaemon \
 
 # --env EXTRA_CMD="-D DEBUG"
 
-docker logs --tail 30 --follow appdaemon &
+docker logs --tail 30 --follow appdaemon
 echo http://nuclet:5050
 

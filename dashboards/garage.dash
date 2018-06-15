@@ -1,0 +1,103 @@
+##
+## Main arguments, all optional
+##
+title: Garage Panel
+widget_dimensions: [120, 110]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+scalable: true
+columns: 8
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - clock(3x1), big_garage_door, small_garage_door
+  - garage_sonos(3x3), garage_play_classic_rewind, garage_play_classic_vinyl
+  - garage_play_tom_petty, garage_play_grateful_dead
+  - reload, nav_to_weather, nav_to_main
+  - weather_now
+
+clock:
+  widget_type: clock
+  show_seconds: 1
+
+big_garage_door:
+  widget_type: cover
+  entity: cover.big_door
+  title: Garage
+  title2: Big Door
+  icon_on: mdi-garage-open
+  icon_off: mdi-garage
+  state_text: 1
+
+small_garage_door:
+  widget_type: cover
+  entity: cover.small_door
+  title: Garage
+  title2: Small Door
+  icon_on: mdi-garage-open
+  icon_off: mdi-garage
+  state_text: 1
+
+garage_sonos:
+  widget_type: combosonos
+  entity: media_player.garage
+  truncate_name: 64
+  title: Garage  
+  
+nav_to_weather:
+  widget_type: navigate
+  title: Weather
+  title2: Dashboard
+  dashboard: weather
+  timeout: 10
+  return: garage
+  icon_inactive: mdi-weather-partlycloudy
+  icon_active: mdi-weather-sunny
+
+garage_play_classic_rewind:
+  title: Classic Rewind
+  widget_type: script
+  entity: "script.garage_play_classic_rewind"
+  
+garage_play_grateful_dead:
+  title: Grateful Dead
+  widget_type: script
+  entity: "script.garage_play_grateful_dead"
+  
+garage_play_tom_petty:
+  title: Tom Petty
+  widget_type: script
+  entity: "script.garage_play_tom_petty"
+  
+garage_play_classic_vinyl:
+  title: Classic Vinyl
+  widget_type: script
+  entity: "script.garage_play_classic_vinyl"
+
+
+nav_to_main:
+  widget_type: navigate
+  title: Main
+  title2: Dashboard
+  dashboard: main
+  timeout: 10
+  return: garage
+  icon_inactive: mdi-home-assistant
+  icon_active: mdi-weather-sunny
+  
+weather_now:
+  widget_type: weather
+
+reload:
+  widget_type: reload
+  title: Reload
+  
+weather_now:
+  widget_type: weather
