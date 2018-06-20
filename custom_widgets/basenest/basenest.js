@@ -13,7 +13,6 @@ function basenest(widget_id, url, skin, parameters)
     // Parameters may come in useful later on
 
     self.parameters = parameters
-
     self.OnRaiseHeatLevelClick = OnRaiseHeatLevelClick
     self.OnLowerHeatLevelClick = OnLowerHeatLevelClick
     self.OnRaiseCoolLevelClick = OnRaiseCoolLevelClick
@@ -41,9 +40,12 @@ function basenest(widget_id, url, skin, parameters)
     self.OnNestUpdate = OnNestUpdate
     
     var monitored_entities = [];
-    
+
+    // I wonder if I can just calculate the other things from the nest name?
+	//
     if ("nest_entity" in parameters)
     {
+		console.log("parameters.nest_entity =>", parameters.nest_entity);
         monitored_entities.push({"entity": parameters.nest_entity, "initial": self.OnNestAvailable, "update": self.OnNestUpdate});
     }
 

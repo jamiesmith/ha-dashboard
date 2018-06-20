@@ -13,15 +13,14 @@ global_parameters:
       step: 5
 
 layout:
-  - nest(2x1)
-  # - sensor.downstairs_thermostat_hvac_state
+  - test_sonos(2x2)
 
 nest:
   widget_type: nest
   entity: climate.upstairs
   nest_entity: climate.upstairs
   state_entity: sensor.upstairs_thermostat_hvac_state
-  fan_entity: binary_sensor.upstairs_thermostat_fan
+  fan_entity:   binary_sensor.upstairs_thermostat_fan
   title: Upstairs Nest
   step: 1
   units: "F"
@@ -29,11 +28,14 @@ nest:
   
 test_sonos:
   widget_type: combosonos
-  entity: media_player.family_room
+  entity: media_player.office
   truncate_name: 64
   title: test
-  title2: sonos
+  title2: sonos  
   
-  
-  
+your_media_select:
+  widget_type: media_select
+  entity: media_player.office
+  title: Office
+  title2: Sonos  
   

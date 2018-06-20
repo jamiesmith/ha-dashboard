@@ -67,6 +67,8 @@ function basecombosonos(widget_id, url, skin, parameters)
 
     function OnStateAvailable(self, state)
     {
+		console.log("OnStateAvailable", self, state);
+		
 		self.entity = state.entity_id;
         self.level = state.attributes.volume_level;
 		self.state = state.state;
@@ -90,7 +92,7 @@ function basecombosonos(widget_id, url, skin, parameters)
 
     function OnStateUpdate(self, state)
     {
-		console.log("OnStateUpdate");
+		console.log("OnStateUpdate", self, state);
         self.level = state.attributes.volume_level;
         set_view(self, state)
     }
@@ -113,7 +115,6 @@ function basecombosonos(widget_id, url, skin, parameters)
 				console.log("Play click, args:", args)
 
 				self.call_service(self, args);				
-				
             }
             else
             {
@@ -170,6 +171,9 @@ function basecombosonos(widget_id, url, skin, parameters)
 	function OnPlaylistSelectChange(self, state)
 	{
 		var curEntity = self.entity_state[self.entity];
+
+		console.log("OnPlaylistSelectChange", self, curEntity);
+		
 		var entityState = curEntity.state;
 		var entitySource = curEntity.attributes.source;
 		var entityName = curEntity.entity_id;
@@ -179,16 +183,22 @@ function basecombosonos(widget_id, url, skin, parameters)
 		self.source = selectedSource;
 
 		setTimeout(function(){
-			console.log(self.entity_state[self.entity].entity_id + " fcn entityState => ", entityState);
-			console.log(self.entity_state[self.entity].entity_id + " fcn entitySource => ", entitySource);
-			console.log(self.entity_state[self.entity].entity_id + " fcn entityName => ", entityName);
-			console.log(self.entity_state[self.entity].entity_id + " fcn selectedSource => ", selectedSource);
-			console.log(self.entity_state[self.entity].entity_id + " fcn selectedState => ", selectedState);
-			
+			// console.log(self.entity_state[self.entity].entity_id + " fcn entityState => ", entityState);
+			// console.log(self.entity_state[self.entity].entity_id + " fcn entitySource => ", entitySource);
+			// console.log(self.entity_state[self.entity].entity_id + " fcn entityName => ", entityName);
+			// console.log(self.entity_state[self.entity].entity_id + " fcn selectedSource => ", selectedSource);
+			// console.log(self.entity_state[self.entity].entity_id + " fcn selectedState => ", selectedState);
+
+			// What I do have to figure out is, what happens when something OTHER than a "source" is playing.  
+			// Right now a page reload wipes it out and starts playing the first thing in the list
+			// adding !curEntity.attributes.media_album_name is close, but then the playlist change isn't detected
+			//
 			if ((self.state === "playing") 
-				&& (entitySource != self.ViewModel.selectedoption()))
+				&& (entitySource != self.ViewModel.selectedoption())
+				&& (!curEntity.attributes.media_album_name))
 			{	
-				console.log("######################## They Dont Match!");
+				console.log("######################## They Dont Match!");			
+		
 				
 				self.source = self.ViewModel.selectedoption();
 				args = self.parameters.post_service_select_playlist

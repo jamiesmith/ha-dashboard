@@ -44,6 +44,7 @@
 }
 
 .widget-basecombosonos-{{id}} .primary-icon.play {
+	font-size: 36px;
     position: absolute;
     width: 100%;
 }

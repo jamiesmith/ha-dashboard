@@ -17,11 +17,11 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(3x1), big_garage_door, small_garage_door
-  - garage_sonos(3x3), garage_play_classic_rewind, garage_play_classic_vinyl
+  - clock(3x1), big_garage_door, small_garage_door, weather_now(2x2)
+  - garage_sonos(3x2), garage_play_classic_rewind, garage_play_classic_vinyl
   - garage_play_tom_petty, garage_play_grateful_dead
-  - reload, nav_to_weather, nav_to_main
-  - weather_now
+  - garage_volume_down, garage_volume_up
+  - spacer(5x1), reload, nav_to_weather, nav_to_main
 
 clock:
   widget_type: clock
@@ -68,6 +68,8 @@ garage_play_classic_rewind:
   
 garage_play_grateful_dead:
   title: Grateful Dead
+  icon_on:  mdi-skull
+  icon_off: mdi-skull
   widget_type: script
   entity: "script.garage_play_grateful_dead"
   
@@ -78,9 +80,24 @@ garage_play_tom_petty:
   
 garage_play_classic_vinyl:
   title: Classic Vinyl
+  icon_on:  mdi-album
+  icon_off: mdi-album
   widget_type: script
   entity: "script.garage_play_classic_vinyl"
 
+garage_volume_up:  
+  title: Volume Up
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+  widget_type: script
+  entity: "script.garage_volume_up"
+
+garage_volume_down:  
+  title: Volume down
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+  widget_type: script
+  entity: "script.garage_volume_down"
 
 nav_to_main:
   widget_type: navigate

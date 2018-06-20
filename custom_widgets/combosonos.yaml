@@ -52,8 +52,8 @@ css:
 static_icons:
   previous_icon: $media_player_icon_previous
   next_icon: $media_player_icon_next
-  icon_up: $media_player_icon_up
-  icon_down: $media_player_icon_down
+  icon_up: fa-volume-up
+  icon_down: fa-volume-down
   
 static_css:
   previous_icon_style: $media_player_icon_style_previous

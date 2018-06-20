@@ -2,3 +2,4 @@ compiled
 apps/*
 **/._*
 secrets.yaml
+.DS_Store

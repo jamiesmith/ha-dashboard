@@ -20,10 +20,8 @@ layout:
   - clock(2x1), kitchen_light_level, foyer_outlet_switch_2, accent_lighting, landscape_lights, big_garage_door, small_garage_door
   - family_room_sonos(2x2), patio_sonos(2x2), office_sonos(2x2), garage_sonos(2x2)
   - empty: 1
-  - family_room_add_patio, remove_patio, family_room_play_classic_rewind, family_room_turn_off, weather_now(2x2)
+  - family_room_add_patio, remove_patio, family_room_play_classic_rewind, family_room_turn_off, weather_now(2x2), spacer, nav_to_garage
   - downstairs_nest(2x1), upstairs_nest(2x1), reload, nav_to_weather
-  - 
-  # - office_sonos(2x2), office_sonos_select(2x2)
 
 accent_lighting:
   widget_type: group
@@ -169,11 +167,19 @@ nav_to_weather:
   icon_inactive: mdi-weather-partlycloudy
   icon_active: mdi-weather-sunny
 
+nav_to_garage:
+  widget_type: navigate
+  title: Garage
+  title2: Dashboard
+  dashboard: garage
+  timeout: 5
+  return: main
+  icon_inactive: mdi-garage
+  icon_active: mdi-garage
+
 weather_now:
   widget_type: weather
 
 reload:
   widget_type: reload
   title: Reload
-  
-    
