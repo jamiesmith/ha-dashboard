@@ -45,7 +45,7 @@ function basenest(widget_id, url, skin, parameters)
 	//
     if ("nest_entity" in parameters)
     {
-		console.log("parameters.nest_entity =>", parameters.nest_entity);
+		// console.log("parameters.nest_entity =>", parameters.nest_entity);
         monitored_entities.push({"entity": parameters.nest_entity, "initial": self.OnNestAvailable, "update": self.OnNestUpdate});
     }
 
@@ -82,9 +82,6 @@ function basenest(widget_id, url, skin, parameters)
     function OnStateAvailable(self, state)
     {
 		self.state = state.state;
-		console.log("OnStateAvailable self:", self);
-		console.log("OnStateAvailable state:", state);
-		console.log("OSA self.state:", self.state);
 
 		// TODO: This seems right, just need to get the HTML and icon working
 		//
@@ -95,9 +92,6 @@ function basenest(widget_id, url, skin, parameters)
 
     function OnStateUpdate(self, state)
     {
-		console.log("OnStateUpdate self:", self);
-		console.log("OnStateUpdate state:", state);
-
 		// TODO: This seems right, just need to get the HTML and icon working
 		//
 		self.set_field(self, "state", state.state);
@@ -107,8 +101,8 @@ function basenest(widget_id, url, skin, parameters)
 
     function OnFanAvailable(self, state)
     {
-		console.log("OnFanAvailable self:", self);
-		console.log("OnFanAvailable state:", state);
+		// console.log("OnFanAvailable self:", self);
+		// console.log("OnFanAvailable state:", state);
 		self.fan = state.state;
 
 		// TODO: This seems right, just need to get the HTML and icon working
@@ -120,8 +114,8 @@ function basenest(widget_id, url, skin, parameters)
 
     function OnFanUpdate(self, state)
     {
-		console.log("OnFanUpdate self:", self);
-		console.log("OnFanUpdate state:", state);
+		// console.log("OnFanUpdate self:", self);
+		// console.log("OnFanUpdate state:", state);
 
 		// TODO: This seems right, just need to get the HTML and icon working
 		//
@@ -234,13 +228,8 @@ function basenest(widget_id, url, skin, parameters)
 
     function set_nest_view(self, state)
     {
-	console.log("sv self.state:", self.state);
-	
         // self.set_field(self, "play_icon_style", self.css.icon_style_active);
         // self.set_icon(self, "play_icon", self.icons.pause_icon)
-	
-	console.log("SV Self =>", self);
-	console.log("SV State =>", state);
 
         self.set_field(self, "level", self.format_number(self, state.attributes.current_temperature));
         if ("temperature" in state.attributes && state.attributes.temperature != null)

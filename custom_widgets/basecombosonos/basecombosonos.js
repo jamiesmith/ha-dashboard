@@ -67,7 +67,7 @@ function basecombosonos(widget_id, url, skin, parameters)
 
     function OnStateAvailable(self, state)
     {
-		console.log("OnStateAvailable", self, state);
+		// console.log("OnStateAvailable", self, state);
 		
 		self.entity = state.entity_id;
         self.level = state.attributes.volume_level;
@@ -92,8 +92,7 @@ function basecombosonos(widget_id, url, skin, parameters)
 
     function OnStateUpdate(self, state)
     {
-		console.log("OnStateUpdate", self, state);
-        self.level = state.attributes.volume_level;
+		self.level = state.attributes.volume_level;
         set_view(self, state)
     }
 
@@ -112,8 +111,6 @@ function basecombosonos(widget_id, url, skin, parameters)
 				
 				args["source"] = self.ViewModel.selectedoption();
 				
-				console.log("Play click, args:", args)
-
 				self.call_service(self, args);				
             }
             else
@@ -172,8 +169,6 @@ function basecombosonos(widget_id, url, skin, parameters)
 	{
 		var curEntity = self.entity_state[self.entity];
 
-		console.log("OnPlaylistSelectChange", self, curEntity);
-		
 		var entityState = curEntity.state;
 		var entitySource = curEntity.attributes.source;
 		var entityName = curEntity.entity_id;
@@ -197,20 +192,20 @@ function basecombosonos(widget_id, url, skin, parameters)
 				&& (entitySource != self.ViewModel.selectedoption())
 				&& (!curEntity.attributes.media_album_name))
 			{	
-				console.log("######################## They Dont Match!");			
+				// console.log("######################## They Dont Match!");
 		
 				
 				self.source = self.ViewModel.selectedoption();
 				args = self.parameters.post_service_select_playlist
 				
 				args["source"] = self.source
-				console.log("Calling Service => ", args);
+				// console.log("Calling Service => ", args);
 
 				self.call_service(self, args);
 			}
 			else
 			{
-				console.log("######################## They Match!");
+				// console.log("######################## They Match!");
 			}
 		},500)
 	}	
@@ -244,6 +239,7 @@ function basecombosonos(widget_id, url, skin, parameters)
 
 	function set_playlist_options(self, options, state)
 	{
+		// console.log("JRS", options)
 		self.set_field(self, "inputoptions", options);
 	}
 

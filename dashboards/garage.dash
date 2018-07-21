@@ -21,7 +21,7 @@ layout:
   - garage_sonos(3x2), garage_play_classic_rewind, garage_play_classic_vinyl
   - garage_play_tom_petty, garage_play_grateful_dead
   - garage_volume_down, garage_volume_up
-  - spacer(5x1), reload, nav_to_weather, nav_to_main
+  - family_room_add_garage, remove_garage, spacer(1x1), reload, nav_to_weather, nav_to_main
 
 clock:
   widget_type: clock
@@ -61,6 +61,8 @@ nav_to_weather:
   icon_inactive: mdi-weather-partlycloudy
   icon_active: mdi-weather-sunny
 
+# Playlists
+#
 garage_play_classic_rewind:
   title: Classic Rewind
   widget_type: script
@@ -118,3 +120,19 @@ reload:
   
 weather_now:
   widget_type: weather
+
+family_room_add_garage:
+  title: Add Garage
+  title2: (To Family Room)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.family_room_add_garage"
+
+remove_garage:
+  title: Remove Garage
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.family_room_remove_garage"
+

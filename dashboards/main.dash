@@ -22,6 +22,7 @@ layout:
   - empty: 1
   - family_room_add_patio, remove_patio, family_room_play_classic_rewind, family_room_turn_off, weather_now(2x2), spacer, nav_to_garage
   - downstairs_nest(2x1), upstairs_nest(2x1), reload, nav_to_weather
+  - morning_room_lamp
 
 accent_lighting:
   widget_type: group
@@ -34,6 +35,13 @@ foyer_outlet_switch_2:
   widget_type: switch
   entity: switch.foyer_outlet_switch_2
   title: Foyer Lamp
+  icon_on: mdi-lightbulb-on
+  icon_off: mdi-lightbulb
+
+morning_room_lamp:
+  widget_type: switch
+  entity: switch.morning_room_lamp_switch
+  title: Morning Room Lamp
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
@@ -145,6 +153,7 @@ garage_sonos:
   
 family_room_add_patio:
   title: Add Patio
+  title2: (To Family Room)
   icon_on: mdi-speaker
   icon_off: mdi-speaker
   widget_type: script
