@@ -12,9 +12,10 @@ function baseplaylist(widget_id, url, skin, parameters)
     // Store on brightness or fallback to a default
         
     // Parameters may come in useful later on
-    
+    console.log("params", parameters);
     self.parameters = parameters;
-    
+    self.playlist = parameters.fields.playlist;
+	
     // Toggle needs to be referenced from self for the timeout function
     
     self.toggle = toggle;
@@ -80,34 +81,17 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     function OnButtonClick(self)
     {
-		console.log("OBC")
-        if (self.state == self.parameters.state_active)
-        {
-            args = self.parameters.post_service_inactive
-        }
-        else
-        {
-            args = self.parameters.post_service_active
-        }
-        self.call_service(self, args);
-        toggle(self);
-        if ("momentary" in self.parameters)
-        {
-            setTimeout(function() { self.toggle(self) }, self.parameters["momentary"])
-        }
+		// self.source = self.ViewModel.selectedoption();
+		args = self.parameters.post_service_playlist
+		
+		args["source"] = self.playlist
+		console.log("Calling Service => ", args);
+
+		self.call_service(self, args);
     }
     
     function toggle(self)
     {
-        if (self.state == self.parameters.state_active)
-        {
-            self.state = self.parameters.state_inactive;
-        }
-        else
-        {
-            self.state = self.parameters.state_active;
-        }
-        set_view(self, self.state)
     }
     
     // Set view is a helper function to set all aspects of the widget to its 
@@ -116,19 +100,5 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     function set_view(self, state, level)
     {
-        if (state == self.parameters.state_active || ("active_map" in self.parameters && self.parameters.active_map.includes(state)))
-        {
-            self.set_icon(self, "icon", self.icons.icon_on);
-            self.set_field(self, "icon_style", self.css.icon_style_active)
-        }
-        else
-        {
-            self.set_icon(self, "icon", self.icons.icon_off);
-            self.set_field(self, "icon_style", self.css.icon_style_inactive)
-        }
-        if ("state_text" in self.parameters && self.parameters.state_text == 1)
-        {
-            self.set_field(self, "state_text", self.map_state(self, state))
-        }
     }
 }

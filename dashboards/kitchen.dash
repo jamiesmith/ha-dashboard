@@ -283,7 +283,7 @@ family_room_pl_the_coffee_house:
   logo: "/custom_css/img/coffee-house.png"
   
 family_room_pl_tom_petty_radio:
-  widget_type: switch
+  widget_type: playlist
   entity: media_player.family_room
   title: "Tom Petty Radio"
   playlist: "31 - Tom Petty Radio"
