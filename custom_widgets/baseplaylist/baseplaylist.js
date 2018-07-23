@@ -12,7 +12,6 @@ function baseplaylist(widget_id, url, skin, parameters)
     // Store on brightness or fallback to a default
         
     // Parameters may come in useful later on
-    console.log("params", parameters);
     self.parameters = parameters;
     self.playlist = parameters.fields.playlist;
 	
@@ -81,13 +80,13 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     function OnButtonClick(self)
     {
-		// self.source = self.ViewModel.selectedoption();
-		args = self.parameters.post_service_playlist
-		
-		args["source"] = self.playlist
-		console.log("Calling Service => ", args);
-
-		self.call_service(self, args);
+	 console.log("OBC", self.playlist);
+	args = self.parameters.post_service_playlist
+	
+	args["source"] = self.playlist
+	// console.log("Calling Service => ", args);
+	
+	self.call_service(self, args);
     }
     
     function toggle(self)

@@ -13,9 +13,9 @@ global_parameters:
       step: 5
 
 layout:      
-  - forecast_1(2x1), weather_now(2x2), weather_hourly_summary(2x2)
+  - forecast_1(2x1), weather_now(3x2), weather_hourly_summary(2x2)
   - forecast_2(2x1)
-  - forecast_3(2x1), weather_frame(4x3)
+  - forecast_3(2x1), weather_frame(5x4)
   - forecast_4(2x1)
   - forecast_5(2x1)
   - forecast_6(2x1), spacer(4x1)

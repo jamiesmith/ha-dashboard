@@ -67,23 +67,23 @@ function basecombosonos(widget_id, url, skin, parameters)
 
     function OnStateAvailable(self, state)
     {
-		// console.log("OnStateAvailable", self, state);
-		
-		self.entity = state.entity_id;
+	console.log("OnStateAvailable", self, state);
+	
+	self.entity = state.entity_id;
         self.level = state.attributes.volume_level;
-		self.state = state.state;
-		self.source = state.source;
-		
-		
+	self.state = state.state;
+	self.source = state.source;
+	
+	
         set_view(self, state)
         if ("dump_capabilities" in self.parameters && self.parameters["dump_capabilities"] == "1")
         {
-			console.log("OnStateAvailable self => ", self);
+	    console.log("OnStateAvailable self => ", self);
             display_supported_functions(self);
         }
-		
-		set_playlist_options(self, state.attributes.source_list, state);
-		set_playlist_value(self, state);
+	
+	set_playlist_options(self, state.attributes.source_list, state);
+	set_playlist_value(self, state);
     }
 
     // The OnStateUpdate function will be called when the specific entity
