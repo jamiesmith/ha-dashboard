@@ -20,7 +20,7 @@ layout:
   - clock(2x1), kitchen_light_level, foyer_outlet_switch_2, accent_lighting, landscape_lights, big_garage_door, small_garage_door
   - family_room_sonos(2x2), patio_sonos(2x2), office_sonos(2x2), garage_sonos(2x2)
   - empty: 1
-  - family_room_add_patio, remove_patio, family_room_play_classic_rewind, family_room_turn_off, weather_now(2x2), spacer, nav_to_garage
+  - family_room_add_patio, drop_patio, family_room_play_classic_rewind, family_room_turn_off, weather_now(2x2), spacer, nav_to_garage
   - downstairs_nest(2x1), upstairs_nest(2x1), reload, nav_to_weather
   - morning_room_lamp
 
@@ -159,12 +159,12 @@ family_room_add_patio:
   widget_type: script
   entity: "script.family_room_add_patio"
 
-remove_patio:
-  title: Remove Patio
+drop_patio:
+  title: Drop Patio
   widget_type: script
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
-  entity: "script.family_room_remove_patio"
+  entity: "script.drop_patio"
   
 nav_to_weather:
   widget_type: navigate

@@ -146,5 +146,5 @@ drop_garage:
   widget_type: script
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
-  entity: "script.family_room_remove_garage"
+  entity: "script.drop_garage"
 
