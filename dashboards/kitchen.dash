@@ -223,6 +223,7 @@ nav_to_weather:
   title: Weather
   title2: Dashboard
   dashboard: weather
+#  url: https://www.wunderground.com/hourly/us/nc/matthews/28104?cm_ven=localwx_hour
   timeout: 8
   return: kitchen
   icon_inactive: mdi-weather-partlycloudy
