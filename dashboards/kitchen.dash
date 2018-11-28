@@ -36,7 +36,7 @@ accent_lighting:
 
 holiday_lights:
   widget_type: group
-  entity: group.holiday_lighting
+  entity: group.holiday_all
   title: Holiday Lights
   icon_on: mdi-candle
   icon_off: mdi-candle
