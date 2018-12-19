@@ -246,6 +246,8 @@ weather_now:
 reload:
   widget_type: reload
   title: Reload
+  icon_active: fa-sync-alt
+  icon_inactive: fa-sync-alt
 
 # Generated Playlists
 # 

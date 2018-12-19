@@ -93,14 +93,14 @@ family_room_volume_up:
   icon_on: fa-volume-up
   icon_off: fa-volume-up
   widget_type: script
-  entity: "script.family_room_volume_up"
+  entity: "script.family_room_receiver_volume_up"
 
 family_room_volume_down:  
   title: Volume down
   icon_on: fa-volume-down
   icon_off: fa-volume-down
   widget_type: script
-  entity: "script.family_room_volume_down"
+  entity: "script.family_room_receiver_volume_down"
 
 family_room_toggle_mute:  
   title: Mute
@@ -252,6 +252,7 @@ nav_to_garage:
   return: kitchen
   icon_inactive: mdi-garage
   icon_active: mdi-garage
+  sticky: 1
 
 nav_to_patio:
   widget_type: navigate
@@ -260,8 +261,9 @@ nav_to_patio:
   dashboard: patio
   timeout: 5
   return: kitchen
-  icon_inactive: fa-pagelines
-  icon_active: fa-pagelines
+  icon_inactive: fa-leaf
+  icon_active: fa-leaf
+  sticky: 1
 
 weather_now:
   widget_type: weather
@@ -269,6 +271,8 @@ weather_now:
 reload:
   widget_type: reload
   title: Reload
+  icon_active: fa-sync-alt
+  icon_inactive: fa-sync-alt
 
 # Generated Playlists
 # 

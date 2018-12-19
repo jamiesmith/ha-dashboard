@@ -1,7 +1,7 @@
 version: '2.1'
 services:
   appdaemon:
-    image: acockburn/appdaemon:3.0.1
+    image: acockburn/appdaemon:3.0.2
     container_name: appdaemon
     restart: always
 #    network_mode: 'host'
