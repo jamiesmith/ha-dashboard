@@ -20,7 +20,7 @@ layout:
   - clock(3x1), big_garage_door, small_garage_door, weather_now(2x2)
   - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl
   - garage_pl_tom_petty_radio, garage_pl_grateful_dead, garage_pl_deep_tracks
-  - garage_volume_down, garage_volume_up
+  - garage_volume_down, garage_media_play_pause, garage_volume_up
   - family_room_add_garage, drop_garage, spacer(1x1), reload, nav_to_weather, nav_to_main, garage_candles
   
 
@@ -105,6 +105,13 @@ garage_pl_tom_petty_radio:
   title: "Tom Petty Radio"
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
+
+garage_media_play_pause:  
+  title: Play/Pause
+  icon_on: mdi-play-pause
+  icon_off: mdi-play-pause
+  widget_type: script
+  entity: "script.garage_media_play_pause"
 
 garage_volume_up:  
   title: Volume Up

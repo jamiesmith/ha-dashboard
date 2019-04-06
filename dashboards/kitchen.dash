@@ -17,7 +17,7 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, foyer_outlet_switch_2, accent_lighting, landscape_lights, holiday_lights, holiday_lights_family_room
+  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, foyer_outlet_switch_2, accent_lighting, landscape_lights, party_lights, family_room_apple_tv
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), garage_sonos(2x2), family_room_volume_up(2x1)
   - family_room_toggle_mute(2x1)
   - upstairs_nest(2x1), family_room_turn_off(2x1), family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
@@ -40,6 +40,20 @@ holiday_lights:
   title: Holiday Lights
   icon_on: mdi-candle
   icon_off: mdi-candle
+
+party_lights:
+  widget_type: group
+  entity: group.party_lights
+  title: Party Lights
+  icon_on: fa-glass-cheers
+  icon_off: fa-glass-cheers
+
+family_room_apple_tv:
+  widget_type: switch
+  entity: switch.family_room_apple_tv_switch
+  title: Family Room AppleTV
+  icon_on: mdi-apple
+  icon_off: mdi-apple
 
 holiday_lights_family_room:
   widget_type: group
