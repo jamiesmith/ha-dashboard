@@ -13,19 +13,25 @@ global_parameters:
       step: 5
 
 layout:      
-  - forecast_1(2x1), weather_now(3x2), weather_hourly_summary(2x2)
-  - forecast_2(2x1)
-  - forecast_3(2x1), weather_frame(5x4)
-  - forecast_4(2x1)
-  - forecast_5(2x1)
-  - forecast_6(2x1), spacer(4x1)
+  - my_frame(10x7)
+  # JRS-TMP - forecast_1(2x1), weather_now(3x2), weather_hourly_summary(2x2)
+  # JRS-TMP - forecast_2(2x1)
+  # JRS-TMP - forecast_3(2x1), weather_frame(5x4)
+  # JRS-TMP - forecast_4(2x1)
+  # JRS-TMP - forecast_5(2x1)
+  # JRS-TMP - forecast_6(2x1), spacer(4x1)
 
 iframe:
   widget_type: iframe
-  title: Cats
+  title: Ten-day Forecast
   refresh: 60
   url_list:
     - https://www.wunderground.com/hourly/us/nc/matthews/28104?cm_ven=localwx_hour
+    
+my_frame:
+  widget_type: iframe
+  url_list:
+    - https://www.wunderground.com/forecast/us/nc/indian-trail/KNCINDIA32?cm_ven=localwx_10day
     
 weather_frame:
   # Generate your link - https://www.wunderground.com/weather-radar/united-states/

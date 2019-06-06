@@ -9,8 +9,8 @@ appdaemon:
     HASS:
       type: hass
       ha_url: http://nuclet:8123
-      ha_key: !secret http_password
-      # token: !secret hatoken
+      # ha_key: !secret http_password
+      token: !secret hatoken
   disable_apps: 1
   
 hadashboard:
