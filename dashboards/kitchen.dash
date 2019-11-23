@@ -20,9 +20,9 @@ layout:
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, foyer_outlet_switch_2, accent_lighting, landscape_lights, party_lights, family_room_apple_tv
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), garage_sonos(2x2), family_room_volume_up(2x1)
   - family_room_toggle_mute(2x1)
-  - upstairs_nest(2x1), family_room_turn_off(2x1), family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
-  - downstairs_nest(2x1), family_room_pl_unplugged, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_50s_on_5, family_room_pl_60s_on_6, family_room_pl_70s_on_7
-  - family_room_pl_80s_on_8, family_room_pl_90s_on_9, family_room_pl_rockbar, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly # these are broken for now, big_garage_door, small_garage_door
+  - upstairs_nest(2x1), family_room_previous_track, family_room_next_track, family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
+  - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_unplugged, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
+  - family_room_pl_80s_on_8, family_room_pl_90s_on_9, family_room_pl_rockbar, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly, spacer, office_strip_level # these are broken for now, big_garage_door, small_garage_door
   - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, spacer, nav_to_patio, nav_to_weather, nav_to_garage, reload
 
 # Lighting
@@ -100,6 +100,16 @@ kitchen_light_level:
   shorten: 1
   entity: light.kitchen_light_level
 
+office_strip_level:
+  widget_type: light
+  title: Light Strip Light Level
+  icon_on: mdi-lightbulb-on
+  icon_off: mdi-lightbulb
+  units: " %"
+  precision: 0
+  shorten: 1
+  entity: light.hue_lightstrip_plus_1
+
 # Media
 #
 family_room_volume_up:  
@@ -131,6 +141,19 @@ family_room_turn_off:
   widget_type: script
   entity: "script.family_room_turn_off"
 
+family_room_next_track:  
+  title: Next Track
+  icon_on: fa-step-forward
+  icon_off: fa-step-forward
+  widget_type: script
+  entity: "script.family_room_sonos_next_track"
+
+family_room_previous_track:  
+  title: Previous Track
+  icon_on: fa-step-backward
+  icon_off: fa-step-backward
+  widget_type: script
+  entity: "script.family_room_sonos_previous_track"
 
 # Grouping Options
 #  
@@ -170,21 +193,23 @@ office_sonos:
   entity: media_player.office
   truncate_name: 64
   title: Office
+  dump_capabilities: 1
 
 family_room_sonos:
-  widget_type: combosonos
+#  widget_type: media_player
+  widget_type: media_player
   entity: media_player.family_room
   truncate_name: 64
   title: Family Room
 
 patio_sonos:
-  widget_type: combosonos
+  widget_type: media_player
   entity: media_player.patio
   truncate_name: 64
   title: Patio
 
 garage_sonos:
-  widget_type: combosonos
+  widget_type: media_player
   entity: media_player.garage
   truncate_name: 64
   title: Garage  
@@ -202,7 +227,6 @@ family_room_label:
 
 # Garage Doors
 #
-
 big_garage_door:
   widget_type: cover
   entity: cover.big_door

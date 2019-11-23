@@ -22,7 +22,7 @@ layout:
   - empty: 1
   - family_room_add_patio, drop_patio, family_room_play_classic_rewind, family_room_turn_off, weather_now(2x2), spacer, nav_to_garage
   - downstairs_nest(2x1), upstairs_nest(2x1), reload, nav_to_weather
-  - morning_room_lamp
+  - media_office_sonos(2x2)
 
 accent_lighting:
   widget_type: group
@@ -38,12 +38,11 @@ foyer_outlet_switch_2:
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
-morning_room_lamp:
-  widget_type: switch
-  entity: switch.morning_room_lamp_switch
-  title: Morning Room Lamp
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+media_office_sonos:
+  widget_type: media_player
+  entity: media_player.family_room
+  truncate_name: 64
+  title: Office
 
 landscape_lights:
   widget_type: group
@@ -52,20 +51,25 @@ landscape_lights:
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
-
 family_room_play_classic_rewind:
-  title: Classic Rewind
-  widget_type: script
-  entity: "script.family_room_play_classic_rewind"
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Classic Rewind"
+  playlist: "25 - Classic Rewind"
+  logo: "/custom_css/img/classic-rewind.png"
   
 family_room_play_classic_vinyl:
-  title: Classic Vinyl
-  widget_type: script
-  entity: "script.family_room_play_classic_vinyl"
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Classic Vinyl"
+  playlist: "26 - Classic Vinyl"
+  logo: "/custom_css/img/classic-vinyl.png"
   
 family_room_turn_off:
   title: Turn Off
   title2: Family Room
+  icon_on: mdi-power-on
+  icon_off: mdi-power
   widget_type: script
   entity: "script.family_room_turn_off"
 
@@ -135,7 +139,7 @@ family_room_sonos:
 
 office_sonos:
   widget_type: combosonos
-  entity: media_player.office
+  entity: media_player.office_sonos
   truncate_name: 64
   title: Office
 

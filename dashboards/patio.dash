@@ -17,7 +17,7 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), foyer_outlet_switch_2, accent_lighting, landscape_lights, morning_room_lamp, cabinet_lighting, patio_label
+  - clock(2x1), foyer_outlet_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label
   - weather_now(2x3), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1)
   - patio_volume_down(2x1)
   - family_room_turn_off(2x1), patio_add_family_room, drop_family_room
@@ -31,6 +31,13 @@ patio_label:
 
 # Lighting
 #
+party_lights:
+  widget_type: group
+  entity: group.party_lights
+  title: Party Lights
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
+
 accent_lighting:
   widget_type: group
   entity: group.accent_lighting
@@ -51,6 +58,13 @@ foyer_outlet_switch_2:
   title: Foyer Lamp
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
+
+palm_tree_lights:
+  widget_type: switch
+  entity: switch.palm_tree_switch
+  title: Palm Tree
+  icon_on: fa-tree-on
+  icon_off: fa-tree
 
 morning_room_lamp:
   widget_type: switch
