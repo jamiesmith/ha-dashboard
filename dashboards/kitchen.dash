@@ -17,12 +17,13 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, foyer_outlet_switch_2, accent_lighting, landscape_lights, party_lights, family_room_apple_tv
+  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, foyer_outlet_switch_2, accent_lighting, party_lights, landscape_lights, family_room_apple_tv # these are broken for now, big_garage_door, small_garage_door
+  # holiday_lights, holiday_lights_family_room
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), garage_sonos(2x2), family_room_volume_up(2x1)
   - family_room_toggle_mute(2x1)
   - upstairs_nest(2x1), family_room_previous_track, family_room_next_track, family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
   - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_unplugged, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
-  - family_room_pl_80s_on_8, family_room_pl_90s_on_9, family_room_pl_rockbar, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly, spacer, office_strip_level # these are broken for now, big_garage_door, small_garage_door
+  - family_room_pl_80s_on_8, family_room_pl_90s_on_9, family_room_pl_rockbar, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly
   - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, spacer, nav_to_patio, nav_to_weather, nav_to_garage, reload
 
 # Lighting
@@ -276,7 +277,7 @@ nav_to_weather:
   title2: Dashboard
   dashboard: weather
 #  url: https://www.wunderground.com/hourly/us/nc/matthews/28104?cm_ven=localwx_hour
-  timeout: 15
+  timeout: 30
   return: kitchen
   icon_inactive: mdi-weather-partlycloudy
   icon_active: mdi-weather-sunny

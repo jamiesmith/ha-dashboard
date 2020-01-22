@@ -31,7 +31,7 @@ iframe:
 my_frame:
   widget_type: iframe
   url_list:
-    - https://www.wunderground.com/forecast/us/nc/indian-trail/KNCINDIA32?cm_ven=localwx_10day
+    - https://www.accuweather.com/en/us/matthews/28105/hourly-weather-forecast/2114180
     
 weather_frame:
   # Generate your link - https://www.wunderground.com/weather-radar/united-states/
