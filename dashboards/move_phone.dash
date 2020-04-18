@@ -1,12 +1,12 @@
 #
 # Main arguments, all optional
 #
-title: Patio Panel
-widget_dimensions: [120, 110]
+title: Phone Panel
+widget_dimensions: [105, 115]
 widget_size: [1, 1]
 widget_margins: [2, 2]
 scalable: true
-columns: 10
+columns: 7
 global_parameters:
   use_comma: 0 
   precision: 1 
@@ -17,20 +17,11 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), foyer_outlet_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label
-  - weather_now(2x3), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1)
-  - patio_volume_down(2x1)
-  - family_room_turn_off(2x1), patio_add_family_room, drop_family_room
-  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_rockbar, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock, spacer, nav_to_weather, nav_to_kitchen, reload
+  - move_pl_classic_rewind, move_pl_classic_vinyl, move_pl_deep_tracks, move_pl_grateful_dead, move_pl_tom_petty_radio, party_lights, move_volume_up
+  - move_pl_80s_on_8, move_pl_90s_on_9, move_pl_rockbar, move_pl_unplugged, move_pl_bluesville, move_pl_dave_matthews, move_volume_down
+  - move_pl_peter_gabriel_radio, move_pl_imagine_dragons_radio, move_pl_jimmy_buffett, move_add_family_room, drop_family_room, reload, move_turn_off
+  - 
 
-patio_label:
-  widget_type: label
-  title: Patio
-
-# Lighting
-#
 party_lights:
   widget_type: group
   entity: group.party_lights
@@ -38,6 +29,12 @@ party_lights:
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
 
+move_label:
+  widget_type: label
+  title: Move
+
+# Lighting
+#
 accent_lighting:
   widget_type: group
   entity: group.accent_lighting
@@ -59,13 +56,6 @@ foyer_outlet_switch_2:
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
-palm_tree_lights:
-  widget_type: switch
-  entity: switch.palm_tree_switch
-  title: Palm Tree
-  icon_on: fa-tree-on
-  icon_off: fa-tree
-
 morning_room_lamp:
   widget_type: switch
   entity: switch.morning_room_lamp_switch
@@ -80,58 +70,58 @@ landscape_lights:
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
-patio_light_level:
+move_light_level:
   widget_type: light
-  title: Patio Light Level
+  title: Move Light Level
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
   units: " %"
   precision: 0
   shorten: 1
-  entity: light.patio_light_level
+  entity: light.move_light_level
 
 # Media
 #
-patio_volume_up:  
+move_volume_up:  
   title: Volume Up
   icon_on: fa-volume-up
   icon_off: fa-volume-up
   widget_type: script
-  entity: "script.patio_volume_up"
+  entity: "script.move_volume_up"
 
-patio_volume_down:  
+move_volume_down:  
   title: Volume down
   icon_on: fa-volume-down
   icon_off: fa-volume-down
   widget_type: script
-  entity: "script.patio_volume_down"
+  entity: "script.move_volume_down"
 
-patio_toggle_mute:  
+move_toggle_mute:  
   title: Mute
   icon_on: mdi-volume-off
   icon_off: mdi-volume-off
   widget_type: script
-  entity: "script.patio_toggle_mute"
+  entity: "script.move_toggle_mute"
 
-family_room_turn_off:
+move_turn_off:
   title: Turn Off
-  title2: Family Room
+  title2: Move 
   icon_on: mdi-power-on
   icon_off: mdi-power
   widget_type: script
-  entity: "script.family_room_turn_off"
+  entity: "script.move_turn_off"
 
 
 # Grouping Options
 #  
 
-patio_add_family_room:
-  title: Add Family Room
-  title2: (To Patio)
+move_add_family_room:
+  title: Add FR
+  title2: (To Move)
   icon_on: mdi-speaker
   icon_off: mdi-speaker
   widget_type: script
-  entity: "script.patio_add_family_room"
+  entity: "script.move_add_family_room"
 
 drop_family_room:
   title: Drop Family Room
@@ -156,25 +146,25 @@ drop_garage:
   entity: "script.family_room_drop_garage"
 
 office_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.office
   truncate_name: 64
   title: Office
 
-patio_sonos:
-  widget_type: media_player
-  entity: media_player.patio
+move_sonos:
+  widget_type: combosonos
+  entity: media_player.move
   truncate_name: 64
-  title: Patio
+  title: Move
 
 family_room_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.family_room
   truncate_name: 64
   title: Family Room
 
 garage_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.garage
   truncate_name: 64
   title: Garage  
@@ -242,7 +232,7 @@ nav_to_weather:
   title2: Dashboard
   dashboard: weather
   timeout: 8
-  return: patio
+  return: move
   icon_inactive: mdi-weather-partlycloudy
   icon_active: mdi-weather-sunny
 
@@ -260,112 +250,103 @@ weather_now:
 reload:
   widget_type: reload
   title: Reload
-  icon_active: fa-sync-alt
-  icon_inactive: fa-sync-alt
 
 # Generated Playlists
 # 
-patio_pl_grateful_dead:
+move_pl_grateful_dead:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Grateful Dead"
   playlist: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
   
-patio_pl_classic_rewind:
+move_pl_classic_rewind:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Classic Rewind"
   playlist: "25 - Classic Rewind"
   logo: "/custom_css/img/classic-rewind.png"
   
-patio_pl_classic_vinyl:
+move_pl_classic_vinyl:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Classic Vinyl"
   playlist: "26 - Classic Vinyl"
   logo: "/custom_css/img/classic-vinyl.png"
   
-patio_pl_deep_tracks:
+move_pl_deep_tracks:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Deep Tracks"
   playlist: "27 - Deep Tracks"
   logo: "/custom_css/img/deep-tracks.png"
   
-patio_pl_the_coffee_house:
+move_pl_the_coffee_house:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "The Coffee House"
   playlist: "14 - The Coffee House"
   logo: "/custom_css/img/coffee-house.png"
   
-patio_pl_yacht_rock:
+move_pl_tom_petty_radio:
   widget_type: playlist
-  entity: media_player.patio
-  title: "Yacht Rock"
-  playlist: "311 - Yacht Rock Radio"
-  logo: "/custom_css/img/yacht-rock.png"
-
-patio_pl_tom_petty_radio:
-  widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Tom Petty Radio"
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-patio_pl_rockbar:
+move_pl_rockbar:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "RockBar"
   playlist: "313 - RockBar"
   logo: "/custom_css/img/rockbar.png"
   
-patio_pl_50s_on_5:
+move_pl_50s_on_5:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "50s on 5"
   playlist: "5 - 50s on 5"
   logo: "/custom_css/img/50s.png"
   
-patio_pl_60s_on_6:
+move_pl_60s_on_6:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "60s on 6"
   playlist: "6 - 60s on 6"
   logo: "/custom_css/img/60s.png"
   
-patio_pl_70s_on_7:
+move_pl_70s_on_7:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "70s on 7"
   playlist: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
   
-patio_pl_80s_on_8:
+move_pl_80s_on_8:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "80s on 8"
   playlist: "8 - 80s on 8"
   logo: "/custom_css/img/80s.png"
   
-patio_pl_90s_on_9:
+move_pl_90s_on_9:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "90s on 9"
   playlist: "9 - 90s on 9"
   logo: "/custom_css/img/90s.png"
   
-patio_pl_real_jazz:
+move_pl_real_jazz:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Real Jazz"
   playlist: "67 - Real Jazz"
   logo: "/custom_css/img/real-jazz.png"
   
-patio_pl_bluesville:
+move_pl_bluesville:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Bluesville"
   playlist: "74 - B.B. King's Bluesville"
   logo: "/custom_css/img/bluesville.png"
@@ -374,52 +355,52 @@ patio_pl_bluesville:
 # Skip 752 - Holly
 # Skip 753 - Holiday Pops
 # Skip Bach Cello Suites
-patio_pl_bryson_tiller_radio:
+move_pl_bryson_tiller_radio:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Bryson Tiller Radio"
   playlist: "Bryson Tiller Radio"
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
-patio_pl_jimmy_buffett:
+move_pl_jimmy_buffett:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Jimmy Buffett"
   playlist: "Jimmy Buffett"
   logo: "/custom_css/img/jimmy-buffett.png"
   
-patio_pl_unplugged:
+move_pl_unplugged:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Unplugged"
   playlist: "Unplugged"
   logo: "/custom_css/img/unplugged.png"
   
-patio_pl_fall_out_boy:
+move_pl_fall_out_boy:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Fall Out Boy"
   playlist: "Fall Out Boy Radio"
   logo: "/custom_css/img/fall-out-boy.png"
   
-patio_pl_peter_gabriel_radio:
+move_pl_peter_gabriel_radio:
   widget_type: playlist
-  entity: media_player.patio
-  title: "Peter Gabriel Radio"
+  entity: media_player.move
+  title: "Peter Gabriel"
   playlist: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
-patio_pl_imagine_dragons_radio:
+move_pl_imagine_dragons_radio:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Imagine Dragons"
   playlist: "Imagine Dragons Radio"
   logo: "/custom_css/img/imagine-dragons.png"
 
-patio_pl_dave_matthews:
+move_pl_dave_matthews:
   widget_type: playlist
-  entity: media_player.patio
+  entity: media_player.move
   title: "Dave Matthews"
   playlist: "716 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
