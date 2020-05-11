@@ -1,12 +1,13 @@
 #
 # Main arguments, all optional
 #
-title: Patio Panel
-widget_dimensions: [120, 110]
+title: Patio Dashboard Panel
+# widget_dimensions: [120, 110]
+widget_dimensions: [140, 140]
 widget_size: [1, 1]
-widget_margins: [2, 2]
+widget_margins: [5, 5]
 scalable: true
-columns: 10
+columns: 8
 global_parameters:
   use_comma: 0 
   precision: 1 
@@ -17,20 +18,11 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), foyer_outlet_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label
-  - weather_now(2x3), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1)
-  - patio_volume_down(2x1)
-  - family_room_turn_off(2x1), patio_add_family_room, drop_family_room
-  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_rockbar, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_buffett
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock, spacer, nav_to_weather, nav_to_kitchen, reload
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, party_lights, patio_volume_up
+  - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
+  - patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_rockbar, spacer, patio_add_move, patio_add_family_room, patio_turn_off
+  - patio_pl_yacht_rock, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, nav_to_move, drop_move, drop_family_room, reload
 
-patio_label:
-  widget_type: label
-  title: Patio
-
-# Lighting
-#
 party_lights:
   widget_type: group
   entity: group.party_lights
@@ -38,6 +30,12 @@ party_lights:
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
 
+patio_label:
+  widget_type: label
+  title: Patio
+
+# Lighting
+#
 accent_lighting:
   widget_type: group
   entity: group.accent_lighting
@@ -58,13 +56,6 @@ foyer_outlet_switch_2:
   title: Foyer Lamp
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
-
-palm_tree_lights:
-  widget_type: switch
-  entity: switch.palm_tree_switch
-  title: Palm Tree
-  icon_on: fa-tree-on
-  icon_off: fa-tree
 
 morning_room_lamp:
   widget_type: switch
@@ -113,20 +104,20 @@ patio_toggle_mute:
   widget_type: script
   entity: "script.patio_toggle_mute"
 
-family_room_turn_off:
+patio_turn_off:
   title: Turn Off
-  title2: Family Room
+  title2: Patio 
   icon_on: mdi-power-on
   icon_off: mdi-power
   widget_type: script
-  entity: "script.family_room_turn_off"
+  entity: "script.patio_turn_off"
 
 
 # Grouping Options
 #  
 
 patio_add_family_room:
-  title: Add Family Room
+  title: Add FR
   title2: (To Patio)
   icon_on: mdi-speaker
   icon_off: mdi-speaker
@@ -139,42 +130,44 @@ drop_family_room:
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
   entity: "script.drop_family_room"
-  
-family_room_add_garage:
-  title: Add Garage
-  title2: (To Family Room)
+
+# Move
+#
+patio_add_move:
+  title: Add Move
+  title2: (To Patio)
   icon_on: mdi-speaker
   icon_off: mdi-speaker
   widget_type: script
-  entity: "script.family_room_add_garage"
+  entity: "script.patio_add_move"
 
-drop_garage:
-  title: Drop Garage
+drop_move:
+  title: Drop Move
   widget_type: script
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
-  entity: "script.family_room_drop_garage"
+  entity: "script.drop_move"
 
 office_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.office
   truncate_name: 64
   title: Office
 
 patio_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.patio
   truncate_name: 64
   title: Patio
 
 family_room_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.family_room
   truncate_name: 64
   title: Family Room
 
 garage_sonos:
-  widget_type: media_player
+  widget_type: combosonos
   entity: media_player.garage
   truncate_name: 64
   title: Garage  
@@ -260,8 +253,6 @@ weather_now:
 reload:
   widget_type: reload
   title: Reload
-  icon_active: fa-sync-alt
-  icon_inactive: fa-sync-alt
 
 # Generated Playlists
 # 
@@ -300,13 +291,6 @@ patio_pl_the_coffee_house:
   playlist: "14 - The Coffee House"
   logo: "/custom_css/img/coffee-house.png"
   
-patio_pl_yacht_rock:
-  widget_type: playlist
-  entity: media_player.patio
-  title: "Yacht Rock"
-  playlist: "311 - Yacht Rock Radio"
-  logo: "/custom_css/img/yacht-rock.png"
-
 patio_pl_tom_petty_radio:
   widget_type: playlist
   entity: media_player.patio
@@ -406,7 +390,7 @@ patio_pl_fall_out_boy:
 patio_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.patio
-  title: "Peter Gabriel Radio"
+  title: "Peter Gabriel"
   playlist: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
@@ -423,12 +407,22 @@ patio_pl_dave_matthews:
   title: "Dave Matthews"
   playlist: "716 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
-
-patio_pl_buffett:
+  
+  
+patio_pl_yacht_rock:
   widget_type: playlist
   entity: media_player.patio
-  title: "Margaritaville"
-  playlist: "24 - Buffett"
-  logo: "/custom_css/img/buffett.png"
-  
-  
+  title: "Yacht Rock"
+  playlist: "311 - Yacht Rock Radio"
+  logo: "/custom_css/img/yacht-rock.png"
+
+nav_to_move:
+  widget_type: navigate
+  title: Sonos Move
+  title2: Panel
+  dashboard: move
+  timeout: 5
+  return: patio-fire
+  icon_inactive: fa-leaf
+  icon_active: fa-leaf
+  sticky: 1
