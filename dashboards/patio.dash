@@ -23,7 +23,7 @@ layout:
   - family_room_turn_off(2x1), patio_add_family_room, drop_family_room
   - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7
   - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_rockbar, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_buffett
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock, spacer, nav_to_weather, nav_to_kitchen, reload
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock, patio_pl_spectrum, nav_to_weather, nav_to_kitchen, reload
 
 patio_label:
   widget_type: label
@@ -63,9 +63,10 @@ palm_tree_lights:
   widget_type: switch
   entity: switch.palm_tree_switch
   title: Palm Tree
-  icon_on: fa-tree-on
-  icon_off: fa-tree
+  icon_on: fa-traffic-light
+  icon_off: fa-traffic-light
 
+  
 morning_room_lamp:
   widget_type: switch
   entity: switch.morning_room_lamp_switch
@@ -341,6 +342,13 @@ patio_pl_70s_on_7:
   title: "70s on 7"
   playlist: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
+  
+patio_pl_spectrum:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Spectrum"
+  playlist: "28 - The Spectrum"
+  logo: "/custom_css/img/spectrum.png"
   
 patio_pl_80s_on_8:
   widget_type: playlist
