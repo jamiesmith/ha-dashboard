@@ -54,7 +54,7 @@ small_garage_door:
   state_text: 1
 
 garage_sonos:
-  widget_type: combosonos
+  widget_type: media_player
   entity: media_player.garage
   truncate_name: 64
   title: Garage  

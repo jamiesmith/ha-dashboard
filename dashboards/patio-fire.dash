@@ -20,7 +20,7 @@ global_parameters:
 layout:
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock, patio_pl_spectrum, patio_pl_tom_petty_radio, party_lights, patio_volume_up
   - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
-  - patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_grateful_dead, spacer, patio_add_move, patio_add_family_room, patio_turn_off
+  - patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_grateful_dead, patio_pl_hamilton, patio_add_move, patio_add_family_room, patio_turn_off
   - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_deep_tracks, nav_to_move, drop_move, drop_family_room, reload
 
 party_lights:
@@ -256,6 +256,13 @@ reload:
 
 # Generated Playlists
 # 
+patio_pl_hamilton:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Hamilton"
+  playlist: "Hamilton"
+  logo: "/custom_css/img/hamilton.jpg"
+
 patio_pl_grateful_dead:
   widget_type: playlist
   entity: media_player.patio

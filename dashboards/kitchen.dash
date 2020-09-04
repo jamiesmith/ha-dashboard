@@ -23,7 +23,7 @@ layout:
   - family_room_toggle_mute(2x1)
   - upstairs_nest(2x1), family_room_previous_track, family_room_next_track, family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
   - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_unplugged, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
-  - family_room_pl_80s_on_8, family_room_pl_90s_on_9, family_room_pl_rockbar, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, spacer, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_apple_tv
+  - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_90s_on_9, family_room_pl_rockbar, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_apple_tv
   - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, family_room_pl_yacht_rock, nav_to_patio, nav_to_weather, nav_to_garage, reload
 
 # Lighting
@@ -87,7 +87,7 @@ liquor_cabinet_toggle:
 morning_room_lamp:
   widget_type: switch
   entity: switch.morning_room_lamp_switch
-  title: Morning Room Lamp
+  title: Morning Room
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
 
@@ -100,7 +100,7 @@ landscape_lights:
 
 kitchen_light_level:
   widget_type: light
-  title: Kitchen Light Level
+  title: Kitchen Light
   icon_on: mdi-lightbulb-on
   icon_off: mdi-lightbulb
   units: " %"
@@ -319,6 +319,13 @@ reload:
   title: Reload
   icon_active: fa-sync-alt
   icon_inactive: fa-sync-alt
+
+family_room_pl_hamilton:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Hamilton"
+  playlist: "Hamilton"
+  logo: "/custom_css/img/hamilton.jpg"
 
 # Generated Playlists
 # 
