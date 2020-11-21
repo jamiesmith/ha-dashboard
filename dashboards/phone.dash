@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, party_lights, patio_volume_up
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_rockbar, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
+  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
   - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_add_family_room, drop_family_room, reload, patio_turn_off
   - 
 
@@ -295,12 +295,12 @@ patio_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-patio_pl_rockbar:
+patio_pl_poprocks:
   widget_type: playlist
   entity: media_player.patio
   title: "RockBar"
   playlist: "313 - RockBar"
-  logo: "/custom_css/img/rockbar.png"
+  logo: "/custom_css/img/poprocks.svg"
   
 patio_pl_50s_on_5:
   widget_type: playlist

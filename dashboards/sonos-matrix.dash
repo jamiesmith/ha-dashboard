@@ -1,0 +1,268 @@
+#
+# Main arguments, all optional
+#
+title: Sonos Panel
+widget_dimensions: [120, 120]
+widget_size: [1, 1]
+widget_margins: [5, 5]
+scalable: true
+columns: 8
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - family_room_label(2x1), nav_to_index, family_room_add_patio, family_room_add_move, family_room_add_garage, family_room_add_office, drop_family_room
+  - patio_label(2x1), patio_add_family_room, spacer, patio_add_move, patio_add_garage, patio_add_office, drop_patio
+  - move_label(2x1), move_add_family_room, move_add_patio, spacer, move_add_garage, move_add_office, drop_move
+  - garage_label(2x1), garage_add_family_room, garage_add_patio, garage_add_move, spacer, garage_add_office, drop_garage
+  - office_label(2x1), office_add_family_room, office_add_patio, office_add_move, office_add_garage, spacer, drop_office
+drop_family_room:
+  title: DROP Family Room
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_family_room"
+
+family_room_label:
+  widget_type: label
+  title: "Add this -->"
+  title2: "to ↓"
+  text: Family Room
+  value_style: "font-size: 200%"
+
+
+family_room_add_patio:
+  title: Patio
+#  title2: (To family_room)
+  icon_on: mdi-fire
+  icon_off: mdi-fire
+  widget_type: script
+  entity: "script.family_room_add_patio"
+
+family_room_add_move:
+  title: Move
+#  title2: (To family_room)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.family_room_add_move"
+
+family_room_add_garage:
+  title: Garage
+#  title2: (To family_room)
+  icon_on: mdi-garage
+  icon_off: mdi-garage
+  widget_type: script
+  entity: "script.family_room_add_garage"
+
+family_room_add_office:
+  title: Office
+#  title2: (To family_room)
+  icon_on: mdi-monitor
+  icon_off: mdi-monitor
+  widget_type: script
+  entity: "script.family_room_add_office"
+
+drop_patio:
+  title: DROP Patio
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_patio"
+
+patio_label:
+  widget_type: label
+  title: "Add this -->"
+  title2: "to ↓"
+  text: Patio
+  value_style: "font-size: 200%"
+
+
+patio_add_family_room:
+  title: Family Room
+#  title2: (To patio)
+  icon_on: fa-couch
+  icon_off: fa-couch
+  widget_type: script
+  entity: "script.patio_add_family_room"
+
+patio_add_move:
+  title: Move
+#  title2: (To patio)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.patio_add_move"
+
+patio_add_garage:
+  title: Garage
+#  title2: (To patio)
+  icon_on: mdi-garage
+  icon_off: mdi-garage
+  widget_type: script
+  entity: "script.patio_add_garage"
+
+patio_add_office:
+  title: Office
+#  title2: (To patio)
+  icon_on: mdi-monitor
+  icon_off: mdi-monitor
+  widget_type: script
+  entity: "script.patio_add_office"
+
+drop_move:
+  title: DROP Move
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_move"
+
+move_label:
+  widget_type: label
+  title: "Add this -->"
+  title2: "to ↓"
+  text: Move
+  value_style: "font-size: 200%"
+
+
+move_add_family_room:
+  title: Family Room
+#  title2: (To move)
+  icon_on: fa-couch
+  icon_off: fa-couch
+  widget_type: script
+  entity: "script.move_add_family_room"
+
+move_add_patio:
+  title: Patio
+#  title2: (To move)
+  icon_on: mdi-fire
+  icon_off: mdi-fire
+  widget_type: script
+  entity: "script.move_add_patio"
+
+move_add_garage:
+  title: Garage
+#  title2: (To move)
+  icon_on: mdi-garage
+  icon_off: mdi-garage
+  widget_type: script
+  entity: "script.move_add_garage"
+
+move_add_office:
+  title: Office
+#  title2: (To move)
+  icon_on: mdi-monitor
+  icon_off: mdi-monitor
+  widget_type: script
+  entity: "script.move_add_office"
+
+drop_garage:
+  title: DROP Garage
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_garage"
+
+garage_label:
+  widget_type: label
+  title: "Add this -->"
+  title2: "to ↓"
+  text: Garage
+  value_style: "font-size: 200%"
+
+
+garage_add_family_room:
+  title: Family Room
+#  title2: (To garage)
+  icon_on: fa-couch
+  icon_off: fa-couch
+  widget_type: script
+  entity: "script.garage_add_family_room"
+
+garage_add_patio:
+  title: Patio
+#  title2: (To garage)
+  icon_on: mdi-fire
+  icon_off: mdi-fire
+  widget_type: script
+  entity: "script.garage_add_patio"
+
+garage_add_move:
+  title: Move
+#  title2: (To garage)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.garage_add_move"
+
+garage_add_office:
+  title: Office
+#  title2: (To garage)
+  icon_on: mdi-monitor
+  icon_off: mdi-monitor
+  widget_type: script
+  entity: "script.garage_add_office"
+
+drop_office:
+  title: DROP Office
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_office"
+
+office_label:
+  widget_type: label
+  title: "Add this -->"
+  title2: "to ↓"
+  text: Office
+  value_style: "font-size: 200%"
+
+
+office_add_family_room:
+  title: Family Room
+#  title2: (To office)
+  icon_on: fa-couch
+  icon_off: fa-couch
+  widget_type: script
+  entity: "script.office_add_family_room"
+
+office_add_patio:
+  title: Patio
+#  title2: (To office)
+  icon_on: mdi-fire
+  icon_off: mdi-fire
+  widget_type: script
+  entity: "script.office_add_patio"
+
+office_add_move:
+  title: Move
+#  title2: (To office)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.office_add_move"
+
+office_add_garage:
+  title: Garage
+#  title2: (To office)
+  icon_on: mdi-garage
+  icon_off: mdi-garage
+  widget_type: script
+  entity: "script.office_add_garage"
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
+

@@ -22,8 +22,17 @@ layout:
   - office_volume_down(2x1)
   - family_room_turn_off(2x1), office_add_family_room, drop_family_room
   - office_pl_unplugged, office_pl_fall_out_boy, office_pl_peter_gabriel_radio, office_pl_imagine_dragons_radio, office_pl_jimmy_buffett, office_pl_50s_on_5, office_pl_60s_on_6, office_pl_70s_on_7
-  - office_pl_80s_on_8, office_pl_90s_on_9, office_pl_rockbar, office_pl_real_jazz, office_pl_bluesville, office_pl_dave_matthews
-  - office_pl_classic_rewind, office_pl_classic_vinyl, office_pl_deep_tracks, office_pl_grateful_dead, office_pl_tom_petty_radio, office_pl_yacht_rock, spacer, nav_to_weather, nav_to_kitchen, reload
+  - office_pl_80s_on_8, office_pl_90s_on_9, office_pl_poprocks, office_pl_real_jazz, office_pl_bluesville, office_pl_dave_matthews
+  - office_pl_classic_rewind, office_pl_classic_vinyl, office_pl_deep_tracks, office_pl_grateful_dead, office_pl_tom_petty_radio, office_pl_yacht_rock, spacer, nav_to_index, nav_to_kitchen, reload
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
 
 office_label:
   widget_type: label
@@ -314,12 +323,12 @@ office_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-office_pl_rockbar:
+office_pl_poprocks:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "RockBar"
   playlist: "313 - RockBar"
-  logo: "/custom_css/img/rockbar.png"
+  logo: "/custom_css/img/poprocks.svg"
   
 office_pl_50s_on_5:
   widget_type: playlist

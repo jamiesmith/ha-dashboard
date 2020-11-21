@@ -22,8 +22,17 @@ layout:
   - move_volume_down(2x1)
   - family_room_turn_off(2x1), move_add_family_room, drop_family_room
   - move_pl_unplugged, move_pl_fall_out_boy, move_pl_peter_gabriel_radio, move_pl_imagine_dragons_radio, move_pl_jimmy_buffett, move_pl_50s_on_5, move_pl_60s_on_6, move_pl_70s_on_7
-  - move_pl_80s_on_8, move_pl_90s_on_9, move_pl_rockbar, move_pl_real_jazz, move_pl_bluesville, move_pl_dave_matthews
-  - move_pl_classic_rewind, move_pl_classic_vinyl, move_pl_deep_tracks, move_pl_grateful_dead, move_pl_tom_petty_radio, move_pl_yacht_rock, spacer, nav_to_weather, nav_to_kitchen, reload
+  - move_pl_80s_on_8, move_pl_90s_on_9, move_pl_poprocks, move_pl_real_jazz, move_pl_bluesville, move_pl_dave_matthews
+  - move_pl_classic_rewind, move_pl_classic_vinyl, move_pl_deep_tracks, move_pl_grateful_dead, move_pl_tom_petty_radio, move_pl_yacht_rock, nav_to_index, nav_to_weather, nav_to_kitchen, reload
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
 
 move_label:
   widget_type: label
@@ -314,12 +323,12 @@ move_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-move_pl_rockbar:
+move_pl_poprocks:
   widget_type: playlist
   entity: media_player.move
   title: "RockBar"
   playlist: "313 - RockBar"
-  logo: "/custom_css/img/rockbar.png"
+  logo: "/custom_css/img/poprocks.svg"
   
 move_pl_50s_on_5:
   widget_type: playlist

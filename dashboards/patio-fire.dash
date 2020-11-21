@@ -18,10 +18,19 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock, patio_pl_spectrum, patio_pl_tom_petty_radio, party_lights, patio_volume_up
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock, patio_pl_spectrum, porch_lights, party_lights, patio_volume_up
   - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
-  - patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_grateful_dead, patio_pl_hamilton, patio_add_move, patio_add_family_room, patio_turn_off
-  - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_deep_tracks, nav_to_move, drop_move, drop_family_room, reload
+  - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_add_family_room, patio_turn_off
+  - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_deep_tracks, nav_to_index, nav_to_sonos_matrix, drop_family_room, reload
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
 
 party_lights:
   widget_type: group
@@ -33,6 +42,17 @@ party_lights:
 patio_label:
   widget_type: label
   title: Patio
+
+nav_to_sonos_matrix:
+  widget_type: navigate
+  title: Sonos
+  title2: Matrix
+  dashboard: sonos-matrix
+  timeout: 10
+  return: patio-fire
+  icon_inactive: fa-headphones
+  icon_active: fa-headphones
+  sticky: 1
 
 # Lighting
 #
@@ -269,6 +289,13 @@ patio_pl_grateful_dead:
   title: "Grateful Dead"
   playlist: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
+
+patio_pl_poprocks:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "PopRocks"
+  playlist: "12 - PopRocks"
+  logo: "/custom_css/img/PopRocks.svg"
   
 patio_pl_classic_rewind:
   widget_type: playlist
@@ -305,12 +332,12 @@ patio_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-patio_pl_rockbar:
+patio_pl_poprocks:
   widget_type: playlist
   entity: media_player.patio
   title: "RockBar"
   playlist: "313 - RockBar"
-  logo: "/custom_css/img/rockbar.png"
+  logo: "/custom_css/img/poprocks.svg"
   
 patio_pl_50s_on_5:
   widget_type: playlist
@@ -440,3 +467,10 @@ nav_to_move:
   icon_inactive: fa-leaf
   icon_active: fa-leaf
   sticky: 1
+
+porch_lights:
+  widget_type: switch
+  entity: switch.patio_party_lights_switch
+  title: Porch Lights
+  icon_on: fa-traffic-light
+  icon_off: fa-traffic-light

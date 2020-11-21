@@ -12,7 +12,8 @@ global_parameters:
     media_player:
       step: 5
 
-layout:      
+layout:
+  - nav_to_index
   - my_frame(10x7)
   # JRS-TMP - forecast_1(2x1), weather_now(3x2), weather_hourly_summary(2x2)
   # JRS-TMP - forecast_2(2x1)
@@ -20,6 +21,15 @@ layout:
   # JRS-TMP - forecast_4(2x1)
   # JRS-TMP - forecast_5(2x1)
   # JRS-TMP - forecast_6(2x1), spacer(4x1)
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
 
 iframe:
   widget_type: iframe

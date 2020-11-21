@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - move_pl_classic_rewind, move_pl_classic_vinyl, move_pl_deep_tracks, move_pl_grateful_dead, move_pl_tom_petty_radio, party_lights, move_volume_up
-  - move_pl_80s_on_8, move_pl_90s_on_9, move_pl_rockbar, move_pl_unplugged, move_pl_bluesville, move_pl_dave_matthews, move_volume_down
+  - move_pl_80s_on_8, move_pl_90s_on_9, move_pl_poprocks, move_pl_unplugged, move_pl_bluesville, move_pl_dave_matthews, move_volume_down
   - move_pl_peter_gabriel_radio, move_pl_imagine_dragons_radio, move_pl_jimmy_buffett, move_add_family_room, drop_family_room, reload, move_turn_off
   - 
 
@@ -295,12 +295,12 @@ move_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-move_pl_rockbar:
+move_pl_poprocks:
   widget_type: playlist
   entity: media_player.move
   title: "RockBar"
   playlist: "313 - RockBar"
-  logo: "/custom_css/img/rockbar.png"
+  logo: "/custom_css/img/poprocks.svg"
   
 move_pl_50s_on_5:
   widget_type: playlist

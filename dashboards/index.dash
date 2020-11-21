@@ -1,0 +1,140 @@
+#
+# Main arguments, all optional
+#
+title: Index Panel
+widget_dimensions: [140, 140]
+widget_size: [1, 1]
+widget_margins: [2, 2]
+scalable: true
+columns: 7
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - nav_to_kitchen, nav_to_patio, nav_to_guest, nav_to_move, nav_to_weather
+  - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio-fire, nav_to_phone
+  - nav_to_sonos_matrix
+
+nav_to_garage:
+  widget_type: navigate
+  title: garage
+  title2: Dashboard
+  dashboard: garage
+  icon_inactive: mdi-garage
+  icon_active: mdi-garage
+  sticky: 1
+
+nav_to_guest:
+  widget_type: navigate
+  title: guest
+  title2: Dashboard
+  dashboard: guest
+  icon_inactive: fa-bed
+  icon_active: fa-bed
+  sticky: 1
+
+nav_to_sonos_matrix:
+  widget_type: navigate
+  title: Sonos
+  title2: Matrix
+  dashboard: sonos-matrix
+  icon_inactive: fa-headphones
+  icon_active: fa-headphones
+  sticky: 1
+
+nav_to_kitchen:
+  widget_type: navigate
+  title: kitchen
+  title2: Dashboard
+  dashboard: kitchen
+  icon_inactive: fa-coffee
+  icon_active: fa-coffee
+  sticky: 1
+
+nav_to_main:
+  widget_type: navigate
+  title: main
+  title2: Dashboard
+  dashboard: main
+  icon_inactive: mdi-garage
+  icon_active: mdi-garage
+  sticky: 1
+
+nav_to_move:
+  widget_type: navigate
+  title: move
+  title2: Dashboard
+  dashboard: move
+  icon_inactive: mdi-speaker
+  icon_active: mdi-speaker
+  sticky: 1
+
+nav_to_move_phone:
+  widget_type: navigate
+  title: move_phone
+  title2: Dashboard
+  dashboard: move_phone
+  icon_inactive: mdi-speaker-bluetooth
+  icon_active: mdi-speaker-bluetooth
+  sticky: 1
+
+nav_to_office:
+  widget_type: navigate
+  title: office
+  title2: Dashboard
+  dashboard: office
+  icon_inactive: mdi-monitor
+  icon_active: mdi-monitor
+  sticky: 1
+
+nav_to_patio:
+  widget_type: navigate
+  title: patio
+  title2: Dashboard
+  dashboard: patio
+  icon_inactive: mdi-fan
+  icon_active: mdi-leaf
+  sticky: 1
+
+nav_to_patio-fire:
+  widget_type: navigate
+  title: patio-fire
+  title2: Dashboard
+  dashboard: patio-fire
+  icon_inactive: mdi-fire
+  icon_active: mdi-fire
+  sticky: 1
+
+nav_to_phone:
+  widget_type: navigate
+  title: phone
+  title2: Dashboard
+  dashboard: phone
+  icon_inactive: mdi-phone
+  icon_active: mdi-phone
+  sticky: 1
+
+nav_to_test:
+  widget_type: navigate
+  title: test
+  title2: Dashboard
+  dashboard: test
+  icon_inactive: mdi-garage
+  icon_active: mdi-garage
+  sticky: 1
+
+nav_to_weather:
+  widget_type: navigate
+  title: weather
+  title2: Dashboard
+  dashboard: weather
+  icon_inactive: mdi-cloud
+  icon_active: mdi-cloud
+  sticky: 1
+

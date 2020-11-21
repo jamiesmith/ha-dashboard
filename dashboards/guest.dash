@@ -19,8 +19,17 @@ global_parameters:
 layout:
   - guest_room_pl_grateful_dead, guest_room_pl_classic_rewind, guest_room_pl_classic_vinyl, guest_room_pl_deep_tracks, guest_room_pl_tom_petty_radio,  guest_room_volume_up
   - guest_room_pl_80s_on_8, guest_room_pl_90s_on_9, guest_room_pl_unplugged, guest_room_pl_bluesville, guest_room_pl_dave_matthews, guest_room_volume_down
-  - guest_room_pl_peter_gabriel_radio, guest_room_pl_jimmy_buffett, spacer(2x1), reload, guest_room_turn_off
+  - guest_room_pl_peter_gabriel_radio, guest_room_pl_jimmy_buffett, spacer(2x1), nav_to_index, reload, guest_room_turn_off
 
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
 
 party_lights:
   widget_type: group
@@ -295,12 +304,12 @@ guest_room_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-guest_room_pl_rockbar:
+guest_room_pl_poprocks:
   widget_type: playlist
   entity: media_player.guest_room
   title: "RockBar"
   playlist: "313 - RockBar"
-  logo: "/custom_css/img/rockbar.png"
+  logo: "/custom_css/img/poprocks.svg"
   
 guest_room_pl_50s_on_5:
   widget_type: playlist

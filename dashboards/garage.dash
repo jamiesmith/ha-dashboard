@@ -20,9 +20,18 @@ layout:
   - clock(3x1), garage_pl_deep_tracks, garage_pl_bluesville, weather_now(2x2)
   - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl
   - garage_pl_tom_petty_radio, garage_pl_grateful_dead
-  - garage_volume_down, garage_media_play_pause, garage_volume_up
+  - garage_volume_down, garage_media_play_pause, garage_volume_up, spacer(3x1), nav_to_index
   - family_room_add_garage, drop_garage, spacer(2x1), nav_to_main, garage_candles, reload
   
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
 
 clock:
   widget_type: clock
