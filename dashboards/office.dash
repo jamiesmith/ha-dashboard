@@ -326,8 +326,8 @@ office_pl_tom_petty_radio:
 office_pl_poprocks:
   widget_type: playlist
   entity: media_player.office_sonos
-  title: "RockBar"
-  playlist: "313 - RockBar"
+  title: "PopRocks"
+  playlist: "313 - PopRocks"
   logo: "/custom_css/img/poprocks.svg"
   
 office_pl_50s_on_5:

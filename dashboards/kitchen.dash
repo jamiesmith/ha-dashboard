@@ -422,8 +422,8 @@ family_room_pl_poprocks:
 family_room_pl_poprocks:
   widget_type: playlist
   entity: media_player.family_room
-  title: "RockBar"
-  playlist: "313 - RockBar"
+  title: "PopRocks"
+  playlist: "313 - PopRocks"
   logo: "/custom_css/img/poprocks.svg"
   
 family_room_pl_50s_on_5:
