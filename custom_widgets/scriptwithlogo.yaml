@@ -1,4 +1,4 @@
-widget_type: baseswitch
+widget_type: baseswitchwithlogo
 entity: {{entity}}
 state_inactive: "off"
 state_active: "on"
@@ -6,7 +6,7 @@ enable: 1
 momentary: 1000
 ignore_state: 1
 post_service_active:
-    service: sonos/join
+    service: homeassistant/turn_on
     entity_id: {{entity}}
 post_service_inactive:
     service: homeassistant/turn_off
@@ -14,6 +14,7 @@ post_service_inactive:
 fields:
   title: {{title}}
   title2: {{title2}}
+  logo: {{logo}}
   icon: ""
   icon_style: ""
   state_text: ""

@@ -22,6 +22,7 @@ layout:
   - move_label(2x1), move_add_family_room, move_add_patio, spacer, move_add_garage, move_add_office, drop_move
   - garage_label(2x1), garage_add_family_room, garage_add_patio, garage_add_move, spacer, garage_add_office, drop_garage
   - office_label(2x1), office_add_family_room, office_add_patio, office_add_move, office_add_garage, spacer, drop_office
+
 drop_family_room:
   title: DROP Family Room
   widget_type: script

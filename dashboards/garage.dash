@@ -20,7 +20,7 @@ layout:
   - clock(3x1), garage_pl_deep_tracks, garage_pl_bluesville, weather_now(2x2)
   - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl
   - garage_pl_tom_petty_radio, garage_pl_grateful_dead
-  - garage_volume_down, garage_media_play_pause, garage_volume_up, spacer(3x1), nav_to_index
+  - garage_volume_down, garage_media_play_pause, garage_volume_up, patio_pl_80s_on_8, spacer(2x1), nav_to_index
   - family_room_add_garage, drop_garage, spacer(2x1), nav_to_main, garage_candles, reload
   
 
@@ -128,6 +128,13 @@ garage_media_play_pause:
   icon_off: mdi-play-pause
   widget_type: script
   entity: "script.garage_media_play_pause"
+
+patio_pl_80s_on_8:
+  widget_type: playlist
+  entity: media_player.garage
+  title: "80s on 8"
+  playlist: "8 - 80s on 8"
+  logo: "/custom_css/img/80s.png"
 
 garage_volume_up:  
   title: Volume Up

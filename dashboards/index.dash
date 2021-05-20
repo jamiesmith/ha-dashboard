@@ -20,6 +20,7 @@ layout:
   - nav_to_kitchen, nav_to_patio, nav_to_guest, nav_to_move, nav_to_weather
   - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio-fire, nav_to_phone
   - nav_to_sonos_matrix
+  - can_i_get_you_something
 
 nav_to_garage:
   widget_type: navigate
@@ -138,3 +139,13 @@ nav_to_weather:
   icon_active: mdi-cloud
   sticky: 1
 
+can_i_get_you_something:
+  widget_type: scriptwithlogo
+  title: "Can I get you something"
+  entity: script.mqtt_publish_bartender
+  logo: "/custom_css/img/cocktail.png"
+
+
+
+  
+  

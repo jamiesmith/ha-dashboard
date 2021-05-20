@@ -19,7 +19,7 @@ global_parameters:
 
 layout:
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock, patio_pl_spectrum, porch_lights, party_lights, patio_volume_up
-  - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
+  - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_e_street_radio, patio_pl_dave_matthews, patio_volume_down
   - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_add_family_room, patio_turn_off
   - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_deep_tracks, nav_to_index, nav_to_sonos_matrix, drop_family_room, reload
 
@@ -295,7 +295,7 @@ patio_pl_poprocks:
   entity: media_player.patio
   title: "PopRocks"
   playlist: "12 - PopRocks"
-  logo: "/custom_css/img/PopRocks.svg"
+  logo: "/custom_css/img/poprocks.svg"
   
 patio_pl_classic_rewind:
   widget_type: playlist
@@ -331,13 +331,6 @@ patio_pl_tom_petty_radio:
   title: "Tom Petty Radio"
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
-  
-patio_pl_poprocks:
-  widget_type: playlist
-  entity: media_player.patio
-  title: "PopRocks"
-  playlist: "313 - PopRocks"
-  logo: "/custom_css/img/poprocks.svg"
   
 patio_pl_50s_on_5:
   widget_type: playlist
@@ -456,6 +449,27 @@ patio_pl_yacht_rock:
   title: "Yacht Rock"
   playlist: "311 - Yacht Rock Radio"
   logo: "/custom_css/img/yacht-rock.png"
+
+patio_pl_bob_marley:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Bob Marley"
+  playlist: "19 - Bob Marley"
+  logo: "/custom_css/img/bob-marley.png"
+
+patio_pl_alt_nation:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Alt Nation"
+  playlist: "36 - Alt Nation"
+  logo: "/custom_css/img/alt-nation.png"
+
+patio_pl_e_street_radio:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Alt Nation"
+  playlist: "20 - E Street Radio"
+  logo: "/custom_css/img/e-street-radio.png"
 
 nav_to_move:
   widget_type: navigate

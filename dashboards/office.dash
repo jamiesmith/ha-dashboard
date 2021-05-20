@@ -327,7 +327,7 @@ office_pl_poprocks:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "PopRocks"
-  playlist: "313 - PopRocks"
+  playlist: "12 - PopRocks"
   logo: "/custom_css/img/poprocks.svg"
   
 office_pl_50s_on_5:

@@ -299,7 +299,7 @@ move_pl_poprocks:
   widget_type: playlist
   entity: media_player.move
   title: "PopRocks"
-  playlist: "313 - PopRocks"
+  playlist: "12 - PopRocks"
   logo: "/custom_css/img/poprocks.svg"
   
 move_pl_50s_on_5:

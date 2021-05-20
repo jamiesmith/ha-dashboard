@@ -22,8 +22,8 @@ layout:
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up(2x1)
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute(2x1)
   - upstairs_nest(2x1), family_room_previous_track, family_room_next_track, family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
-  - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_unplugged, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
-  - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_90s_on_9, family_room_pl_poprocks, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_apple_tv
+  - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_bob_marley, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
+  - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_apple_tv
   - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, family_room_pl_yacht_rock, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload
 
 # Lighting
@@ -417,15 +417,8 @@ family_room_pl_poprocks:
   entity: media_player.family_room
   title: "PopRocks"
   playlist: "12 - PopRocks"
-  logo: "/custom_css/img/PopRocks.svg"
-
-family_room_pl_poprocks:
-  widget_type: playlist
-  entity: media_player.family_room
-  title: "PopRocks"
-  playlist: "313 - PopRocks"
   logo: "/custom_css/img/poprocks.svg"
-  
+
 family_room_pl_50s_on_5:
   widget_type: playlist
   entity: media_player.family_room
@@ -542,3 +535,18 @@ family_room_pl_holly:
   title: "Holly"
   playlist: "752 - Holly"
   logo: "/custom_css/img/HollyLogo.png"
+
+family_room_pl_bob_marley:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Bob Marley"
+  playlist: "19 - Bob Marley"
+  logo: "/custom_css/img/bob-marley.png"
+
+family_room_pl_alt_nation:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Alt Nation"
+  playlist: "36 - Alt Nation"
+  logo: "/custom_css/img/alt-nation.png"
+
