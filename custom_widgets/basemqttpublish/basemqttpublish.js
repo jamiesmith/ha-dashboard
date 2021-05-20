@@ -1,4 +1,4 @@
-function baseplaylist(widget_id, url, skin, parameters)
+function basemqttpublish(widget_id, url, skin, parameters)
 {
     // Will be using "self" throughout for the various flavors of "this"
     // so for consistency ...
@@ -12,13 +12,11 @@ function baseplaylist(widget_id, url, skin, parameters)
     // Store on brightness or fallback to a default
         
     // Parameters may come in useful later on
+    //
     self.parameters = parameters;
-    self.playlist = parameters.fields.playlist;
+    self.topic = parameters.fields.topic;
+    self.payload = parameters.fields.payload;
 	
-    // Toggle needs to be referenced from self for the timeout function
-    
-    self.toggle = toggle;
-    
     // Define callbacks for on click events
     // They are defined as functions below and can be any name as long as the
     // 'self'variables match the callbacks array below
@@ -44,10 +42,7 @@ function baseplaylist(widget_id, url, skin, parameters)
     self.OnStateAvailable = OnStateAvailable
     self.OnStateUpdate = OnStateUpdate
     
-    var monitored_entities = 
-        [
-            {"entity": parameters.entity, "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        ];
+    var monitored_entities = [];
     
     // Finally, call the parent constructor to get things moving
     
@@ -80,18 +75,11 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     function OnButtonClick(self)
     {
-	console.log("OBC", self.playlist);
-	args = self.parameters.post_service_playlist
-	
-	args["source"] = self.playlist
-	// console.log("Calling Service => ", args);
-	
+	args = self.parameters.post_service;
+	args["payload"] = self.payload
 	self.call_service(self, args);
     }
     
-    function toggle(self)
-    {
-    }
     
     // Set view is a helper function to set all aspects of the widget to its 
     // current state - it is called by widget code when an update occurs

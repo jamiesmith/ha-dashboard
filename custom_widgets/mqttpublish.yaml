@@ -1,0 +1,20 @@
+widget_type: basemqttpublish
+entity: {{entity}}
+state_active: "on"
+state_inactive: "off"
+enable: 1
+post_service:
+    service: mqtt/publish
+    topic: {{topic}}
+    payload: {{payload}}
+fields:
+  title: {{title}}
+  logo: {{logo}}
+  topic: {{topic}}
+  payload: {{payload}}
+icons: []
+static_icons: []
+css: []
+static_css:
+  title_style: $switch_title_style
+  widget_style: $switch_widget_style

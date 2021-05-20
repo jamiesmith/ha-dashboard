@@ -17,9 +17,9 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label
-  - weather_now(2x3), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1)
-  - patio_volume_down(2x1)
+  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label, spacer, cocktail
+  - weather_now(2x3), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1), spacer, are_you_walking
+  - patio_volume_down(2x1), spacer, you_sit_on_a_throne_of_lies
   - family_room_turn_off(2x1), patio_add_family_room, drop_family_room
   - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7, spacer, nav_to_sonos_matrix
   - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_buffett, spacer(2x1), nav_to_index
@@ -467,3 +467,26 @@ patio_pl_buffett:
   logo: "/custom_css/img/buffett.png"
   
   
+cocktail:
+  widget_type: mqttpublish
+  title: "Cocktail"
+  topic: "say/amy"
+  payload: "bartender"
+  entity: script.mqtt_publish_bartender
+  logo: "/custom_css/img/cocktail.png"
+
+you_sit_on_a_throne_of_lies:
+  widget_type: mqttpublish
+  title: "Throne of lies"
+  topic: "say/amy"
+  payload: "lies"
+  entity: script.mqtt_publish_lies
+  logo: "/custom_css/img/throne.png"
+
+are_you_walking:
+  widget_type: mqttpublish
+  title: "Are you walking?"
+  topic: "say/amy"
+  payload: "walking"
+  entity: script.mqtt_publish_walking
+  logo: "/custom_css/img/dog.png"
