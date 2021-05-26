@@ -23,7 +23,7 @@ layout:
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute(2x1)
   - upstairs_nest(2x1), family_room_previous_track, family_room_next_track, family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
   - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_bob_marley, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
-  - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_apple_tv
+  - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, what_can_i_get_you, cocktail, family_room_apple_tv
   - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, family_room_pl_yacht_rock, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload
 
 # Lighting
@@ -549,4 +549,21 @@ family_room_pl_alt_nation:
   title: "Alt Nation"
   playlist: "36 - Alt Nation"
   logo: "/custom_css/img/alt-nation.png"
+
+cocktail:
+  widget_type: mqttpublish
+  title: "Cocktail"
+  topic: "say/amy"
+  payload: "Can I get you something?"
+  logo: "/custom_css/img/cocktail.png"
+
+what_can_i_get_you:
+  widget_type: mqttpublish
+  title: "What?"
+  topic: "say/amy"
+  payload: "What can I get you?"
+  logo: "/custom_css/img/question_mark.png"
+  
+
+
 

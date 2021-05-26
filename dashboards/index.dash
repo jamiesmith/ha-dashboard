@@ -19,7 +19,7 @@ global_parameters:
 layout:
   - nav_to_kitchen, nav_to_patio, nav_to_guest, nav_to_move, nav_to_weather
   - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio-fire, nav_to_phone
-  - nav_to_sonos_matrix, spacer, can_i_get_you_something, are_you_walking, you_sit_on_a_throne_of_lies
+  - nav_to_sonos_matrix, spacer, can_i_get_you_something, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
 
 nav_to_garage:
   widget_type: navigate
@@ -149,7 +149,7 @@ you_sit_on_a_throne_of_lies:
   widget_type: mqttpublish
   title: "Throne of lies"
   topic: "say/amy"
-  payload: "lies"
+  payload: "you sit on a throne of lies"
   logo: "/custom_css/img/throne.png"
 
 are_you_walking:
@@ -157,5 +157,12 @@ are_you_walking:
   title: "Are you walking?"
   topic: "say/amy"
   payload: "walking"
+  logo: "/custom_css/img/dog.png"
+
+not_time_to_eat:
+  widget_type: mqttpublish
+  title: "Not time to eat"
+  topic: "say/amy"
+  payload: "it is not time to eat"
   logo: "/custom_css/img/dog.png"
   

@@ -12,7 +12,11 @@ appdaemon:
       # ha_key: !secret http_password
       token: !secret hatoken
   disable_apps: 1
-  
+  latitude: !secret latitude
+  longitude: !secret longitude
+  elevation: 730
+  time_zone: America/New_York
+    
 hadashboard:
    dash_url: http://0.0.0.0:5050
    dash_dir: /conf/dashboards

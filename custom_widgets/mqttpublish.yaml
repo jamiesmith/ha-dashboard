@@ -12,7 +12,9 @@ fields:
   logo: {{logo}}
   topic: {{topic}}
   payload: {{payload}}
-icons: []
+icons: 
+  icon_on: $script_icon_on
+  icon_off: $script_icon_off
 static_icons: []
 css: []
 static_css:
