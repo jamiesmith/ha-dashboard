@@ -17,7 +17,7 @@ global_parameters:
       step: 5
 
 layout:
-  - nav_to_kitchen, nav_to_patio, nav_to_guest, nav_to_move, nav_to_weather
+  - nav_to_kitchen, nav_to_patio, nav_to_guest, nav_to_move, nav_to_weather, nav_to_say_it
   - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio-fire, nav_to_phone
   - nav_to_sonos_matrix, spacer, can_i_get_you_something, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
 
@@ -136,6 +136,15 @@ nav_to_weather:
   dashboard: weather
   icon_inactive: mdi-cloud
   icon_active: mdi-cloud
+  sticky: 1
+
+nav_to_say_it:
+  widget_type: navigate
+  title: Say it!
+  title2: Dashboard
+  dashboard: say-it
+  icon_inactive: mdi-bullhorn
+  icon_active: mdi-bullhorn
   sticky: 1
 
 can_i_get_you_something:

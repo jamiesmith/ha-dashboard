@@ -467,7 +467,7 @@ patio_pl_alt_nation:
 patio_pl_e_street_radio:
   widget_type: playlist
   entity: media_player.patio
-  title: "Alt Nation"
+  title: "E Street Radio"
   playlist: "20 - E Street Radio"
   logo: "/custom_css/img/e-street-radio.png"
 

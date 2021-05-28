@@ -1,0 +1,74 @@
+#
+# Main arguments, all optional
+#
+title: Index Panel
+widget_dimensions: [140, 140]
+widget_size: [1, 1]
+widget_margins: [2, 2]
+scalable: true
+columns: 7
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
+  - sorry_out_of_that
+  - nav_to_index
+
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
+
+can_i_get_you_something:
+  widget_type: mqttpublish
+  title: "Cocktail"
+  topic: "say/amy"
+  payload: "bartender"
+  logo: "/custom_css/img/cocktail.png"
+
+sorry_out_of_that:
+  widget_type: mqttpublish
+  title: "Sorry"
+  topic: "say/amy"
+  payload: "Sorry, we are out of that"
+  logo: "/custom_css/img/cocktail.png"
+
+you_sit_on_a_throne_of_lies:
+  widget_type: mqttpublish
+  title: "Throne of lies"
+  topic: "say/amy"
+  payload: "you sit on a throne of lies"
+  logo: "/custom_css/img/throne.png"
+
+are_you_walking:
+  widget_type: mqttpublish
+  title: "Are you walking?"
+  topic: "say/amy"
+  payload: "walking"
+  logo: "/custom_css/img/dog.png"
+
+not_time_to_eat:
+  widget_type: mqttpublish
+  title: "Not time to eat"
+  topic: "say/amy"
+  payload: "it is not time to eat"
+  logo: "/custom_css/img/dog.png"
+  
+what_can_i_get_you:
+  widget_type: mqttpublish
+  title: "What?"
+  topic: "say/amy"
+  payload: "What can I get you?"
+  logo: "/custom_css/img/question_mark.png"

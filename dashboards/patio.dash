@@ -17,13 +17,19 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label, spacer, cocktail
-  - weather_now(2x3), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1), spacer, are_you_walking
+  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label, porch_fan, cocktail
+  - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1), spacer, are_you_walking
   - patio_volume_down(2x1), spacer, you_sit_on_a_throne_of_lies
-  - family_room_turn_off(2x1), patio_add_family_room, drop_family_room
-  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7, spacer, nav_to_sonos_matrix
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_buffett, spacer(2x1), nav_to_index
+  - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room
+  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7, spacer
+  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, spacer(2x1), nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock, patio_pl_spectrum, nav_to_weather, nav_to_kitchen, reload
+
+patio_now_playing:
+  title: Now Playing
+  widget_type: entitypicture
+  entity: media_player.patio
+  base_url: http://192.168.1.60:8123
 
 nav_to_sonos_matrix:
   widget_type: navigate
@@ -92,6 +98,13 @@ porch_lights:
   title: Porch Lights
   icon_on: fa-traffic-light
   icon_off: fa-traffic-light
+
+porch_fan:
+  widget_type: switch
+  entity: switch.patio_temp_fan_switch
+  title: Porch Fan
+  icon_on: mdi-fan
+  icon_off: mdi-fan
 
   
 morning_room_lamp:
@@ -395,7 +408,6 @@ patio_pl_real_jazz:
   widget_type: playlist
   entity: media_player.patio
   title: "Real Jazz"
-  playlist: "67 - Real Jazz"
   logo: "/custom_css/img/real-jazz.png"
   
 patio_pl_bluesville:
@@ -422,6 +434,7 @@ patio_pl_jimmy_buffett:
   entity: media_player.patio
   title: "Jimmy Buffett"
   playlist: "Jimmy Buffett"
+  image_style: "top: 0; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/jimmy-buffett.png"
   
 patio_pl_unplugged:
@@ -429,6 +442,7 @@ patio_pl_unplugged:
   entity: media_player.patio
   title: "Unplugged"
   playlist: "Unplugged"
+  image_style: "top: 0; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/unplugged.png"
   
 patio_pl_fall_out_boy:
@@ -436,6 +450,7 @@ patio_pl_fall_out_boy:
   entity: media_player.patio
   title: "Fall Out Boy"
   playlist: "Fall Out Boy Radio"
+  image_style: "top: 0; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/fall-out-boy.png"
   
 patio_pl_peter_gabriel_radio:
@@ -450,6 +465,7 @@ patio_pl_imagine_dragons_radio:
   entity: media_player.patio
   title: "Imagine Dragons"
   playlist: "Imagine Dragons Radio"
+  image_style: "top: 0; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/imagine-dragons.png"
 
 patio_pl_dave_matthews:
@@ -465,14 +481,14 @@ patio_pl_buffett:
   title: "Margaritaville"
   playlist: "24 - Buffett"
   logo: "/custom_css/img/buffett.png"
-  
-  
+    
 cocktail:
   widget_type: mqttpublish
   title: "Cocktail"
   topic: "say/amy"
   payload: "bartender"
   entity: script.mqtt_publish_bartender
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/cocktail.png"
 
 you_sit_on_a_throne_of_lies:
@@ -481,6 +497,7 @@ you_sit_on_a_throne_of_lies:
   topic: "say/amy"
   payload: "lies"
   entity: script.mqtt_publish_lies
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/throne.png"
 
 are_you_walking:
@@ -489,4 +506,5 @@ are_you_walking:
   topic: "say/amy"
   payload: "walking"
   entity: script.mqtt_publish_walking
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/dog.png"
