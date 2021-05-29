@@ -17,8 +17,8 @@ global_parameters:
       step: 5
 
 layout:
-  - nav_to_kitchen, nav_to_patio, nav_to_guest, nav_to_move, nav_to_weather, nav_to_say_it
-  - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio-fire, nav_to_phone
+  - nav_to_kitchen, nav_to_patio-fire, nav_to_move, nav_to_guest, nav_to_weather, nav_to_say_it
+  - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio, nav_to_phone
   - nav_to_sonos_matrix, spacer, can_i_get_you_something, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
 
 nav_to_garage:

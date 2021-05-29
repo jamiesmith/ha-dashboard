@@ -1,26 +1,34 @@
-23 - Grateful Dead,grateful-dead,,yes
-25 - Classic Rewind,classic-rewind,,yes
-26 - Classic Vinyl,classic-vinyl,,yes
-27 - Deep Tracks,deep-tracks,,yes
-14 - The Coffee House,coffee-house,,yes
-31 - Tom Petty Radio,tom-petty,,yes
-313 - RockBar,rockbar,,yes
-716 - Dave Matthews Band Radio,dmb,Dave Matthews,yes
-5 - 50s on 5,50s,,yes
-6 - 60s on 6,60s,,yes
-7 - 70s on 7,70s,,yes
-8 - 80s on 8,80s,,yes
-9 - 90s on 9,90s,,yes
-67 - Real Jazz,real-jazz,,yes
-74 - B.B. King's Bluesville,bluesville,Bluesville,yes
-Bach Cello Suites,yo-yo-bach,,no
-Bryson Tiller Radio,bryson-tiller,,yes
-Hozier Radio,hozier,,no
-Jimmy Buffett,jimmy-buffett,,yes
-Unplugged,unplugged,,yes
-Fall Out Boy Radio,fall-out-boy,Fall Out Boy,yes
-Peter Gabriel Radio,peter-gabriel,,yes
-Imagine Dragons Radio,imagine-dragons,Imagine Dragons,yes
-751 - Holiday Traditions,,,yes
-752 - Holly,,,yes
-753 - Holiday Pops,,,no
+23 - Grateful Dead,grateful-dead,,yes,not-cd
+25 - Classic Rewind,classic-rewind,,yes,not-cd
+26 - Classic Vinyl,classic-vinyl,,yes,not-cd
+27 - Deep Tracks,deep-tracks,,yes,not-cd
+14 - The Coffee House,coffee-house,,yes,not-cd
+31 - Tom Petty Radio,tom-petty,,yes,not-cd
+313 - RockBar,rockbar,,yes,not-cd
+716 - Dave Matthews Band Radio,dmb,Dave Matthews,yes,not-cd
+5 - 50s on 5,50s,,yes,not-cd
+6 - 60s on 6,60s,,yes,not-cd
+7 - 70s on 7,70s,,yes,not-cd
+8 - 80s on 8,80s,,yes,not-cd
+9 - 90s on 9,90s,,yes,not-cd
+67 - Real Jazz,real-jazz,,yes,not-cd
+74 - B.B. King's Bluesville,bluesville,Bluesville,yes,not-cd
+Bach Cello Suites,yo-yo-bach,,not-cd,not-cd
+Bryson Tiller Radio,bryson-tiller,,yes,not-cd
+Hozier Radio,hozier,,not-cd,not-cd
+Jimmy Buffett,jimmy-buffett,,yes,yes
+Unplugged,unplugged,,yes,not-cd
+Fall Out Boy Radio,fall-out-boy,Fall Out Boy,yes,CD
+Peter Gabriel Radio,peter-gabriel,,yes,not-cd
+Imagine Dragons Radio,imagine-dragons,Imagine Dragons,yes,CD
+751 - Holiday Traditions,,,yes,not-cd
+752 - Holly,,,yes,not-cd
+753 - Holiday Pops,,,not-cd,not-cd
+12 - PopRocks,poprocks.svg,,yes,not-cd
+19 - Bob Marley,,,yes,not-cd
+20 - E Street Radio,,,yes,not-cd
+24 - Buffett,,,yes,CD
+28 - The Spectrum,spectrum,,yes,not-cd
+311 - Yacht Rock Radio,yacht-rock,,yes,not-cd
+36 - Alt Nation,,,yes,not-cd
+Hamilton,hamilton.jpg,,yes,not-cd

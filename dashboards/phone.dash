@@ -19,7 +19,7 @@ global_parameters:
 layout:
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, party_lights, patio_volume_up
   - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
-  - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_jimmy_buffett, patio_add_family_room, drop_family_room, reload, patio_turn_off
+  - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_add_family_room, drop_family_room, reload, patio_turn_off
   - 
 
 party_lights:
@@ -251,6 +251,8 @@ reload:
   widget_type: reload
   title: Reload
 
+  
+  
 # Generated Playlists
 # 
 patio_pl_grateful_dead:
@@ -295,12 +297,19 @@ patio_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-patio_pl_poprocks:
+patio_pl_rockbar:
   widget_type: playlist
   entity: media_player.patio
-  title: "PopRocks"
-  playlist: "12 - PopRocks"
-  logo: "/custom_css/img/poprocks.svg"
+  title: "RockBar"
+  playlist: "313 - RockBar"
+  logo: "/custom_css/img/rockbar.png"
+  
+patio_pl_dave_matthews:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Dave Matthews"
+  playlist: "716 - Dave Matthews Band Radio"
+  logo: "/custom_css/img/dmb.png"
   
 patio_pl_50s_on_5:
   widget_type: playlist
@@ -351,9 +360,6 @@ patio_pl_bluesville:
   playlist: "74 - B.B. King's Bluesville"
   logo: "/custom_css/img/bluesville.png"
   
-# Skip 751 - Holiday Traditions
-# Skip 752 - Holly
-# Skip 753 - Holiday Pops
 # Skip Bach Cello Suites
 patio_pl_bryson_tiller_radio:
   widget_type: playlist
@@ -383,26 +389,92 @@ patio_pl_fall_out_boy:
   title: "Fall Out Boy"
   playlist: "Fall Out Boy Radio"
   logo: "/custom_css/img/fall-out-boy.png"
-  
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
 patio_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.patio
-  title: "Peter Gabriel"
+  title: "Peter Gabriel Radio"
   playlist: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
-patio_pl_imagine_dragons_radio:
+patio_pl_imagine_dragons:
   widget_type: playlist
   entity: media_player.patio
   title: "Imagine Dragons"
   playlist: "Imagine Dragons Radio"
   logo: "/custom_css/img/imagine-dragons.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
-patio_pl_dave_matthews:
+patio_pl_holiday_traditions:
   widget_type: playlist
   entity: media_player.patio
-  title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
-  logo: "/custom_css/img/dmb.png"
+  title: "Holiday Traditions"
+  playlist: "751 - Holiday Traditions"
+  logo: "/custom_css/img/holiday-traditions.png"
   
+patio_pl_holly:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Holly"
+  playlist: "752 - Holly"
+  logo: "/custom_css/img/holly.png"
+  
+# Skip 753 - Holiday Pops
+patio_pl_poprocks:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "PopRocks"
+  playlist: "12 - PopRocks"
+  logo: "/custom_css/img/poprocks.svg"
+  
+patio_pl_bob_marley:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Bob Marley"
+  playlist: "19 - Bob Marley"
+  logo: "/custom_css/img/bob-marley.png"
+  
+patio_pl_e_street_radio:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "E Street Radio"
+  playlist: "20 - E Street Radio"
+  logo: "/custom_css/img/e-street-radio.png"
+  
+patio_pl_buffett:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Buffett"
+  playlist: "24 - Buffett"
+  logo: "/custom_css/img/buffett.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
+patio_pl_the_spectrum:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "The Spectrum"
+  playlist: "28 - The Spectrum"
+  logo: "/custom_css/img/spectrum.png"
+  
+patio_pl_yacht_rock_radio:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Yacht Rock Radio"
+  playlist: "311 - Yacht Rock Radio"
+  logo: "/custom_css/img/yacht-rock.png"
+  
+patio_pl_alt_nation:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Alt Nation"
+  playlist: "36 - Alt Nation"
+  logo: "/custom_css/img/alt-nation.png"
+  
+patio_pl_hamilton:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Hamilton"
+  playlist: "Hamilton"
+  logo: "/custom_css/img/hamilton.jpg"
   

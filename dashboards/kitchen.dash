@@ -21,12 +21,10 @@ layout:
  
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up(2x1)
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
-#  - upstairs_nest(2x1), family_room_previous_track, family_room_next_track, family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
-#  - downstairs_nest(2x1), family_room_turn_off(2x1), family_room_pl_bob_marley, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
   - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_add_patio, drop_patio, family_room_add_garage, drop_garage, family_room_volume_down(2x1)
-  - downstairs_nest(2x1), family_room_pl_bob_marley, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons_radio, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
+  - downstairs_nest(2x1), family_room_pl_bob_marley, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_imagine_dragons, family_room_pl_jimmy_buffett, family_room_pl_70s_on_7
   - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_real_jazz, family_room_pl_bluesville, family_room_pl_dave_matthews, what_can_i_get_you, cocktail, family_room_apple_tv
-  - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, family_room_pl_yacht_rock, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload
+  - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, family_room_pl_yacht_rock_radio, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload
 
 family_room_now_playing:
   title: Now Playing
@@ -364,13 +362,20 @@ reload:
   icon_active: fa-sync-alt
   icon_inactive: fa-sync-alt
 
-family_room_pl_hamilton:
-  widget_type: playlist
-  entity: media_player.family_room
-  title: "Hamilton"
-  playlist: "Hamilton"
-  logo: "/custom_css/img/hamilton.jpg"
+cocktail:
+  widget_type: mqttpublish
+  title: "Cocktail"
+  topic: "say/amy"
+  payload: "Can I get you something?"
+  logo: "/custom_css/img/cocktail.png"
 
+what_can_i_get_you:
+  widget_type: mqttpublish
+  title: "What?"
+  topic: "say/amy"
+  payload: "What can I get you?"
+  logo: "/custom_css/img/question_mark.png"
+  
 # Generated Playlists
 # 
 family_room_pl_grateful_dead:
@@ -414,21 +419,21 @@ family_room_pl_tom_petty_radio:
   title: "Tom Petty Radio"
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
-
-family_room_pl_yacht_rock:
-  widget_type: playlist
-  entity: media_player.family_room
-  title: "Yacht Rock"
-  playlist: "311 - Yacht Rock Radio"
-  logo: "/custom_css/img/yacht-rock.png"
   
-family_room_pl_poprocks:
+family_room_pl_rockbar:
   widget_type: playlist
   entity: media_player.family_room
-  title: "PopRocks"
-  playlist: "12 - PopRocks"
-  logo: "/custom_css/img/poprocks.svg"
-
+  title: "RockBar"
+  playlist: "313 - RockBar"
+  logo: "/custom_css/img/rockbar.png"
+  
+family_room_pl_dave_matthews:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Dave Matthews"
+  playlist: "716 - Dave Matthews Band Radio"
+  logo: "/custom_css/img/dmb.png"
+  
 family_room_pl_50s_on_5:
   widget_type: playlist
   entity: media_player.family_room
@@ -478,9 +483,6 @@ family_room_pl_bluesville:
   playlist: "74 - B.B. King's Bluesville"
   logo: "/custom_css/img/bluesville.png"
   
-# Skip 751 - Holiday Traditions
-# Skip 752 - Holly
-# Skip 753 - Holiday Pops
 # Skip Bach Cello Suites
 family_room_pl_bryson_tiller_radio:
   widget_type: playlist
@@ -510,7 +512,8 @@ family_room_pl_fall_out_boy:
   title: "Fall Out Boy"
   playlist: "Fall Out Boy Radio"
   logo: "/custom_css/img/fall-out-boy.png"
-  
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
 family_room_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.family_room
@@ -518,62 +521,83 @@ family_room_pl_peter_gabriel_radio:
   playlist: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
-family_room_pl_imagine_dragons_radio:
+family_room_pl_imagine_dragons:
   widget_type: playlist
   entity: media_player.family_room
   title: "Imagine Dragons"
   playlist: "Imagine Dragons Radio"
   logo: "/custom_css/img/imagine-dragons.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
-family_room_pl_dave_matthews:
-  widget_type: playlist
-  entity: media_player.family_room
-  title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
-  logo: "/custom_css/img/dmb.png"
-  
 family_room_pl_holiday_traditions:
   widget_type: playlist
   entity: media_player.family_room
   title: "Holiday Traditions"
   playlist: "751 - Holiday Traditions"
-  logo: "/custom_css/img/HolidayTradionsLogo.png"
+  logo: "/custom_css/img/holiday-traditions.png"
   
 family_room_pl_holly:
   widget_type: playlist
   entity: media_player.family_room
   title: "Holly"
   playlist: "752 - Holly"
-  logo: "/custom_css/img/HollyLogo.png"
-
+  logo: "/custom_css/img/holly.png"
+  
+# Skip 753 - Holiday Pops
+family_room_pl_poprocks:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "PopRocks"
+  playlist: "12 - PopRocks"
+  logo: "/custom_css/img/poprocks.svg"
+  
 family_room_pl_bob_marley:
   widget_type: playlist
   entity: media_player.family_room
   title: "Bob Marley"
   playlist: "19 - Bob Marley"
   logo: "/custom_css/img/bob-marley.png"
+  
+family_room_pl_e_street_radio:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "E Street Radio"
+  playlist: "20 - E Street Radio"
+  logo: "/custom_css/img/e-street-radio.png"
+  
+family_room_pl_buffett:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Buffett"
+  playlist: "24 - Buffett"
+  logo: "/custom_css/img/buffett.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
+family_room_pl_the_spectrum:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "The Spectrum"
+  playlist: "28 - The Spectrum"
+  logo: "/custom_css/img/spectrum.png"
+  
+family_room_pl_yacht_rock_radio:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Yacht Rock Radio"
+  playlist: "311 - Yacht Rock Radio"
+  logo: "/custom_css/img/yacht-rock.png"
+  
 family_room_pl_alt_nation:
   widget_type: playlist
   entity: media_player.family_room
   title: "Alt Nation"
   playlist: "36 - Alt Nation"
   logo: "/custom_css/img/alt-nation.png"
-
-cocktail:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "Can I get you something?"
-  logo: "/custom_css/img/cocktail.png"
-
-what_can_i_get_you:
-  widget_type: mqttpublish
-  title: "What?"
-  topic: "say/amy"
-  payload: "What can I get you?"
-  logo: "/custom_css/img/question_mark.png"
   
-
-
-
+family_room_pl_hamilton:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Hamilton"
+  playlist: "Hamilton"
+  logo: "/custom_css/img/hamilton.jpg"
+  

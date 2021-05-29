@@ -1,4 +1,4 @@
-#
+##
 # Main arguments, all optional
 #
 title: Patio Dashboard Panel
@@ -18,10 +18,10 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock, patio_pl_spectrum, porch_lights, party_lights, patio_volume_up
-  - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_e_street_radio, patio_pl_dave_matthews, patio_volume_down
-  - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_add_family_room, patio_turn_off
-  - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons_radio, patio_pl_deep_tracks, nav_to_index, nav_to_sonos_matrix, drop_family_room, reload
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, porch_lights, party_lights, patio_volume_up
+  - patio_pl_80s_on_8, patio_pl_70s_on_7, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_deep_tracks, patio_pl_e_street_radio, patio_volume_down
+  - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
+  - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 nav_to_index:
   widget_type: navigate
@@ -30,7 +30,34 @@ nav_to_index:
   dashboard: index
   icon_inactive: fa-list
   icon_active: fa-list
+
+nav_to_previous_dash:
+  widget_type: navigate
+  title: Previous
+  title2: Dashboard
+  dashboard: patio-fire-2
+  icon_inactive: fa-arrow-alt-circle-left
+  icon_active: fa-arrow-alt-circle-left
+  timeout: 10
+  return: patio-fire
   sticky: 1
+
+nav_to_next_dash:
+  widget_type: navigate
+  title: Next
+  title2: Dashboard
+  dashboard: patio-fire-2
+  icon_inactive: fa-arrow-alt-circle-right
+  icon_active: fa-arrow-alt-circle-right
+  timeout: 10
+  return: patio-fire
+  sticky: 1
+
+patio_now_playing:
+  title: Now Playing
+  widget_type: entitypicture
+  entity: media_player.patio
+  base_url: http://192.168.1.60:8123
 
 party_lights:
   widget_type: group
@@ -274,28 +301,32 @@ reload:
   widget_type: reload
   title: Reload
 
+nav_to_move:
+  widget_type: navigate
+  title: Sonos Move
+  title2: Panel
+  dashboard: move
+  timeout: 5
+  return: patio-fire
+  icon_inactive: fa-leaf
+  icon_active: fa-leaf
+  sticky: 1
+
+porch_lights:
+  widget_type: switch
+  entity: switch.patio_party_lights_switch
+  title: Porch Lights
+  icon_on: fa-traffic-light
+  icon_off: fa-traffic-light
+
 # Generated Playlists
 # 
-patio_pl_hamilton:
-  widget_type: playlist
-  entity: media_player.patio
-  title: "Hamilton"
-  playlist: "Hamilton"
-  logo: "/custom_css/img/hamilton.jpg"
-
 patio_pl_grateful_dead:
   widget_type: playlist
   entity: media_player.patio
   title: "Grateful Dead"
   playlist: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
-
-patio_pl_poprocks:
-  widget_type: playlist
-  entity: media_player.patio
-  title: "PopRocks"
-  playlist: "12 - PopRocks"
-  logo: "/custom_css/img/poprocks.svg"
   
 patio_pl_classic_rewind:
   widget_type: playlist
@@ -332,6 +363,20 @@ patio_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
+patio_pl_rockbar:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "RockBar"
+  playlist: "313 - RockBar"
+  logo: "/custom_css/img/rockbar.png"
+  
+patio_pl_dave_matthews:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Dave Matthews"
+  playlist: "716 - Dave Matthews Band Radio"
+  logo: "/custom_css/img/dmb.png"
+  
 patio_pl_50s_on_5:
   widget_type: playlist
   entity: media_player.patio
@@ -359,13 +404,6 @@ patio_pl_80s_on_8:
   title: "80s on 8"
   playlist: "8 - 80s on 8"
   logo: "/custom_css/img/80s.png"
-
-patio_pl_spectrum:
-  widget_type: playlist
-  entity: media_player.patio
-  title: "Spectrum"
-  playlist: "28 - The Spectrum"
-  logo: "/custom_css/img/spectrum.png"
   
 patio_pl_90s_on_9:
   widget_type: playlist
@@ -388,9 +426,6 @@ patio_pl_bluesville:
   playlist: "74 - B.B. King's Bluesville"
   logo: "/custom_css/img/bluesville.png"
   
-# Skip 751 - Holiday Traditions
-# Skip 752 - Holly
-# Skip 753 - Holiday Pops
 # Skip Bach Cello Suites
 patio_pl_bryson_tiller_radio:
   widget_type: playlist
@@ -420,71 +455,92 @@ patio_pl_fall_out_boy:
   title: "Fall Out Boy"
   playlist: "Fall Out Boy Radio"
   logo: "/custom_css/img/fall-out-boy.png"
-  
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
 patio_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.patio
-  title: "Peter Gabriel"
+  title: "Peter Gabriel Radio"
   playlist: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
-patio_pl_imagine_dragons_radio:
+patio_pl_imagine_dragons:
   widget_type: playlist
   entity: media_player.patio
   title: "Imagine Dragons"
   playlist: "Imagine Dragons Radio"
   logo: "/custom_css/img/imagine-dragons.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
-patio_pl_dave_matthews:
+patio_pl_holiday_traditions:
   widget_type: playlist
   entity: media_player.patio
-  title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
-  logo: "/custom_css/img/dmb.png"
+  title: "Holiday Traditions"
+  playlist: "751 - Holiday Traditions"
+  logo: "/custom_css/img/holiday-traditions.png"
   
-  
-patio_pl_yacht_rock:
+patio_pl_holly:
   widget_type: playlist
   entity: media_player.patio
-  title: "Yacht Rock"
-  playlist: "311 - Yacht Rock Radio"
-  logo: "/custom_css/img/yacht-rock.png"
-
+  title: "Holly"
+  playlist: "752 - Holly"
+  logo: "/custom_css/img/holly.png"
+  
+# Skip 753 - Holiday Pops
+patio_pl_poprocks:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "PopRocks"
+  playlist: "12 - PopRocks"
+  logo: "/custom_css/img/poprocks.svg"
+  
 patio_pl_bob_marley:
   widget_type: playlist
   entity: media_player.patio
   title: "Bob Marley"
   playlist: "19 - Bob Marley"
   logo: "/custom_css/img/bob-marley.png"
-
-patio_pl_alt_nation:
-  widget_type: playlist
-  entity: media_player.patio
-  title: "Alt Nation"
-  playlist: "36 - Alt Nation"
-  logo: "/custom_css/img/alt-nation.png"
-
+  
 patio_pl_e_street_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "E Street Radio"
   playlist: "20 - E Street Radio"
   logo: "/custom_css/img/e-street-radio.png"
+  
+patio_pl_buffett:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Buffett"
+  playlist: "24 - Buffett"
+  logo: "/custom_css/img/buffett.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
-nav_to_move:
-  widget_type: navigate
-  title: Sonos Move
-  title2: Panel
-  dashboard: move
-  timeout: 5
-  return: patio-fire
-  icon_inactive: fa-leaf
-  icon_active: fa-leaf
-  sticky: 1
-
-porch_lights:
-  widget_type: switch
-  entity: switch.patio_party_lights_switch
-  title: Porch Lights
-  icon_on: fa-traffic-light
-  icon_off: fa-traffic-light
+patio_pl_the_spectrum:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "The Spectrum"
+  playlist: "28 - The Spectrum"
+  logo: "/custom_css/img/spectrum.png"
+  
+patio_pl_yacht_rock_radio:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Yacht Rock Radio"
+  playlist: "311 - Yacht Rock Radio"
+  logo: "/custom_css/img/yacht-rock.png"
+  
+patio_pl_alt_nation:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Alt Nation"
+  playlist: "36 - Alt Nation"
+  logo: "/custom_css/img/alt-nation.png"
+  
+patio_pl_hamilton:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Hamilton"
+  playlist: "Hamilton"
+  logo: "/custom_css/img/hamilton.jpg"
+  
