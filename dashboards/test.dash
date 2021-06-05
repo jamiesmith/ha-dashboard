@@ -27,7 +27,7 @@ nest:
   precision: 0
   
 test_sonos:
-  widget_type: combosonos
+  widget_type: media
   entity: media_player.office
   truncate_name: 64
   title: test

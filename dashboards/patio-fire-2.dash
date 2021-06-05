@@ -190,30 +190,6 @@ drop_move:
   icon_off: mdi-speaker-off
   entity: "script.drop_move"
 
-office_sonos:
-  widget_type: combosonos
-  entity: media_player.office
-  truncate_name: 64
-  title: Office
-
-patio_sonos:
-  widget_type: combosonos
-  entity: media_player.patio
-  truncate_name: 64
-  title: Patio
-
-family_room_sonos:
-  widget_type: combosonos
-  entity: media_player.family_room
-  truncate_name: 64
-  title: Family Room
-
-garage_sonos:
-  widget_type: combosonos
-  entity: media_player.garage
-  truncate_name: 64
-  title: Garage  
-
 # Misc
 #
 clock:

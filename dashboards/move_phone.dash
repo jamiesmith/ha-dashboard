@@ -145,30 +145,6 @@ drop_garage:
   icon_off: mdi-speaker-off
   entity: "script.family_room_drop_garage"
 
-office_sonos:
-  widget_type: combosonos
-  entity: media_player.office
-  truncate_name: 64
-  title: Office
-
-move_sonos:
-  widget_type: combosonos
-  entity: media_player.move
-  truncate_name: 64
-  title: Move
-
-family_room_sonos:
-  widget_type: combosonos
-  entity: media_player.family_room
-  truncate_name: 64
-  title: Family Room
-
-garage_sonos:
-  widget_type: combosonos
-  entity: media_player.garage
-  truncate_name: 64
-  title: Garage  
-
 # Misc
 #
 clock:

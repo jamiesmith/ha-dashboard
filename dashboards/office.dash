@@ -170,12 +170,6 @@ office_sonos:
   truncate_name: 64
   title: Office
 
-office_sonos:
-  widget_type: media_player
-  entity: media_player.office_sonos
-  truncate_name: 64
-  title: Office
-
 family_room_sonos:
   widget_type: media_player
   entity: media_player.family_room

@@ -18,10 +18,24 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, porch_lights, party_lights, patio_volume_up
-  - patio_pl_80s_on_8, patio_pl_70s_on_7, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_deep_tracks, patio_pl_e_street_radio, patio_volume_down
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up
+  - patio_pl_80s_on_8, patio_pl_70s_on_7, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down
   - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
+
+patio_ceiling_fan:
+  widget_type: fan
+  entity: fan.patio_ceiling_fan
+  title: Porch Ceiling Fan
+  icon_on: mdi-fan
+  icon_off: mdi-fan-off
+  
+porch_fan:
+  widget_type: switch
+  entity: switch.patio_temp_fan_switch
+  title: Porch Fan
+  icon_on: mdi-fan
+  icon_off: mdi-fan
 
 nav_to_index:
   widget_type: navigate
@@ -194,30 +208,6 @@ drop_move:
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
   entity: "script.drop_move"
-
-office_sonos:
-  widget_type: combosonos
-  entity: media_player.office
-  truncate_name: 64
-  title: Office
-
-patio_sonos:
-  widget_type: combosonos
-  entity: media_player.patio
-  truncate_name: 64
-  title: Patio
-
-family_room_sonos:
-  widget_type: combosonos
-  entity: media_player.family_room
-  truncate_name: 64
-  title: Family Room
-
-garage_sonos:
-  widget_type: combosonos
-  entity: media_player.garage
-  truncate_name: 64
-  title: Garage  
 
 # Misc
 #

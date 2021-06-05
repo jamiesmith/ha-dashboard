@@ -1,0 +1,42 @@
+# Some fan skillz - from HA services
+# fan.
+#   decrease_speed
+#   increase_speed
+#   oscillate
+#   set_direction
+#   set_percentage
+#   set_preset_mode
+#   set_speed [ off | low | medium | high ]
+#   toggle
+#   turn_off
+#   turn_on
+
+widget_type: basefan
+entity: {{entity}}
+state_active: "on"
+state_inactive: "off"
+enable: 1
+post_service_active:
+    service: fan/turn_on
+    entity_id: {{entity}}
+post_service_inactive:
+    service: fan/turn_off
+    entity_id: {{entity}}
+fields:
+  title: {{title}}
+  title2: {{title2}}
+  icon: ""
+  icon_style: ""
+  state_text: ""
+icons:
+  icon_on: $fan_icon_on
+  icon_off: $fan_icon_off
+static_icons: []
+css:
+  icon_style_active: $fan_icon_style_active 
+  icon_style_inactive: $fan_icon_style_inactive 
+static_css:
+  title_style: $fan_title_style
+  title2_style: $fan_title2_style
+  state_text_style: $fan_state_text_style
+  widget_style: $fan_widget_style
