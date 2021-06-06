@@ -216,6 +216,7 @@ office_sonos:
   title: Office
 
 patio_sonos:
+  dump_capabilities: 1
   widget_type: media_player
   entity: media_player.patio
   roon_entity: media_player.patio_sonos_roon

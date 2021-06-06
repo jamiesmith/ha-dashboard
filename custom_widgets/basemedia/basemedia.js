@@ -49,6 +49,13 @@ function basemedia(widget_id, url, skin, parameters)
             {"entity": parameters.entity, "initial": self.OnStateAvailable, "update": self.OnStateUpdate}
         ];
 
+    if (parameters.roon_entity)
+    {
+	console.log("also adding roon entity ", parameters.roon_entity);
+	//	monitored_entities.push( {"entity": parameters.roon_entity, "initial": self.OnStateAvailable, "update": self.OnStateUpdate} );
+	self.roon_entity = parameters.roon_entity;
+    }
+
     // Finally, call the parent constructor to get things moving
 
     WidgetBase.call(self, widget_id, url, skin, parameters, monitored_entities, callbacks);
@@ -62,11 +69,13 @@ function basemedia(widget_id, url, skin, parameters)
     function OnStateAvailable(self, state)
     {
         self.entity = state.entity_id;
+	self.media_content_id = state.attributes.media_content_id;
         self.level = state.attributes.volume_level;
         set_view(self, state)
         if ("dump_capabilities" in self.parameters && self.parameters["dump_capabilities"] == "1")
         {
-            display_supported_functions(self)
+	    //            display_supported_functions(self);
+	    console.log(state);
         }
     }
 
@@ -76,8 +85,9 @@ function basemedia(widget_id, url, skin, parameters)
 
     function OnStateUpdate(self, state)
     {
-	console.log("OnStateUpdate", self, state);
+	self.media_content_id = state.attributes.media_content_id;
         self.level = state.attributes.volume_level;
+	console.log("media_content_id: ", state.attributes.media_content_id);
         set_view(self, state)
     }
 
@@ -125,12 +135,24 @@ function basemedia(widget_id, url, skin, parameters)
     {
         if (is_supported(self, "PREVIOUS_TRACK"))
         {
-            args = self.parameters.post_service_previous;
-            self.call_service(self, args)
+	    args = self.parameters.post_service_previous;
+	    
+	    if (self.media_content_id.includes(":9104/") && self.roon_entity)
+	    {
+		console.log("ROON!");
+		args["entity_id"] = self.roon_entity;
+	    }
+	    else
+	    {
+		console.log("SONOS");
+		args["entity_id"] = self.entity;
+	    }
+	    
+	    self.call_service(self, args)
         }
         else
         {
-            console.log("NEXT_TRACK attribute not supported")
+            console.log("PREVIOUS_TRACK attribute not supported")
         }
     }
 
@@ -138,16 +160,26 @@ function basemedia(widget_id, url, skin, parameters)
     {
         if (is_supported(self, "NEXT_TRACK"))
         {
-            args = self.parameters.post_service_next;
-            self.call_service(self, args)
+	    args = self.parameters.post_service_next;
+	    
+	    if (self.media_content_id.includes(":9104/") && self.roon_entity)
+	    {
+		console.log("ROON!");
+		args["entity_id"] = self.roon_entity;
+	    }
+	    else
+	    {
+		console.log("SONOS");
+		args["entity_id"] = self.entity;
+	    }
+	    
+	    self.call_service(self, args)
         }
         else
         {
             console.log("NEXT_TRACK attribute not supported")
         }
     }
-
-
 
     function OnRaiseLevelClick(self)
     {
