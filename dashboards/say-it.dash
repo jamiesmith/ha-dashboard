@@ -18,6 +18,7 @@ global_parameters:
 
 layout:
   - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
+  - ily
   - sorry_out_of_that
   - nav_to_index
 
@@ -30,6 +31,13 @@ nav_to_index:
   icon_inactive: fa-list
   icon_active: fa-list
   sticky: 1
+
+ily:
+  widget_type: mqttpublish
+  title: "ily"
+  topic: "say/amy"
+  payload: "I love you"
+  logo: "/custom_css/img/heart.png"
 
 can_i_get_you_something:
   widget_type: mqttpublish
@@ -56,7 +64,7 @@ are_you_walking:
   widget_type: mqttpublish
   title: "Are you walking?"
   topic: "say/amy"
-  payload: "walking"
+  payload: "Are you walking?"
   logo: "/custom_css/img/dog.png"
 
 not_time_to_eat:

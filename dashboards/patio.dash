@@ -17,19 +17,30 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_label, temp_fan, cocktail
-  - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up(2x1), patio_ceiling_fan, are_you_walking
-  - patio_volume_down(2x1), patio_ceiling_fan_light, you_sit_on_a_throne_of_lies
-  - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, spacer(2x1), ily, what_can_i_get_you
+  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_ceiling_fan, patio_ceiling_fan_light, temp_fan
+  - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up_5(2x1), patio_volume_up_10, nav_to_say_it
+  - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
+  - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
   - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7, spacer
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, spacer(2x1), nav_to_sonos_matrix, nav_to_index
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_weather, nav_to_kitchen, reload
+  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, spacer, are_you_walking, nav_to_sonos_matrix, nav_to_index
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
 patio_now_playing:
   title: Now Playing
   widget_type: entitypicture
   entity: media_player.patio
   base_url: http://192.168.1.60:8123
+
+nav_to_patio_fire:
+  widget_type: navigate
+  title: patio-fire
+  title2: Dashboard
+  dashboard: patio-fire
+  icon_inactive: mdi-fire
+  icon_active: mdi-fire
+  timeout: 8
+  return: patio
+  sticky: 1
 
 nav_to_sonos_matrix:
   widget_type: navigate
@@ -112,12 +123,31 @@ patio_ceiling_fan:
   title: Porch Ceiling Fan
   icon_on: mdi-fan
   icon_off: mdi-fan-off
+
+fan_low:  
+  title: fan low
+  icon_on: mdi-fan #-speed-1
+  icon_off: mdi-fan #-speed-1
+  widget_type: script
+  entity: "script.patio_fan_speed_low"
+fan_medium:  
+  title: fan medium
+  icon_on: mdi-fan #-speed-2
+  icon_off: mdi-fan #-speed-2
+  widget_type: script
+  entity: "script.patio_fan_speed_medium"
+fan_high:  
+  title: fan high
+  icon_on: mdi-fan #-speed-3
+  icon_off: mdi-fan #-speed-3
+  widget_type: script
+  entity: "script.patio_fan_speed_high"
   
 patio_ceiling_fan_light:
   widget_type: switch
   entity: light.patio_ceiling_fan
   title: Porch Ceiling Fan
-  icon_on: mdi-lightbulb-on
+  icon_on: mdi-lightbulb
   icon_off: mdi-lightbulb
   
 morning_room_lamp:
@@ -146,19 +176,33 @@ patio_light_level:
 
 # Media
 #
-patio_volume_up:  
-  title: Volume Up
+patio_volume_up_5:
+  title: Volume Up (5)
   icon_on: fa-volume-up
   icon_off: fa-volume-up
   widget_type: script
-  entity: "script.patio_volume_up"
+  entity: "script.patio_volume_up_5"
 
-patio_volume_down:  
-  title: Volume down
+patio_volume_down_5:  
+  title: Volume down (5)
   icon_on: fa-volume-down
   icon_off: fa-volume-down
   widget_type: script
-  entity: "script.patio_volume_down"
+  entity: "script.patio_volume_down_5"
+
+patio_volume_up_10:
+  title: Volume Up (10)
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+  widget_type: script
+  entity: "script.patio_volume_up_10"
+
+patio_volume_down_10:  
+  title: Volume down (10)
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+  widget_type: script
+  entity: "script.patio_volume_down_10"
 
 patio_toggle_mute:  
   title: Mute
@@ -166,6 +210,14 @@ patio_toggle_mute:
   icon_off: mdi-volume-off
   widget_type: script
   entity: "script.patio_toggle_mute"
+
+patio_turn_off:
+  title: Turn Off
+  title2: Patio 
+  icon_on: mdi-power-on
+  icon_off: mdi-power
+  widget_type: script
+  entity: "script.patio_turn_off"
 
 family_room_turn_off:
   title: Turn Off
@@ -226,6 +278,7 @@ patio_sonos:
 family_room_sonos:
   widget_type: media_player
   entity: media_player.family_room
+  roon_entity: media_player.family_room_sonos_roon
   truncate_name: 64
   title: Family Room
 
@@ -319,6 +372,17 @@ reload:
   icon_active: fa-sync-alt
   icon_inactive: fa-sync-alt
 
+nav_to_say_it:
+  widget_type: navigate
+  title: Say it!
+  title2: Dashboard
+  dashboard: say-it
+  icon_inactive: fa-bullhorn
+  icon_active: fa-bullhorn
+  timeout: 5
+  return: patio
+  sticky: 1
+  
 what_can_i_get_you:
   widget_type: mqttpublish
   title: "What?"
@@ -356,7 +420,6 @@ are_you_walking:
   title: "Are you walking?"
   topic: "say/amy"
   payload: "Are you walking?"
-  entity: script.mqtt_publish_walking
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/dog.png"
 # Generated Playlists
@@ -414,7 +477,7 @@ patio_pl_dave_matthews:
   widget_type: playlist
   entity: media_player.patio
   title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
+  playlist: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
 patio_pl_50s_on_5:

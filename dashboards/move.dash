@@ -327,7 +327,7 @@ move_pl_dave_matthews:
   widget_type: playlist
   entity: media_player.move
   title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
+  playlist: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
 move_pl_50s_on_5:

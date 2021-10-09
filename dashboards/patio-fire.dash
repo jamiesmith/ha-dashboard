@@ -18,10 +18,11 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up
-  - patio_pl_80s_on_8, patio_pl_70s_on_7, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up_5
+  - patio_pl_80s_on_8, patio_pl_70s_on_7, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
   - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
+
 
 patio_ceiling_fan:
   widget_type: fan
@@ -144,19 +145,33 @@ patio_light_level:
 
 # Media
 #
-patio_volume_up:  
-  title: Volume Up
+patio_volume_up_5:
+  title: Volume Up (5)
   icon_on: fa-volume-up
   icon_off: fa-volume-up
   widget_type: script
-  entity: "script.patio_volume_up"
+  entity: "script.patio_volume_up_5"
 
-patio_volume_down:  
-  title: Volume down
+patio_volume_down_5:  
+  title: Volume down (5)
   icon_on: fa-volume-down
   icon_off: fa-volume-down
   widget_type: script
-  entity: "script.patio_volume_down"
+  entity: "script.patio_volume_down_5"
+
+patio_volume_up_10:
+  title: Volume Up (10)
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+  widget_type: script
+  entity: "script.patio_volume_up_10"
+
+patio_volume_down_10:  
+  title: Volume down (10)
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+  widget_type: script
+  entity: "script.patio_volume_down_10"
 
 patio_toggle_mute:  
   title: Mute
@@ -364,7 +379,7 @@ patio_pl_dave_matthews:
   widget_type: playlist
   entity: media_player.patio
   title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
+  playlist: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
 patio_pl_50s_on_5:

@@ -19,10 +19,44 @@ global_parameters:
 layout:
   - clock(3x1), garage_pl_deep_tracks, garage_pl_bluesville, weather_now(2x2)
   - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl
-  - garage_pl_tom_petty_radio, garage_pl_grateful_dead
-  - garage_volume_down, garage_media_play_pause, garage_volume_up, patio_pl_80s_on_8, spacer(2x1), nav_to_index
-  - family_room_add_garage, drop_garage, spacer(2x1), nav_to_main, garage_candles, reload
+  - garage_pl_tom_petty_radio, garage_pl_grateful_dead, dust_collector_on, dust_collector_off
+  - garage_volume_down, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, family_room_add_garage, orange_fan_toggle, nav_to_index
+  - garage_volume_down_5, spacer, garage_volume_up_5, spacer, drop_garage, garage_candles, reload
   
+garage_pl_80s_on_8:
+  widget_type: playlist
+  entity: media_player.garage
+  title: "80s on 8"
+  playlist: "8 - 80s on 8"
+  logo: "/custom_css/img/80s.png"
+
+dust_collector:
+  widget_type: fan
+  entity: fan.dc
+  title: Dust Collector Toggle
+  icon_on: fa-trash
+  icon_off: fa-trash
+
+orange_fan_toggle:
+  widget_type: switch
+  entity: switch.garage_orange_fan_switch
+  title: Fan Toggle
+  icon_on: mdi-fan
+  icon_off: mdi-fan
+
+dust_collector_on:
+  widget_type: script
+  entity: script.dust_collector_on
+  title: Dust Collector On
+  icon_on: fa-trash
+  icon_off: fa-trash
+  
+dust_collector_off:
+  widget_type: script
+  entity: script.dust_collector_off
+  title: Dust Collector Off
+  icon_on: fa-trash
+  icon_off: fa-trash
 
 nav_to_index:
   widget_type: navigate
@@ -37,6 +71,13 @@ clock:
   widget_type: clock
   show_seconds: 1
 
+garage_media_play_pause:
+  title: Play/Pause
+  icon_on: mdi-play-pause
+  icon_off: mdi-play-pause
+  widget_type: script
+  entity: "script.garage_media_play_pause"
+  
 garage_candles:
   widget_type: switch
   entity: switch.holiday_garage_candles_switch
@@ -77,6 +118,20 @@ nav_to_weather:
   return: garage
   icon_inactive: mdi-weather-partlycloudy
   icon_active: mdi-weather-sunny
+
+garage_volume_up_5:
+  title: Volume Up (5)
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+  widget_type: script
+  entity: "script.garage_volume_up_5"
+
+garage_volume_down_5:  
+  title: Volume down (5)
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+  widget_type: script
+  entity: "script.garage_volume_down_5"
 
 garage_volume_up:  
   title: Volume Up
@@ -184,7 +239,7 @@ garage_pl_dave_matthews:
   widget_type: playlist
   entity: media_player.garage
   title: "Dave Matthews"
-  playlist: "716 - Dave Matthews Band Radio"
+  playlist: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
 garage_pl_50s_on_5:
