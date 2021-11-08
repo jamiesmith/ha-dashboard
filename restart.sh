@@ -1,6 +1,8 @@
 #!/bin/bash
 
-if [ $(docker-compose ps appdaemon | grep -c Up) -gt 0 ]
+container="ha-dashboard"
+
+if [ $(docker-compose ps ${container} | grep -c Up) -gt 0 ]
 then
     echo "Up!"
     docker-compose restart
@@ -9,5 +11,5 @@ else
     docker-compose up -d
 fi
 
-docker logs --tail 30 --follow appdaemon
-echo http://nuclet:5050
+docker logs --tail 30 --follow ${container}
+echo http://$(hostname):5050

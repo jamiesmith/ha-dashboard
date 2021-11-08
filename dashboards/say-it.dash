@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
-  - ily
+  - ily, would_you_like_an_espresso
   - sorry_out_of_that
   - nav_to_index
 
@@ -80,3 +80,10 @@ what_can_i_get_you:
   topic: "say/amy"
   payload: "What can I get you?"
   logo: "/custom_css/img/question_mark.png"
+
+would_you_like_an_espresso:
+  widget_type: mqttpublish
+  title: "Cuppa?"
+  topic: "say/amy"
+  payload: "Would you like an espresso?"
+  logo: "/custom_css/img/espresso.jpg"

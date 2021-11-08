@@ -1,6 +1,7 @@
 log:
   logfile: STDOUT
   errorfile: STDERR
+
 appdaemon:
   threads: 10
   ad_port: 5050
@@ -18,7 +19,7 @@ appdaemon:
   time_zone: America/New_York
     
 hadashboard:
-   dash_url: http://0.0.0.0:5050
+   dash_url: "http://0.0.0.0:5050"
    dash_dir: /conf/dashboards
    dash_force_compile: 1
    dash_compile_on_start: 1

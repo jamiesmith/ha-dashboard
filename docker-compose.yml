@@ -2,13 +2,14 @@ version: '2.1'
 services:
   appdaemon:
     image: acockburn/appdaemon:3.0.2
-    container_name: appdaemon
+    container_name: ha-dashboard
     restart: always
 #    network_mode: 'host'
     ports:
       - '5050:5050'
     volumes:
-      - '/home/jamie/ha-dashboard:/conf'
+      - '/home/jamie/Projects/GitRepo/ha-dashboard:/conf'
+#      - '/home/jamie/Projects/GitRepo/ha-dashboard/rundash.py:/usr/local/lib/python3.6/site-packages/appdaemon/rundash.py'
 
 # JRS-TMP hadash:
 # JRS-TMP   build: 'hadashboard/'
