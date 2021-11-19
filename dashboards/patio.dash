@@ -38,9 +38,6 @@ nav_to_patio_fire:
   dashboard: patio-fire
   icon_inactive: mdi-fire
   icon_active: mdi-fire
-  timeout: 8
-  return: patio
-  sticky: 1
 
 nav_to_sonos_matrix:
   widget_type: navigate

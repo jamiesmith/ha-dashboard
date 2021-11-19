@@ -19,10 +19,17 @@ global_parameters:
 
 layout:
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up_5
-  - patio_pl_80s_on_8, patio_pl_70s_on_7, patio_pl_alt_nation, patio_pl_bob_marley, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
+  - patio_pl_80s_on_8, ed_sheeran_equals, patio_pl_alt_nation, temp_fan, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
   - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
+
+temp_fan:
+  widget_type: switch
+  entity: switch.patio_temp_fan_switch
+  title: Fan / Heater
+  icon_on: mdi-fan
+  icon_off: mdi-fan
 
 patio_ceiling_fan:
   widget_type: fan
@@ -402,6 +409,13 @@ patio_pl_70s_on_7:
   title: "70s on 7"
   playlist: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
+
+ed_sheeran_equals:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Ed Sheeran Equals"
+  playlist: "Equals"
+  logo: "/custom_css/img/ed_sheeran_equals.png"
   
 patio_pl_80s_on_8:
   widget_type: playlist
