@@ -21,8 +21,8 @@ layout:
   - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up_5(2x1), patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
-  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7, spacer
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, spacer, are_you_walking, nav_to_sonos_matrix, nav_to_index
+  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7
+  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
 patio_now_playing:
@@ -110,7 +110,7 @@ porch_lights:
 temp_fan:
   widget_type: switch
   entity: switch.patio_temp_fan_switch
-  title: Porch Table Fan
+  title: Porch Fan / Heater
   icon_on: mdi-fan
   icon_off: mdi-fan
 
@@ -376,8 +376,6 @@ nav_to_say_it:
   dashboard: say-it
   icon_inactive: fa-bullhorn
   icon_active: fa-bullhorn
-  timeout: 5
-  return: patio
   sticky: 1
   
 what_can_i_get_you:
@@ -419,6 +417,14 @@ are_you_walking:
   payload: "Are you walking?"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
   logo: "/custom_css/img/dog.png"
+
+patio_pl_eagles:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "The Eagles"
+  playlist: "Eagles"
+  logo: "/custom_css/img/TheEagles.jpg"
+
 # Generated Playlists
 # 
 patio_pl_grateful_dead:

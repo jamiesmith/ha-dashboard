@@ -86,4 +86,4 @@ would_you_like_an_espresso:
   title: "Cuppa?"
   topic: "say/amy"
   payload: "Would you like an espresso?"
-  logo: "/custom_css/img/espresso.jpg"
+  logo: "/custom_css/img/coffee-machine.png"

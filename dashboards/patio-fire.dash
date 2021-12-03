@@ -18,7 +18,7 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up_5
+  - patio_pl_classic_rewind, patio_pl_eagles, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up_5
   - patio_pl_80s_on_8, ed_sheeran_equals, patio_pl_alt_nation, temp_fan, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
   - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
@@ -330,6 +330,13 @@ porch_lights:
   title: Porch Lights
   icon_on: fa-traffic-light
   icon_off: fa-traffic-light
+
+patio_pl_eagles:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "The Eagles"
+  playlist: "Eagles"
+  logo: "/custom_css/img/TheEagles.jpg"
 
 # Generated Playlists
 # 
