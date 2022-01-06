@@ -20,7 +20,7 @@ global_parameters:
 layout:
   - patio_pl_the_coffee_house, patio_pl_rockbar, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_jimmy_buffett, temp_fan, patio_volume_up_10
   - patio_pl_classic_vinyl, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_volume_down_10
-  - patio_pl_deep_tracks, patio_pl_dave_matthews, patio_pl_e_street_radio, fan_off, fan_low, fan_medium, fan_high
+  - patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_e_street_radio, fan_off, fan_low, fan_medium, fan_high
   - nav_to_previous_dash, patio_pl_imagine_dragons, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 temp_fan:
@@ -352,6 +352,13 @@ porch_lights:
 
 # Generated Playlists
 # 
+patio_pl_hair_nation:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Hair Nation"
+  playlist: "39 - Hair Nation"
+  logo: "/custom_css/img/HairNation.svg"
+
 patio_pl_grateful_dead:
   widget_type: playlist
   entity: media_player.patio

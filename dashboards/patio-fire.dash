@@ -347,6 +347,13 @@ patio_pl_grateful_dead:
   playlist: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
   
+patio_pl_hair_nation:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Hair Nation"
+  playlist: "39 - Hair Nation"
+  logo: "/custom_css/img/HairNation.svg"
+  
 patio_pl_classic_rewind:
   widget_type: playlist
   entity: media_player.patio
