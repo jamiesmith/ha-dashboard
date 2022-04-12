@@ -21,7 +21,7 @@ layout:
   - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up_5(2x1), patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
-  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_50s_on_5, patio_pl_60s_on_6, patio_pl_70s_on_7
+  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_desperado, patio_pl_hair_nation, patio_pl_70s_on_7
   - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
@@ -29,7 +29,7 @@ patio_now_playing:
   title: Now Playing
   widget_type: entitypicture
   entity: media_player.patio
-  base_url: http://192.168.1.60:8123
+  base_url: http://192.168.1.80:8123
 
 nav_to_patio_fire:
   widget_type: navigate
@@ -489,6 +489,13 @@ patio_pl_50s_on_5:
   title: "50s on 5"
   playlist: "5 - 50s on 5"
   logo: "/custom_css/img/50s.png"
+
+patio_pl_desperado:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Desperado"
+  playlist: "Desperado"
+  logo: "/custom_css/img/desperado.jpg"
   
 patio_pl_60s_on_6:
   widget_type: playlist
@@ -650,3 +657,9 @@ patio_pl_hamilton:
   playlist: "Hamilton"
   logo: "/custom_css/img/hamilton.jpg"
   
+patio_pl_hair_nation:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Hair Nation"
+  playlist: "39 - Hair Nation"
+  logo: "/custom_css/img/HairNation.svg"

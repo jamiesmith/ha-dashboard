@@ -19,9 +19,16 @@ global_parameters:
 layout:
   - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
   - ily, would_you_like_an_espresso
-  - sorry_out_of_that
+  - sorry_out_of_that, look_good
   - nav_to_index
 
+
+look_good:
+  widget_type: mqttpublish
+  title: "Look Good"
+  topic: "say/amy"
+  payload: "I look real good today"
+  logo: "/custom_css/img/look-good.png"
 
 nav_to_index:
   widget_type: navigate

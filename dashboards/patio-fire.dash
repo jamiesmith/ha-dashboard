@@ -19,8 +19,8 @@ global_parameters:
 
 layout:
   - patio_pl_classic_rewind, patio_pl_eagles, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up_5
-  - patio_pl_80s_on_8, ed_sheeran_equals, patio_pl_alt_nation, temp_fan, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
-  - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, patio_pl_poprocks, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
+  - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_alt_nation, temp_fan, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
+  - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, ed_sheeran_equals, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 
@@ -79,7 +79,7 @@ patio_now_playing:
   title: Now Playing
   widget_type: entitypicture
   entity: media_player.patio
-  base_url: http://192.168.1.60:8123
+  base_url: http://192.168.1.80:8123
 
 party_lights:
   widget_type: group

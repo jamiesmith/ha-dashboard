@@ -20,8 +20,8 @@ layout:
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, liquor_cabinet_toggle, foyer_outlet_switch_2, accent_lighting, party_lights, landscape_lights  
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up(2x1)
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
-  - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_add_patio, drop_patio, bar_table, spacer, family_room_volume_down(2x1)
-  - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas
+  - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_add_patio, drop_patio, bar_table, what_can_i_get_you, family_room_volume_down(2x1)
+  - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, family_room_pl_holiday_traditions, fish_paste, look_good
   - family_room_pl_80s_on_8, family_room_pl_hamilton, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_bluesville, family_room_pl_imagine_dragons, family_room_pl_jimmy_buffett, nav_to_say_it, cocktail, family_room_apple_tv
   - family_room_pl_classic_rewind, family_room_pl_grateful_dead, family_room_pl_classic_vinyl, family_room_pl_deep_tracks, family_room_pl_tom_petty_radio, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
@@ -40,7 +40,7 @@ family_room_now_playing:
   title: Now Playing
   widget_type: entitypicture
   entity: media_player.family_room
-  base_url: http://192.168.1.60:8123
+  base_url: http://192.168.1.80:8123
 #  image_style: "top: 0; bottom: 0; left: 0; right: 0;"
 
 
@@ -132,8 +132,8 @@ morning_room_lamp:
   icon_off: mdi-lightbulb
 
 bar_table:
-  widget_type: switch
-  entity: switch.bar_table_switch
+  widget_type: group
+  entity: group.bar_table
   title: Bar Table
   icon_on: mdi-bottle-wine
   icon_off: mdi-bottle-wine
@@ -401,6 +401,20 @@ cocktail:
   topic: "say/amy"
   payload: "Can I get you something?"
   logo: "/custom_css/img/cocktail.png"
+
+look_good:
+  widget_type: mqttpublish
+  title: "Look Good"
+  topic: "say/amy"
+  payload: "You look real good today"
+  logo: "/custom_css/img/look-good.png"
+
+fish_paste:
+  widget_type: mqttpublish
+  title: "Holy Fishpaste"
+  topic: "say/amy"
+  payload: "Holy fishpaste, thats a guy"
+  logo: "/custom_css/img/spongebob.png"
 
 what_can_i_get_you:
   widget_type: mqttpublish
