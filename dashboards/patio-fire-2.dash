@@ -3,7 +3,8 @@
 #
 title: Patio Dashboard Panel
 # widget_dimensions: [120, 110]
-widget_dimensions: [140, 140]
+# 7" was widget_dimensions: [140, 140]
+widget_dimensions: [141, 152]
 widget_size: [1, 1]
 widget_margins: [5, 5]
 scalable: true

@@ -1,17 +1,17 @@
 widget_type: basemqttpublish
-entity: {{entity}}
+entity: "{{entity}}"
 state_active: "on"
 state_inactive: "off"
 enable: 1
 post_service:
     service: mqtt/publish
-    topic: {{topic}}
-    payload: {{payload}}
+    topic: "{{topic}}"
+    payload: "{{payload}}"
 fields:
-  title: {{title}}
-  logo: {{logo}}
-  topic: {{topic}}
-  payload: {{payload}}
+  title: "{{title}}"
+  logo: "{{logo}}"
+  topic: "{{topic}}"
+  payload: "{{payload}}"
 icons: 
   icon_on: $script_icon_on
   icon_off: $script_icon_off

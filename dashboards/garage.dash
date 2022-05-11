@@ -208,8 +208,8 @@ garage_pl_classic_vinyl:
   logo: "/custom_css/img/classic-vinyl.png"
   
 garage_pl_deep_tracks:
-  widget_type: playlist
-  entity: media_player.garage
+  widget_type: "playlist"
+  entity: "media_player.garage"
   title: "Deep Tracks"
   playlist: "27 - Deep Tracks"
   logo: "/custom_css/img/deep-tracks.png"

@@ -97,8 +97,8 @@ palm_tree_lights:
   widget_type: switch
   entity: switch.palm_tree_switch
   title: Palm Tree
-  icon_on: fa-traffic-light
-  icon_off: fa-traffic-light
+  icon_on: mdi-palm-tree
+  icon_off: mdi-palm-tree
 
 porch_lights:
   widget_type: switch

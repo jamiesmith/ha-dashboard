@@ -79,7 +79,7 @@ not_time_to_eat:
   title: "Not time to eat"
   topic: "say/amy"
   payload: "it is not time to eat"
-  logo: "/custom_css/img/dog.png"
+  logo: "/custom_css/img/dog-food.png"
   
 what_can_i_get_you:
   widget_type: mqttpublish

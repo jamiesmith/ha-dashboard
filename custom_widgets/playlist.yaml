@@ -1,15 +1,15 @@
 widget_type: baseplaylist
-entity: {{entity}}
+entity: "{{entity}}"
 state_active: "on"
 state_inactive: "off"
 enable: 1
 post_service_playlist:
     service: media_player/select_source
-    entity_id: {{entity}}
+    entity_id: "{{entity}}"
 fields:
-  title: {{title}}
-  logo: {{logo}}
-  playlist: {{playlist}}
+  title: "{{title}}"
+  logo: "{{logo}}"
+  playlist: "{{playlist}}"
   image_style: ""
 icons: []
 static_icons: []

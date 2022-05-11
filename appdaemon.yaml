@@ -1,7 +1,5 @@
-log:
-  logfile: STDOUT
-  errorfile: STDERR
-
+logs:
+  
 appdaemon:
   threads: 10
   ad_port: 5050
@@ -12,6 +10,7 @@ appdaemon:
       ha_url: http://192.168.1.80:8123
       # ha_key: !secret http_password
       token: !secret hatoken
+      namespace: default
   disable_apps: 1
   latitude: !secret latitude
   longitude: !secret longitude
@@ -19,8 +18,13 @@ appdaemon:
   time_zone: America/New_York
     
 hadashboard:
-   dash_url: "http://0.0.0.0:5050"
+   dash_url: "http://192.168.1.80:5050"
    dash_dir: /conf/dashboards
    dash_force_compile: 1
    dash_compile_on_start: 1
      
+http:
+  url: "http://192.168.1.80:5050"
+  
+api:
+admin:  

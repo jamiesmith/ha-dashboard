@@ -1,6 +1,6 @@
 #!/bin/bash
 
-container="ha-dashboard"
+container="ha-dashboard-4"
 
 if [ $(docker-compose ps ${container} | grep -c Up) -gt 0 ]
 then
@@ -12,4 +12,3 @@ else
 fi
 
 docker logs --tail 30 --follow ${container}
-echo http://$(hostname):5050
