@@ -10,7 +10,6 @@ columns: 10
 global_parameters:
   use_comma: 0 
   precision: 1 
-  use_hass_icon: 1
   namespace: default
   devices:
     media_player:
@@ -66,32 +65,32 @@ patio_label:
 # Lighting
 #
 party_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
 
 accent_lighting:
-  widget_type: group
+  widget_type: switch
   entity: group.accent_lighting
   title: Accent Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 cabinet_lighting:
-  widget_type: group
+  widget_type: switch
   entity: group.cabinet_lighting
   title: Cabinet Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 foyer_outlet_switch_2:
   widget_type: switch
   entity: switch.foyer_outlet_switch_2
   title: Foyer Lamp
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 palm_tree_lights:
   widget_type: switch
@@ -104,8 +103,8 @@ porch_lights:
   widget_type: switch
   entity: switch.patio_party_lights_switch
   title: Porch Lights
-  icon_on: fa-traffic-light
-  icon_off: fa-traffic-light
+  icon_on: mdi-string-lights
+  icon_off: mdi-string-lights
 
 temp_fan:
   widget_type: switch
@@ -115,57 +114,57 @@ temp_fan:
   icon_off: mdi-fan
 
 patio_ceiling_fan:
-  widget_type: fan
+  widget_type: switch
   entity: fan.patio_ceiling_fan
   title: Porch Ceiling Fan
   icon_on: mdi-fan
-  icon_off: mdi-fan-off
+  icon_off: mdi-fan
 
 fan_low:  
   title: fan low
-  icon_on: mdi-fan #-speed-1
-  icon_off: mdi-fan #-speed-1
+  icon_on: mdi-fan-speed-1
+  icon_off: mdi-fan-speed-1
   widget_type: script
   entity: "script.patio_fan_speed_low"
 fan_medium:  
   title: fan medium
-  icon_on: mdi-fan #-speed-2
-  icon_off: mdi-fan #-speed-2
+  icon_on: mdi-fan-speed-2
+  icon_off: mdi-fan-speed-2
   widget_type: script
   entity: "script.patio_fan_speed_medium"
 fan_high:  
   title: fan high
-  icon_on: mdi-fan #-speed-3
-  icon_off: mdi-fan #-speed-3
+  icon_on: mdi-fan-speed-3
+  icon_off: mdi-fan-speed-3
   widget_type: script
   entity: "script.patio_fan_speed_high"
   
 patio_ceiling_fan_light:
   widget_type: switch
   entity: light.patio_ceiling_fan
-  title: Porch Ceiling Fan
-  icon_on: mdi-lightbulb
-  icon_off: mdi-lightbulb
+  title: Porch Fan Light
+  icon_on: mdi-ceiling-light
+  icon_off: mdi-ceiling-light
   
 morning_room_lamp:
   widget_type: switch
   entity: switch.morning_room_lamp_switch
   title: Morning Room Lamp
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 landscape_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.landscape_lights
   title: Landscape Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 patio_light_level:
   widget_type: light
   title: Patio Light Level
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
   units: " %"
   precision: 0
   shorten: 1

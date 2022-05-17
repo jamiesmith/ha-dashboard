@@ -23,7 +23,7 @@ layout:
   - 
 
 party_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
@@ -36,45 +36,45 @@ patio_label:
 # Lighting
 #
 accent_lighting:
-  widget_type: group
+  widget_type: switch
   entity: group.accent_lighting
   title: Accent Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 cabinet_lighting:
-  widget_type: group
+  widget_type: switch
   entity: group.cabinet_lighting
   title: Cabinet Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 foyer_outlet_switch_2:
   widget_type: switch
   entity: switch.foyer_outlet_switch_2
   title: Foyer Lamp
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 morning_room_lamp:
   widget_type: switch
   entity: switch.morning_room_lamp_switch
   title: Morning Room Lamp
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 landscape_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.landscape_lights
   title: Landscape Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 patio_light_level:
   widget_type: light
   title: Patio Light Level
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
   units: " %"
   precision: 0
   shorten: 1

@@ -47,21 +47,21 @@ family_room_now_playing:
 # Lighting
 #
 accent_lighting:
-  widget_type: group
+  widget_type: switch
   entity: group.accent_lighting
   title: Accent Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 holiday_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.holiday_all
   title: Holiday Lights
   icon_on: mdi-candle
   icon_off: mdi-candle
 
 party_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
@@ -82,57 +82,57 @@ toggle_espresso_machine:
   icon_off: fa-coffee
 
 holiday_lights_family_room:
-  widget_type: group
+  widget_type: switch
   entity: group.holiday_lighting_family_room
   title: Tree & Garland
   icon_on: fa-tree
   icon_off: fa-tree
   
 cabinet_lighting:
-  widget_type: group
+  widget_type: switch
   entity: group.cabinet_lighting
   title: Cabinet Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 cabinet_lighting_upper:
-  widget_type: group
+  widget_type: switch
   entity: group.cabinet_lighting_upper
   title: Upper Cabinet Lights
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 cabinet_lighting_lower:
-  widget_type: group
+  widget_type: switch
   entity: group.cabinet_lighting_lower
   title: Lower Cabinet Lights
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 foyer_outlet_switch_2:
   widget_type: switch
   entity: switch.foyer_outlet_switch_2
   title: Foyer Lamp
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
   
 liquor_cabinet_toggle:
   widget_type: switch
   entity: switch.liquor_cabinet_switch
   title: Liquor Cabinet
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 morning_room_lamp:
   widget_type: light
 #  entity: switch.morning_room_lamp_switch
   entity: light.morning_room_sconce
   title: Morning Room
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 bar_table:
-  widget_type: group
+  widget_type: switch
   entity: group.bar_table
   title: Bar Table
   icon_on: mdi-bottle-wine
@@ -142,21 +142,21 @@ living_room_cabinets:
   widget_type: switch
   entity: light.living_room_cabinets_dimmer_level
   title: Living Room Cabinets
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 landscape_lights:
-  widget_type: group
+  widget_type: switch
   entity: group.landscape_lights
   title: Landscape Lighting
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
 kitchen_light_level:
   widget_type: light
   title: Kitchen Light
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
   units: " %"
   precision: 0
   shorten: 1
@@ -165,8 +165,8 @@ kitchen_light_level:
 office_strip_level:
   widget_type: light
   title: Light Strip Light Level
-  icon_on: mdi-lightbulb-on
-  icon_off: mdi-lightbulb
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
   units: " %"
   precision: 0
   shorten: 1
