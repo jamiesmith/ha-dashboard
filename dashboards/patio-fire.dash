@@ -33,11 +33,11 @@ temp_fan:
   icon_off: mdi-fan
 
 patio_ceiling_fan:
-  widget_type: fan
+  widget_type: switch
   entity: fan.patio_ceiling_fan
   title: Porch Ceiling Fan
   icon_on: mdi-fan
-  icon_off: mdi-fan-off
+  icon_off: mdi-fan
   
 porch_fan:
   widget_type: switch
