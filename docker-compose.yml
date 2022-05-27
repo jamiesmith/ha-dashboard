@@ -2,7 +2,7 @@ version: '2.1'
 services:
   appdaemon:
     image: acockburn/appdaemon:4.2.1
-    container_name: ha-dashboard-4
+    container_name: ha-dashboard
     restart: always
 #    network_mode: 'host'
     ports:

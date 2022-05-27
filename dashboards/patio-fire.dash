@@ -329,8 +329,8 @@ porch_lights:
   widget_type: switch
   entity: switch.patio_party_lights_switch
   title: Porch Lights
-  icon_on: fa-traffic-light
-  icon_off: fa-traffic-light
+  icon_on: mdi-string-lights
+  icon_off: mdi-string-lights
 
 patio_pl_eagles:
   widget_type: playlist
