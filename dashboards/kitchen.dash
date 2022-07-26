@@ -127,8 +127,8 @@ liquor_cabinet_toggle:
   widget_type: switch
   entity: switch.liquor_cabinet_switch
   title: Liquor Cabinet
-  icon_on: fa-lightbulb
-  icon_off: fa-lightbulb
+  icon_on: mdi-glass-cocktail
+  icon_off: mdi-glass-cocktail
 
 morning_room_lamp:
   widget_type: light
