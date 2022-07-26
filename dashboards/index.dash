@@ -19,7 +19,7 @@ global_parameters:
 layout:
   - nav_to_kitchen, nav_to_patio-fire, nav_to_move, nav_to_guest, nav_to_weather, nav_to_say_it
   - nav_to_garage, nav_to_move_phone, nav_to_office, nav_to_patio, nav_to_phone, nav_to_test
-  - nav_to_sonos_matrix, spacer, can_i_get_you_something, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
+  - nav_to_sonos_matrix, nav_to_theater, can_i_get_you_something, are_you_walking, nav_to_kitchen_fridge, not_time_to_eat
 
 nav_to_garage:
   widget_type: navigate
@@ -28,6 +28,24 @@ nav_to_garage:
   dashboard: garage
   icon_inactive: mdi-garage
   icon_active: mdi-garage
+  sticky: 1
+
+nav_to_theater:
+  widget_type: navigate
+  title: Theater
+  title2: Dashboard
+  dashboard: theater
+  icon_inactive: mdi-projector
+  icon_active: mdi-projector
+  sticky: 1
+
+nav_to_kitchen_fridge:
+  widget_type: navigate
+  title: Kitchen Fridge
+  title2: Dashboard
+  dashboard: kitchen-fridge
+  icon_inactive: mdi-fridge
+  icon_active: mdi-fridge
   sticky: 1
 
 nav_to_guest:

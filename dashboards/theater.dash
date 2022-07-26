@@ -1,0 +1,77 @@
+#
+# Main arguments, all optional
+#
+title: Theater Panel
+widget_dimensions: [120, 105]
+widget_size: [1, 1]
+widget_margins: [2, 2]
+scalable: true
+columns: 10
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - clock(2x1), watch_apple_tv, watch_apple_tv_big_screen
+  - spacer
+  - big_screen_movie_time
+  - play_sonos, play_roon, sync_tracks
+  - family_room_pl_test
+
+clock:
+  widget_type: clock
+  show_seconds: 1
+
+watch_apple_tv:
+  title: Watch Apple TV
+  icon_on: mdi-apple
+  icon_off: mdi-apple
+  widget_type: script
+  entity: "script.watch_apple_tv"
+  
+watch_apple_tv_big_screen:
+  title: Big-Screen
+  title2: Apple TV
+  icon_on: mdi-projector
+  icon_off: mdi-projector
+  widget_type: script
+  entity: "script.watch_apple_tv_big_screen"
+
+big_screen_movie_time:
+  widget_type: script
+  entity: script.big_screen_movie_time
+  title: Movie Time
+  icon_on: mdi-projector
+  icon_off: mdi-projector
+
+play_sonos:
+  widget_type: script
+  entity: script.theater_sonos_scene
+  title: Sonos
+  icon_on: mdi-music
+  icon_off: mdi-music
+
+play_roon:
+  widget_type: script
+  entity: script.theater_roon_scene
+  title: Roon
+  icon_on: mdi-music
+  icon_off: mdi-music
+
+sync_tracks:
+  widget_type: script
+  entity: script.compare_track_back
+  title: Prev Track
+  icon_on: mdi-music
+  icon_off: mdi-music
+  
+family_room_pl_test:
+  widget_type: playlist
+  entity: media_player.family_room_roon
+  title: "AC/DC Essentials"
+  playlist: "AC/DC Essentials"
+  logo: "/custom_css/img/TheEagles.jpg"

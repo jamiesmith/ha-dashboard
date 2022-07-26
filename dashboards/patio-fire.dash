@@ -19,13 +19,24 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_eagles, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, party_lights, patio_volume_up_5
-  - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_alt_nation, temp_fan, patio_pl_the_spectrum, patio_pl_e_street_radio, patio_volume_down_5
+  - patio_pl_classic_rewind, patio_pl_eagles, patio_pl_yacht_rock_radio, patio_ceiling_fan, porch_lights, fan_heater, patio_volume_up_5
+  - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_imagine_dragons, patio_pl_alt_nation, patio_pl_the_spectrum, move_pl_jazz24, patio_volume_down_5
   - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett, ed_sheeran_equals, patio_pl_hamilton, patio_pl_dave_matthews, patio_turn_off
-  - nav_to_previous_dash, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
+  - nav_to_previous_dash, patio_pl_peter_gabriel_radio, nav_to_say_it, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 
-temp_fan:
+nav_to_say_it:
+  widget_type: navigate
+  title: Say it!
+  title2: Dashboard
+  dashboard: say-it
+  icon_inactive: fa-bullhorn
+  icon_active: fa-bullhorn
+  timeout: 5
+  return: patio-fire
+  sticky: 1
+
+fan_heater:
   widget_type: switch
   entity: switch.patio_temp_fan_switch
   title: Fan / Heater
@@ -39,13 +50,6 @@ patio_ceiling_fan:
   icon_on: mdi-fan
   icon_off: mdi-fan
   
-porch_fan:
-  widget_type: switch
-  entity: switch.patio_temp_fan_switch
-  title: Porch Fan
-  icon_on: mdi-fan
-  icon_off: mdi-fan
-
 nav_to_index:
   widget_type: navigate
   title: Index
@@ -578,3 +582,10 @@ patio_pl_hamilton:
   playlist: "Hamilton"
   logo: "/custom_css/img/hamilton.jpg"
   
+move_pl_jazz24:
+  widget_type: playlist
+  entity: media_player.move
+  title: "Jazz 24: Move"
+  playlist: "Jazz24"
+  logo: "/custom_css/img/jazz24.png"
+

@@ -1,0 +1,165 @@
+#
+# Main arguments, all optional
+#
+title: Kitchen Fridge Panel
+widget_dimensions: [160, 160]
+widget_size: [1, 1]
+widget_margins: [2, 2]
+scalable: true
+columns: 5
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  use_hass_icon: 1
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - can_i_get_you_something, what_can_i_get_you, sorry_out_of_that, look_good, you_sit_on_a_throne_of_lies
+  - liquor_cabinet_toggle, coffee_light_toggle, espresso_machine_toggle, accent_lighting
+  - nav_to_index, nav_to_say_it, nav_to_sonos_matrix, reload
+
+
+reload:
+  widget_type: reload
+  title: Reload
+  icon_active: fa-sync-alt
+  icon_inactive: fa-sync-alt
+
+nav_to_sonos_matrix:
+  widget_type: navigate
+  title: Sonos
+  title2: Matrix
+  dashboard: sonos-matrix
+  timeout: 10
+  return: kitchen-fridge
+  icon_inactive: fa-headphones
+  icon_active: fa-headphones
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+  sticky: 1
+
+accent_lighting:
+  widget_type: switch
+  entity: group.accent_lighting
+  title: Accent Lighting
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+
+nav_to_say_it:
+  widget_type: navigate
+  title: Say it!
+  title2: Dashboard
+  dashboard: say-it
+  icon_inactive: fa-bullhorn
+  icon_active: fa-bullhorn
+  icon_style_active: "margin-top: 70px;"
+  icon_style_inactive: "margin-top: 70px;"
+  timeout: 5
+  return: kitchen-fridge
+  sticky: 1
+
+liquor_cabinet_toggle:
+  widget_type: switch
+  entity: switch.liquor_cabinet_switch
+  title: Liquor Cabinet
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+
+espresso_machine_toggle:
+  widget_type: switch
+  entity: switch.espresso_machine_switch
+  title: Espresso Machine
+  icon_on: fa-coffee
+  icon_off: fa-coffee
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+
+coffee_light_toggle:
+  widget_type: switch
+  entity: switch.short_cabinets_lower_switch
+  title: Coffee Bar Light
+  icon_on: mdi-coffee-maker
+  icon_off: mdi-coffee-maker
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+
+look_good:
+  widget_type: mqttpublish
+  title: "Look Good"
+  topic: "say/amy"
+  payload: "You look real good today"
+  logo: "/custom_css/img/look-good.png"
+
+nav_to_index:
+  widget_type: navigate
+  title: Index
+  title2: Dashboard
+  dashboard: index
+  timeout: 10
+  return: kitchen-fridge
+  icon_inactive: fa-list
+  icon_active: fa-list
+  sticky: 1
+
+ily:
+  widget_type: mqttpublish
+  title: "ily"
+  topic: "say/amy"
+  payload: "I love you"
+  logo: "/custom_css/img/heart.png"
+
+can_i_get_you_something:
+  widget_type: mqttpublish
+  title: "Cocktail"
+  topic: "say/amy"
+  payload: "bartender"
+  logo: "/custom_css/img/cocktail.png"
+
+sorry_out_of_that:
+  widget_type: mqttpublish
+  title: "Sorry"
+  topic: "say/amy"
+  payload: "Sorry, we are out of that"
+  logo: "/custom_css/img/cancel.png"
+
+you_sit_on_a_throne_of_lies:
+  widget_type: mqttpublish
+  title: "Throne of lies"
+  topic: "say/amy"
+  payload: "you sit on a throne of lies"
+  logo: "/custom_css/img/throne.png"
+
+are_you_walking:
+  widget_type: mqttpublish
+  title: "Are you walking?"
+  topic: "say/amy"
+  payload: "Are you walking?"
+  logo: "/custom_css/img/dog.png"
+
+not_time_to_eat:
+  widget_type: mqttpublish
+  title: "Not time to eat"
+  topic: "say/amy"
+  payload: "it is not time to eat"
+  logo: "/custom_css/img/dog-food.png"
+  
+what_can_i_get_you:
+  widget_type: mqttpublish
+  title: "What?"
+  topic: "say/amy"
+  payload: "What can I get you?"
+  logo: "/custom_css/img/question_mark.png"
+
+would_you_like_an_espresso:
+  widget_type: mqttpublish
+  title: "Cuppa?"
+  topic: "say/amy"
+  payload: "Would you like an espresso?"
+  logo: "/custom_css/img/coffee-machine.png"

@@ -1,7 +1,7 @@
 #
 # Main arguments, all optional
 #
-title: Index Panel
+title: Say It Panel
 widget_dimensions: [140, 140]
 widget_size: [1, 1]
 widget_margins: [2, 2]
@@ -58,7 +58,7 @@ sorry_out_of_that:
   title: "Sorry"
   topic: "say/amy"
   payload: "Sorry, we are out of that"
-  logo: "/custom_css/img/cocktail.png"
+  logo: "/custom_css/img/cancel.png"
 
 you_sit_on_a_throne_of_lies:
   widget_type: mqttpublish
