@@ -19,7 +19,7 @@ global_parameters:
 layout:
   - you_sit_on_a_throne_of_lies, sorry_out_of_that, look_good, can_i_get_you_something, what_can_i_get_you
   - bar_table, accent_lighting, espresso_machine_toggle, liquor_cabinet_toggle, coffee_light_toggle
-  - nav_to_index, nav_to_say_it, nav_to_sonos_matrix, reload
+  - nav_to_index, nav_to_say_it, nav_to_sonos_matrix, spacer, reload
 
 
 bar_table:
@@ -36,6 +36,7 @@ reload:
   title: Reload
   icon_active: fa-sync-alt
   icon_inactive: fa-sync-alt
+  widget_style: "font-size: 150%;"
 
 nav_to_sonos_matrix:
   widget_type: navigate
@@ -46,8 +47,7 @@ nav_to_sonos_matrix:
   return: kitchen-fridge
   icon_inactive: fa-headphones
   icon_active: fa-headphones
-  icon_style_active: "font-size: 600%"
-  icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
   sticky: 1
 
 accent_lighting:
@@ -66,8 +66,7 @@ nav_to_say_it:
   dashboard: say-it
   icon_inactive: fa-bullhorn
   icon_active: fa-bullhorn
-  icon_style_active: "margin-top: 70px;"
-  icon_style_inactive: "margin-top: 70px;"
+  widget_style: "font-size: 150%;"
   timeout: 5
   return: kitchen-fridge
   sticky: 1
@@ -115,6 +114,7 @@ nav_to_index:
   return: kitchen-fridge
   icon_inactive: fa-list
   icon_active: fa-list
+  widget_style: "font-size: 150%;"
   sticky: 1
 
 ily:
