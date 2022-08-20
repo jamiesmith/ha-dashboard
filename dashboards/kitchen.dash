@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, liquor_cabinet_toggle, foyer_outlet_switch_2, accent_lighting, party_lights, landscape_lights  
-  - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up(2x1)
+  - weather_now(2x2), family_room_sonos(2x2), family_room_theater_roon(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up(2x1)
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
   - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_add_patio, drop_patio, bar_table, big_screen_movie_time, family_room_volume_down(2x1)
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, look_good
@@ -265,12 +265,17 @@ office_sonos:
   dump_capabilities: 1
 
 family_room_sonos:
-#  widget_type: media_player
   widget_type: media_player
   entity: media_player.family_room
   roon_entity: media_player.family_room_sonos_roon
   truncate_name: 64
-  title: Family Room
+  title: Family Room Sonos
+
+family_room_theater_roon:
+  widget_type: media_player
+  entity: media_player.family_room_theater_roon
+  truncate_name: 64
+  title: Family Room Roon
 
 patio_sonos:
   widget_type: media_player

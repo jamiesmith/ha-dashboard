@@ -17,7 +17,7 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, party_lights, patio_volume_up
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, palm_tree_lights, patio_volume_up
   - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_unplugged, patio_pl_bluesville, patio_pl_dave_matthews, patio_volume_down
   - patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_add_family_room, drop_family_room, reload, patio_turn_off
   - 
@@ -35,6 +35,13 @@ patio_label:
 
 # Lighting
 #
+palm_tree_lights:
+  widget_type: switch
+  entity: switch.palm_tree_switch
+  title: Palm Tree
+  icon_on: mdi-palm-tree
+  icon_off: mdi-palm-tree
+
 accent_lighting:
   widget_type: switch
   entity: group.accent_lighting

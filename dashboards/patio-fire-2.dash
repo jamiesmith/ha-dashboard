@@ -65,22 +65,23 @@ fan_off:
   icon_off: mdi-fan-off
   widget_type: script
   entity: "script.patio_fan_speed_off"
+
 fan_low:  
   title: fan low
-  icon_on: mdi-fan #-speed-1
-  icon_off: mdi-fan #-speed-1
+  icon_on: mdi-fan-speed-1
+  icon_off: mdi-fan-speed-1
   widget_type: script
   entity: "script.patio_fan_speed_low"
 fan_medium:  
   title: fan medium
-  icon_on: mdi-fan #-speed-2
-  icon_off: mdi-fan #-speed-2
+  icon_on: mdi-fan-speed-2
+  icon_off: mdi-fan-speed-2
   widget_type: script
   entity: "script.patio_fan_speed_medium"
 fan_high:  
   title: fan high
-  icon_on: mdi-fan #-speed-3
-  icon_off: mdi-fan #-speed-3
+  icon_on: mdi-fan-speed-3
+  icon_off: mdi-fan-speed-3
   widget_type: script
   entity: "script.patio_fan_speed_high"
 

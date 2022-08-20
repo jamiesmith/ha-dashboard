@@ -17,11 +17,11 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(3x1), garage_pl_deep_tracks, garage_pl_bluesville, weather_now(2x2)
-  - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl
-  - garage_pl_tom_petty_radio, garage_pl_grateful_dead, dust_collector_on, dust_collector_off
-  - garage_volume_down, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, family_room_add_garage, orange_fan_toggle, nav_to_index
-  - garage_volume_down_5, spacer, garage_volume_up_5, nav_to_sonos_matrix, drop_garage, garage_candles, reload
+  - clock(3x1), garage_pl_deep_tracks, garage_pl_bluesville, garage_pl_poprocks, weather_now(2x2)
+  - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_pl_alt_nation
+  - garage_pl_tom_petty_radio, garage_pl_grateful_dead, garage_pl_hair_nation, dust_collector_on, dust_collector_off
+  - garage_volume_down, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, family_room_add_garage, garage_pl_yacht_rock_radio, orange_fan_toggle, nav_to_index
+  - garage_volume_down_5, spacer, garage_volume_up_5, nav_to_sonos_matrix, drop_garage, garage_pl_the_spectrum, garage_candles, reload
   
 garage_pl_80s_on_8:
   widget_type: playlist
@@ -419,3 +419,11 @@ nav_to_sonos_matrix:
   icon_inactive: fa-headphones
   icon_active: fa-headphones
   sticky: 1
+
+garage_pl_hair_nation:
+  widget_type: playlist
+  entity: media_player.garage
+  title: "Hair Nation"
+  playlist: "39 - Hair Nation"
+  logo: "/custom_css/img/HairNation.svg"
+
