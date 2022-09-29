@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - you_sit_on_a_throne_of_lies, sorry_out_of_that, look_good, can_i_get_you_something, what_can_i_get_you
-  - bar_table, accent_lighting, espresso_machine_toggle, liquor_cabinet_toggle, coffee_light_toggle
+  - bar_table, accent_lighting, cabinet_lighting, liquor_cabinet_toggle, coffee_light_toggle
   - nav_to_index, nav_to_say_it, nav_to_sonos_matrix, spacer, reload
 
 
@@ -172,3 +172,14 @@ would_you_like_an_espresso:
   topic: "say/amy"
   payload: "Would you like an espresso?"
   logo: "/custom_css/img/coffee-machine.png"
+
+cabinet_lighting:
+  widget_type: switch
+  entity: group.cabinet_lighting
+  title: Cabinet Lighting
+  # JRS-TMP icon_on: fa-lightbulb
+  # JRS-TMP icon_off: fa-lightbulb
+  icon_on: fa-door-open
+  icon_off: fa-door-closed
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"

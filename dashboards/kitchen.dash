@@ -591,7 +591,7 @@ family_room_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.family_room
   title: "Peter Gabriel Radio"
-  playlist: "Peter Gabriel Radio"
+  playlist: "Peter Gabriel Radio Tidal"
   logo: "/custom_css/img/peter-gabriel.png"
   
 family_room_pl_imagine_dragons:

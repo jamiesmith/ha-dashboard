@@ -414,7 +414,7 @@ move_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.move
   title: "Peter Gabriel Radio"
-  playlist: "Peter Gabriel Radio"
+  playlist: "Peter Gabriel Radio Tidal"
   logo: "/custom_css/img/peter-gabriel.png"
   
 move_pl_imagine_dragons_radio:

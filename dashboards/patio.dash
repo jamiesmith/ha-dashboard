@@ -573,7 +573,7 @@ patio_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "Peter Gabriel Radio"
-  playlist: "Peter Gabriel Radio"
+  playlist: "Peter Gabriel Radio Tidal"
   logo: "/custom_css/img/peter-gabriel.png"
   
 patio_pl_imagine_dragons:
