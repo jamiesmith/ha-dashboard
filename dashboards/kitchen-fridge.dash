@@ -19,7 +19,7 @@ global_parameters:
 layout:
   - you_sit_on_a_throne_of_lies, sorry_out_of_that, look_good, can_i_get_you_something, what_can_i_get_you
   - bar_table, accent_lighting, cabinet_lighting, liquor_cabinet_toggle, coffee_light_toggle
-  - nav_to_index, nav_to_say_it, nav_to_sonos_matrix, spacer, reload
+  - nav_to_index, nav_to_say_it, nav_to_sonos_matrix, accent_lighting_on, reload
 
 
 bar_table:
@@ -49,6 +49,15 @@ nav_to_sonos_matrix:
   icon_active: fa-headphones
   widget_style: "font-size: 150%;"
   sticky: 1
+
+accent_lighting_on:  
+  title: Accent Lights ON
+  icon_on: mdi-lightning-bolt-outline
+  icon_off: mdi-lightning-bolt-outline
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+  widget_type: script
+  entity: "script.turn_on_accent_lighting"
 
 accent_lighting:
   widget_type: switch
