@@ -102,7 +102,7 @@ palm_tree_lights:
 porch_lights:
   widget_type: switch
   entity: switch.patio_party_lights_switch
-  title: Porch Lights
+  title: Party Lights
   icon_on: mdi-string-lights
   icon_off: mdi-string-lights
 
