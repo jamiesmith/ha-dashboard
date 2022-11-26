@@ -628,7 +628,7 @@ family_room_pl_acoustic_christmas:
 family_room_pl_hallmark_christmas:
   widget_type: playlist
   entity: media_player.family_room
-  title: "Hallmark Channel Radio"
+  title: "Hallmark Radio"
   playlist: "105 - Hallmark Channel Radio"
   logo: "/custom_css/img/HallmarkChannelRadio.svg"
   
