@@ -43,7 +43,6 @@ nav_to_sonos_matrix:
   title: Sonos
   title2: Matrix
   dashboard: sonos-matrix
-  timeout: 10
   return: patio
   icon_inactive: fa-headphones
   icon_active: fa-headphones

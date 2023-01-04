@@ -1,6 +1,6 @@
 #!/bin/bash
 
-container="ha-dashboard-4"
+container="ha-dashboard"
 
 if [ $(docker-compose ps ${container} | grep -c Up) -gt 0 ]
 then

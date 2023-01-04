@@ -275,7 +275,7 @@ family_room_sonos:
 
 family_room_theater_roon:
   widget_type: media_player
-  entity: media_player.family_room_theater_roon
+  entity: media_player.theater_roon
   truncate_name: 64
   title: Family Room Roon
 
@@ -402,7 +402,34 @@ nav_to_index:
 
 weather_now:
   widget_type: weather
+  sensors:
+    temperature: sensor.pirateweather_temperature
+    icon: sensor.dark_sky_icon
+    temperature: sensor.pirateweather_temperature
+    apparent_temperature: sensor.pirateweather_apparent_temperature
+    humidity: sensor.pirateweather_humidity
+    precip_probability: sensor.pirateweather_precip_probability
+    precip_intensity: sensor.pirateweather_precip_intensity
+    precip_type: sensor.pirateweather_precip
+    pressure: sensor.pirateweather_pressure
+    wind_speed: sensor.pirateweather_wind_speed
+    wind_bearing: sensor.pirateweather_wind_bearing
+    forecast_icon: sensor.pirateweather_icon_1
+    forecast_temperature_min: sensor.pirateweather_daily_low_temperature_1
+    forecast_temperature_max: sensor.pirateweather_daily_high_temperature_1
+    forecast_precip_probability: sensor.pirateweather_precip_probability_1
+    forecast_precip_type: sensor.pirateweather_precip_1
 
+weather_forecast:
+  widget_type: weather
+  forecast:
+    - 1
+  sensors:
+    forecast_temperature_min: sensor.pirateweather_daily_low_temperature_1
+    forecast_temperature_max: sensor.pirateweather_daily_high_temperature_1
+    forecast_precip_probability: sensor.pirateweather_precip_probability_1
+    forecast_precip_type: sensor.pirateweather_precip_1
+    
 reload:
   widget_type: reload
   title: Reload
