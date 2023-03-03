@@ -20,8 +20,8 @@ layout:
   - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up_5(2x1), patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
-  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_desperado, patio_pl_hair_nation, patio_pl_70s_on_7
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
+  - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_desperado, patio_pl_hair_nation, shut_down_office
+  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_70s_on_7, patio_pl_poprocks, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
 patio_now_playing:
@@ -118,6 +118,13 @@ patio_ceiling_fan:
   title: Porch Ceiling Fan
   icon_on: mdi-fan
   icon_off: mdi-fan
+
+shut_down_office:  
+  title: Shut Down Office
+  icon_on: mdi-power-plug-off
+  icon_off: mdi-power-plug-off
+  widget_type: script
+  entity: "script.shut_down_office"
 
 fan_low:  
   title: fan low
@@ -360,6 +367,28 @@ nav_to_kitchen:
   
 weather_now:
   widget_type: weather
+  title: Zoo
+  title2: Zoo
+  # prefer_icons: 1
+  # show_forecast: 1
+  # forecast: 1
+  sensors:
+    temperature: sensor.pirateweather_temperature
+    icon: sensor.dark_sky_icon
+    temperature: sensor.pirateweather_temperature
+    apparent_temperature: sensor.pirateweather_apparent_temperature
+    humidity: sensor.pirateweather_humidity
+    precip_probability: sensor.pirateweather_precip_probability
+    precip_intensity: sensor.pirateweather_precip_intensity
+    precip_type: sensor.pirateweather_precip
+    pressure: sensor.pirateweather_pressure
+    wind_speed: sensor.pirateweather_wind_speed
+    wind_bearing: sensor.pirateweather_wind_bearing
+    forecast_icon: sensor.pirateweather_icon_1
+    forecast_temperature_min: sensor.pirateweather_daily_low_temperature_1
+    forecast_temperature_max: sensor.pirateweather_daily_high_temperature_1
+    forecast_precip_probability: sensor.pirateweather_precip_probability_1
+    forecast_precip_type: sensor.pirateweather_precip_1
 
 reload:
   widget_type: reload

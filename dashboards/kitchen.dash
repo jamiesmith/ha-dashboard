@@ -24,8 +24,8 @@ layout:
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, look_good
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_phil_collins_radio, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_bluesville, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-# - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, family_room_pl_grateful_dead, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
-  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, family_room_pl_grateful_dead, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+#  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
   widget_type: navigate
@@ -402,6 +402,11 @@ nav_to_index:
 
 weather_now:
   widget_type: weather
+  title: Zoo
+  title2: Zoo
+  # prefer_icons: 1
+  # show_forecast: 1
+  # forecast: 1
   sensors:
     temperature: sensor.pirateweather_temperature
     icon: sensor.dark_sky_icon
