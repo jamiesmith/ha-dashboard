@@ -15,7 +15,7 @@
 }
 
 .widget-baseplaylist-{{id}} .logo {
-
+    max-height: 95%;
     border: none;
     margin: auto;
     display: block;
