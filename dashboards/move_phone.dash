@@ -349,7 +349,7 @@ move_pl_jimmy_buffett:
   widget_type: playlist
   entity: media_player.move
   title: "Jimmy Buffett"
-  playlist: "Jimmy Buffett"
+  playlist: "24 - Buffett"
   logo: "/custom_css/img/jimmy-buffett.png"
   
 move_pl_unplugged:

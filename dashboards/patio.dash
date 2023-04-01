@@ -21,7 +21,7 @@ layout:
   - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
   - patio_pl_unplugged, patio_pl_fall_out_boy, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_desperado, patio_pl_hair_nation, shut_down_office
-  - patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_70s_on_7, patio_pl_poprocks, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
+  - patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_poprocks, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_grateful_dead, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
 patio_now_playing:
@@ -579,7 +579,7 @@ patio_pl_jimmy_buffett:
   widget_type: playlist
   entity: media_player.patio
   title: "Jimmy Buffett"
-  playlist: "Jimmy Buffett"
+  playlist: "24 - Buffett"
   logo: "/custom_css/img/jimmy-buffett.png"
   
 patio_pl_unplugged:
