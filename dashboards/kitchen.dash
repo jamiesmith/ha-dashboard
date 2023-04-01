@@ -599,11 +599,19 @@ family_room_pl_bryson_tiller_radio:
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
-family_room_pl_jimmy_buffett:
+family_room_pl_jimmy_buffett_radio:
   widget_type: playlist
   entity: media_player.family_room
   title: "Jimmy Buffett"
   playlist: "24 - Buffett"
+  logo: "/custom_css/img/margaritaville.png"
+
+family_room_pl_jimmy_buffett:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Jimmy Buffett"
+  playlist: "Jimmy Buffett"
+  shuffle: "true"
   logo: "/custom_css/img/jimmy-buffett.png"
   
 family_room_pl_unplugged:

@@ -382,11 +382,19 @@ office_sonos_pl_bryson_tiller_radio:
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
-office_sonos_pl_jimmy_buffett:
+office_sonos_pl_jimmy_buffett_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Jimmy Buffett"
   playlist: "24 - Buffett"
+  logo: "/custom_css/img/margaritaville.png"
+
+office_sonos_pl_jimmy_buffett:
+  widget_type: playlist
+  entity: media_player.office_sonos
+  title: "Jimmy Buffett"
+  playlist: "Jimmy Buffett"
+  shuffle: "true"
   logo: "/custom_css/img/jimmy-buffett.png"
   
 office_sonos_pl_unplugged:

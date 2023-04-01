@@ -321,11 +321,19 @@ garage_pl_bryson_tiller_radio:
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
-garage_pl_jimmy_buffett:
+garage_pl_jimmy_buffett_radio:
   widget_type: playlist
   entity: media_player.garage
   title: "Jimmy Buffett"
   playlist: "24 - Buffett"
+  logo: "/custom_css/img/margaritaville.png"
+
+garage_pl_jimmy_buffett:
+  widget_type: playlist
+  entity: media_player.garage
+  title: "Jimmy Buffett"
+  playlist: "Jimmy Buffett"
+  shuffle: "true"
   logo: "/custom_css/img/jimmy-buffett.png"
   
 garage_pl_unplugged:
