@@ -9,12 +9,15 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     self.widget_id = widget_id;
     
-    // Store on brightness or fallback to a default
-        
     // Parameters may come in useful later on
     self.parameters = parameters;
     self.playlist = parameters.fields.playlist;
-	
+    self.shuffle = "";
+    if ("shuffle" in parameters.fields)
+    {
+	self.shuffle = parameters.fields.shuffle;
+    }
+
     // Toggle needs to be referenced from self for the timeout function
     
     self.toggle = toggle;
@@ -84,9 +87,15 @@ function baseplaylist(widget_id, url, skin, parameters)
 	args = self.parameters.post_service_playlist
 	
 	args["source"] = self.playlist
-	// console.log("Calling Service => ", args);
+	console.log("Starting Playlist => ", args);
 	
 	self.call_service(self, args);
+	if (self.shuffle != "")
+	{
+	    args2 = self.parameters.post_service_shuffle;
+	    args2["shuffle"] = self.shuffle;
+	    self.call_service(self, args2)
+	}
     }
     
     function toggle(self)

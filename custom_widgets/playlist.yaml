@@ -6,10 +6,14 @@ enable: 1
 post_service_playlist:
     service: media_player/select_source
     entity_id: "{{entity}}"
+post_service_shuffle:
+    service: media_player/shuffle_set
+    entity_id: "{{entity}}"
 fields:
   title: "{{title}}"
   logo: "{{logo}}"
   playlist: "{{playlist}}"
+  shuffle: "{{shuffle}}"
   image_style: ""
 icons: []
 static_icons: []
