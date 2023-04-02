@@ -70,11 +70,12 @@ function basemedia(widget_id, url, skin, parameters)
     {
         self.entity = state.entity_id;
 	self.media_content_id = state.attributes.media_content_id;
+	self.state = state;
         self.level = state.attributes.volume_level;
         set_view(self, state)
         if ("dump_capabilities" in self.parameters && self.parameters["dump_capabilities"] == "1")
         {
-	    //            display_supported_functions(self);
+	    // display_supported_functions(self);
 	    console.log(state);
         }
     }
@@ -86,9 +87,10 @@ function basemedia(widget_id, url, skin, parameters)
     function OnStateUpdate(self, state)
     {
 	self.media_content_id = state.attributes.media_content_id;
-        self.level = state.attributes.volume_level;
+	self.state = state;
+	self.level = state.attributes.volume_level;
 	console.log("media_content_id: ", state.attributes.media_content_id);
-        set_view(self, state)
+	set_view(self, state)
     }
 
     function OnPlayButtonClick(self)
@@ -110,11 +112,6 @@ function basemedia(widget_id, url, skin, parameters)
             if (is_supported(self, "PAUSE"))
             {
                 args = self.parameters.post_service_pause;
-                self.call_service(self, args)
-            }
-            else if (is_supported(self, "STOP"))
-            {
-                args = self.parameters.post_service_stop;
                 self.call_service(self, args)
             }
             else if (is_supported(self, "STOP"))
@@ -276,7 +273,10 @@ function basemedia(widget_id, url, skin, parameters)
                 "SHUFFLE_SET": 32768
             };
 
-        var supported = self.entity_state[parameters.entity].attributes.supported_features;
+	console.log("GOT HERE", self);
+        // var supported = self.entity_state[parameters.entity].attributes.supported_features;
+	var supported = self.state.attributes.supported_features;	
+	console.log("GOT HERE 2");
 
         if (attr in support)
         {
@@ -300,7 +300,9 @@ function basemedia(widget_id, url, skin, parameters)
     function display_supported_functions(self)
     {
         console.log(self.parameters.entity);
-        console.log("Supported Features: " + self.entity_state[parameters.entity].attributes.supported_features);
+        // console.log("Supported Features: " + self.entity_state[parameters.entity].attributes.supported_features);
+	console.log("Supported Features: " + self.state.attributes.supported_features);
+	
         console.log("PAUSE: " + is_supported(self, "PAUSE"))
         console.log("SEEK: " + is_supported(self, "SEEK"))
         console.log("VOLUME_SET: " + is_supported(self, "VOLUME_SET"))

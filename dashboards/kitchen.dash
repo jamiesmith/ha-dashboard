@@ -687,7 +687,7 @@ family_room_pl_poprocks:
   entity: media_player.family_room
   title: "PopRocks"
   playlist: "12 - PopRocks"
-  logo: "/custom_css/img/poprocks.svg"
+  logo: "/custom_css/img/poprocks.png"
   
 family_room_pl_bob_marley:
   widget_type: playlist

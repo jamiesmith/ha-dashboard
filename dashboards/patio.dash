@@ -642,7 +642,7 @@ patio_pl_poprocks:
   entity: media_player.patio
   title: "PopRocks"
   playlist: "12 - PopRocks"
-  logo: "/custom_css/img/poprocks.svg"
+  logo: "/custom_css/img/poprocks.png"
   
 patio_pl_bob_marley:
   widget_type: playlist
