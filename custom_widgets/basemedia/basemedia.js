@@ -95,6 +95,8 @@ function basemedia(widget_id, url, skin, parameters)
 
     function OnPlayButtonClick(self)
     {
+	console.log("ZEBRA");
+	console.log(self);
         if (self.entity_state[self.entity].state !== "playing")
         {
             if (is_supported(self, "PLAY_MEDIA"))
