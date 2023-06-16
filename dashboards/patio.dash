@@ -221,6 +221,14 @@ patio_turn_off:
   widget_type: script
   entity: "script.patio_turn_off"
 
+jamie_patio_mode:
+  title: Jamies Patio Mode
+  title2: Patio 
+  icon_on: mdi-power-on
+  icon_off: mdi-power
+  widget_type: script
+  entity: "script.jamie_patio_mode"
+
 family_room_turn_off:
   title: Turn Off
   title2: Family Room

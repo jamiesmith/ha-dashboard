@@ -19,7 +19,7 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_the_coffee_house, patio_pl_jazz24, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_jimmy_buffett, patio_ceiling_fan_light, patio_volume_up_10
+  - patio_pl_the_coffee_house, patio_pl_jazz24, patio_pl_real_jazz, patio_pl_bluesville, jamie_patio_mode, patio_ceiling_fan_light, patio_volume_up_10
   - patio_pl_classic_vinyl, patio_pl_hamilton, patio_pl_dave_matthews, patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_volume_down_10
   - patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_e_street_radio, fan_off, fan_low, fan_medium, fan_high
   - nav_to_previous_dash, patio_pl_imagine_dragons, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
@@ -417,6 +417,13 @@ patio_pl_tom_petty_radio:
   playlist: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
+move_pl_jazz24:
+  widget_type: playlist
+  entity: media_player.move
+  title: "Jazz 24: Move"
+  playlist: "Jazz24"
+  logo: "/custom_css/img/jazz24.png"
+
 patio_pl_jazz24:
   widget_type: playlist
   entity: media_player.patio
@@ -621,3 +628,10 @@ nav_to_patio:
   icon_inactive: fa-cocktail
   icon_active: fa-cocktail
   sticky: 1
+
+jamie_patio_mode:
+  title: Jamie Mode
+  icon_on: mdi-party-popper
+  icon_off: mdi-party-popper
+  widget_type: script
+  entity: "script.jamie_patio_mode"
