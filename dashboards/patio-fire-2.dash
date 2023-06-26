@@ -30,6 +30,8 @@ patio_ceiling_fan_light:
   title: Porch Fan Light
   icon_on: mdi-ceiling-light
   icon_off: mdi-ceiling-light
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
 
 temp_fan:
   widget_type: switch
@@ -37,6 +39,8 @@ temp_fan:
   title: Porch Table Fan
   icon_on: mdi-fan
   icon_off: mdi-fan
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
 
 patio_volume_up_5:
   title: Volume Up (5)
@@ -58,6 +62,8 @@ patio_volume_up_10:
   icon_off: fa-volume-up
   widget_type: script
   entity: "script.patio_volume_up_10"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
 
 patio_volume_down_10:  
   title: Volume down (10)
@@ -65,6 +71,8 @@ patio_volume_down_10:
   icon_off: fa-volume-down
   widget_type: script
   entity: "script.patio_volume_down_10"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
 
 fan_off:  
   title: fan off
@@ -72,6 +80,8 @@ fan_off:
   icon_off: mdi-fan-off
   widget_type: script
   entity: "script.patio_fan_speed_off"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
 
 fan_low:  
   title: fan low
@@ -79,18 +89,26 @@ fan_low:
   icon_off: mdi-fan-speed-1
   widget_type: script
   entity: "script.patio_fan_speed_low"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
+
 fan_medium:  
   title: fan medium
   icon_on: mdi-fan-speed-2
   icon_off: mdi-fan-speed-2
   widget_type: script
   entity: "script.patio_fan_speed_medium"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
+
 fan_high:  
   title: fan high
   icon_on: mdi-fan-speed-3
   icon_off: mdi-fan-speed-3
   widget_type: script
   entity: "script.patio_fan_speed_high"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
 
 nav_to_index:
   widget_type: navigate
@@ -631,7 +649,9 @@ nav_to_patio:
 
 jamie_patio_mode:
   title: Jamie Mode
-  icon_on: mdi-party-popper
-  icon_off: mdi-party-popper
+  icon_on: mdi-space-invaders
+  icon_off: mdi-space-invaders
   widget_type: script
   entity: "script.jamie_patio_mode"
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
