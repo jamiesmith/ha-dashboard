@@ -20,8 +20,8 @@ layout:
   - clock(3x1), garage_pl_deep_tracks, garage_pl_bluesville, garage_pl_poprocks, weather_now(2x2)
   - garage_sonos(3x2), garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_pl_alt_nation
   - garage_pl_tom_petty_radio, garage_pl_grateful_dead, garage_pl_hair_nation, dust_collector_on, dust_collector_off
-  - garage_volume_down, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, family_room_add_garage, garage_pl_yacht_rock_radio, orange_fan_toggle, nav_to_index
-  - garage_volume_down_5, cocktail, garage_volume_up_5, nav_to_sonos_matrix, drop_garage, garage_pl_the_spectrum, garage_turn_off, reload
+  - garage_volume_down, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, family_room_add_garage, portable_fan_toggle, wall_fan_toggle, nav_to_index
+  - garage_volume_down_5, cocktail, garage_volume_up_5, nav_to_sonos_matrix, drop_garage, garage_pl_yacht_rock_radio, garage_turn_off, reload
   
 garage_pl_80s_on_8:
   widget_type: playlist
@@ -37,6 +37,8 @@ garage_turn_off:
   icon_off: mdi-power
   widget_type: script
   entity: script.garage_off
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 dust_collector:
   widget_type: fan
@@ -45,12 +47,23 @@ dust_collector:
   icon_on: fa-trash
   icon_off: fa-trash
 
-orange_fan_toggle:
+wall_fan_toggle:
   widget_type: switch
-  entity: switch.garage_orange_fan_switch
-  title: Fan Toggle
+  entity: switch.garage_wall_fan_switch
+  title: Wall Fan Toggle
   icon_on: mdi-fan
   icon_off: mdi-fan
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
+
+portable_fan_toggle:
+  widget_type: switch
+  entity: switch.garage_portable_fan_switch
+  title: Portable Fan Toggle
+  icon_on: mdi-fan
+  icon_off: mdi-fan
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 dust_collector_on:
   widget_type: script
@@ -58,6 +71,8 @@ dust_collector_on:
   title: Dust Collector On
   icon_on: fa-trash
   icon_off: fa-trash
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
   
 dust_collector_off:
   widget_type: script
@@ -65,6 +80,8 @@ dust_collector_off:
   title: Dust Collector Off
   icon_on: fa-trash
   icon_off: fa-trash
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 nav_to_index:
   widget_type: navigate
@@ -85,6 +102,8 @@ garage_media_play_pause:
   icon_off: mdi-play-pause
   widget_type: script
   entity: "script.garage_media_play_pause"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
   
 garage_candles:
   widget_type: switch
@@ -140,6 +159,8 @@ garage_volume_up_5:
   icon_off: fa-volume-up
   widget_type: script
   entity: "script.garage_volume_up_5"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 garage_volume_down_5:  
   title: Volume down (5)
@@ -147,6 +168,8 @@ garage_volume_down_5:
   icon_off: fa-volume-down
   widget_type: script
   entity: "script.garage_volume_down_5"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 garage_volume_up:  
   title: Volume Up
@@ -154,6 +177,8 @@ garage_volume_up:
   icon_off: fa-volume-up
   widget_type: script
   entity: "script.garage_volume_up"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 garage_volume_down:  
   title: Volume down
@@ -161,6 +186,8 @@ garage_volume_down:
   icon_off: fa-volume-down
   widget_type: script
   entity: "script.garage_volume_down"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 nav_to_main:
   widget_type: navigate
@@ -205,6 +232,8 @@ family_room_add_garage:
   icon_off: mdi-speaker
   widget_type: script
   entity: "script.family_room_add_garage"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 drop_garage:
   title: Drop Garage
@@ -212,6 +241,8 @@ drop_garage:
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
   entity: "script.drop_garage"
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
 
 # Generated Playlists
 # 
