@@ -22,7 +22,7 @@ layout:
   - patio_pl_the_coffee_house, patio_pl_jazz24, patio_pl_real_jazz, patio_pl_bluesville, jamie_patio_mode, patio_ceiling_fan_light, patio_volume_up_10
   - patio_pl_classic_vinyl, patio_pl_hamilton, patio_pl_dave_matthews, patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_volume_down_10
   - patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_e_street_radio, fan_off, fan_low, fan_medium, fan_high
-  - nav_to_previous_dash, patio_pl_imagine_dragons, nav_to_patio, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
+  - nav_to_previous_dash, patio_pl_imagine_dragons, nav_to_patio, nav_to_index, bambu_printer, reload, nav_to_next_dash
 
 patio_ceiling_fan_light:
   widget_type: switch
@@ -30,6 +30,15 @@ patio_ceiling_fan_light:
   title: Porch Fan Light
   icon_on: mdi-ceiling-light
   icon_off: mdi-ceiling-light
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
+
+bambu_printer:
+  widget_type: script
+  entity: script.bambu_x1c_one_on
+  title: Bambu Printer
+  icon_on: mdi-printer-3d
+  icon_off: mdi-printer-3d
   icon_style_active: "font-size: 500%"
   icon_style_inactive: "font-size: 500%"
 
@@ -117,6 +126,8 @@ nav_to_index:
   dashboard: index
   icon_inactive: fa-list
   icon_active: fa-list
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   timeout: 10
   return: patio-fire
   sticky: 1
@@ -128,7 +139,8 @@ nav_to_previous_dash:
   dashboard: patio-fire
   icon_inactive: fa-arrow-alt-circle-left
   icon_active: fa-arrow-alt-circle-left
-  timeout: 10
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   return: patio-fire
   sticky: 1
 
@@ -139,6 +151,8 @@ nav_to_next_dash:
   dashboard: patio-fire
   icon_inactive: fa-arrow-alt-circle-right
   icon_active: fa-arrow-alt-circle-right
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   sticky: 1
 
 party_lights:
@@ -161,6 +175,8 @@ nav_to_sonos_matrix:
   return: patio-fire
   icon_inactive: fa-headphones
   icon_active: fa-headphones
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   sticky: 1
 
 # Lighting
@@ -365,6 +381,8 @@ weather_now:
 reload:
   widget_type: reload
   title: Reload
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
 
 nav_to_move:
   widget_type: navigate
@@ -645,6 +663,8 @@ nav_to_patio:
   dashboard: patio
   icon_inactive: fa-cocktail
   icon_active: fa-cocktail
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   sticky: 1
 
 jamie_patio_mode:

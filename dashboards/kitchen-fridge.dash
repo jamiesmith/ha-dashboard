@@ -2,7 +2,7 @@
 # Main arguments, all optional
 #
 title: Kitchen Fridge Panel
-widget_dimensions: [160, 160]
+widget_dimensions: [200, 200]
 widget_size: [1, 1]
 widget_margins: [2, 2]
 scalable: true
@@ -26,12 +26,15 @@ bar_table:
   widget_type: switch
   entity: group.bar_table
   title: Bar Table
+  widget_style: "font-size: 150%;"
   icon_on: mdi-bottle-wine
   icon_off: mdi-bottle-wine
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
 
 reload:
+  icon_active_style: "font-size: 600%"
+  icon_inactive_style: "font-size: 600%"
   widget_type: reload
   title: Reload
   icon_active: fa-sync-alt
@@ -40,13 +43,14 @@ reload:
 
 nav_to_sonos_matrix:
   widget_type: navigate
-  title: Sonos
-  title2: Matrix
+  title: Sonos Matrix
   dashboard: sonos-matrix
   timeout: 10
   return: kitchen-fridge
   icon_inactive: fa-headphones
   icon_active: fa-headphones
+  icon_active_style: "font-size: 600%"
+  icon_inactive_style: "font-size: 600%"
   widget_style: "font-size: 150%;"
   sticky: 1
 
@@ -56,6 +60,7 @@ accent_lighting_on:
   icon_off: mdi-lightning-bolt-outline
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
   widget_type: script
   entity: "script.turn_on_accent_lighting"
 
@@ -65,6 +70,7 @@ holiday_lighting_on:
   icon_off: fa-tree
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
   widget_type: script
   entity: "script.turn_on_all_holiday_lights"
 
@@ -76,14 +82,16 @@ accent_lighting:
   icon_off: fa-lightbulb
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
 
 nav_to_say_it:
   widget_type: navigate
   title: Say it!
-  title2: Dashboard
   dashboard: say-it
   icon_inactive: fa-bullhorn
   icon_active: fa-bullhorn
+  icon_active_style: "font-size: 600%"
+  icon_inactive_style: "font-size: 600%"
   widget_style: "font-size: 150%;"
   timeout: 5
   return: kitchen-fridge
@@ -97,6 +105,7 @@ liquor_cabinet_toggle:
   icon_off: mdi-glass-cocktail
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
 
 espresso_machine_toggle:
   widget_type: switch
@@ -106,6 +115,7 @@ espresso_machine_toggle:
   icon_off: fa-coffee
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
 
 coffee_light_toggle:
   widget_type: switch
@@ -115,6 +125,7 @@ coffee_light_toggle:
   icon_off: mdi-coffee-maker
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"
 
 look_good:
   widget_type: mqttpublish
@@ -122,6 +133,7 @@ look_good:
   topic: "say/amy"
   payload: "You look real good today"
   logo: "/custom_css/img/look-good.png"
+  widget_style: "font-size: 150%;"
 
 nav_to_index:
   widget_type: navigate
@@ -155,6 +167,7 @@ sorry_out_of_that:
   topic: "say/amy"
   payload: "Sorry, we are out of that"
   logo: "/custom_css/img/cancel.png"
+  widget_style: "font-size: 150%;"
 
 you_sit_on_a_throne_of_lies:
   widget_type: mqttpublish
@@ -201,3 +214,4 @@ cabinet_lighting:
   icon_off: fa-door-closed
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
+  widget_style: "font-size: 150%;"

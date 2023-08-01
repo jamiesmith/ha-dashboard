@@ -32,6 +32,8 @@ nav_to_say_it:
   dashboard: say-it
   icon_inactive: fa-bullhorn
   icon_active: fa-bullhorn
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   timeout: 5
   return: patio-fire
   sticky: 1
@@ -61,6 +63,8 @@ nav_to_index:
   dashboard: index
   icon_inactive: fa-list
   icon_active: fa-list
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
 
 nav_to_previous_dash:
   widget_type: navigate
@@ -69,6 +73,8 @@ nav_to_previous_dash:
   dashboard: patio-fire-2
   icon_inactive: fa-arrow-alt-circle-left
   icon_active: fa-arrow-alt-circle-left
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   timeout: 10
   return: patio-fire
   sticky: 1
@@ -80,6 +86,8 @@ nav_to_next_dash:
   dashboard: patio-fire-2
   icon_inactive: fa-arrow-alt-circle-right
   icon_active: fa-arrow-alt-circle-right
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   timeout: 10
   return: patio-fire
   sticky: 1
@@ -112,6 +120,8 @@ nav_to_sonos_matrix:
   return: patio-fire
   icon_inactive: fa-headphones
   icon_active: fa-headphones
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
   sticky: 1
 
 # Lighting
@@ -338,6 +348,8 @@ weather_now:
 reload:
   widget_type: reload
   title: Reload
+  icon_active_style: "font-size: 500%"
+  icon_inactive_style: "font-size: 500%"
 
 nav_to_move:
   widget_type: navigate
