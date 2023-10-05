@@ -40,7 +40,7 @@ nav_to_say_it:
 
 fan_heater:
   widget_type: switch
-  entity: switch.patio_temp_fan_switch
+  entity: switch.patio_temp_fan_js_switch
   title: Fan / Heater
   icon_on: mdi-fan
   icon_off: mdi-fan
@@ -140,9 +140,9 @@ cabinet_lighting:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
-foyer_outlet_switch_2:
+foyer_outlet_js_switch_2:
   widget_type: switch
-  entity: switch.foyer_outlet_switch_2
+  entity: switch.foyer_outlet_js_switch_2
   title: Foyer Lamp
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -364,7 +364,7 @@ nav_to_move:
 
 porch_lights:
   widget_type: switch
-  entity: switch.patio_party_lights_switch
+  entity: switch.patio_party_lights_js_switch
   title: Porch Lights
   icon_on: mdi-string-lights
   icon_off: mdi-string-lights

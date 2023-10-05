@@ -84,30 +84,30 @@ cabinet_lighting:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
-foyer_outlet_switch_2:
+foyer_outlet_js_switch_2:
   widget_type: switch
-  entity: switch.foyer_outlet_switch_2
+  entity: switch.foyer_outlet_js_switch_2
   title: Foyer Lamp
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 palm_tree_lights:
   widget_type: switch
-  entity: switch.palm_tree_switch
+  entity: switch.palm_tree_js_switch
   title: Palm Tree
   icon_on: mdi-palm-tree
   icon_off: mdi-palm-tree
 
 porch_lights:
   widget_type: switch
-  entity: switch.patio_party_lights_switch
+  entity: switch.patio_party_lights_js_switch
   title: Party Lights
   icon_on: mdi-string-lights
   icon_off: mdi-string-lights
 
 temp_fan:
   widget_type: switch
-  entity: switch.patio_temp_fan_switch
+  entity: switch.patio_temp_fan_js_switch
   title: Porch Fan / Heater
   icon_on: mdi-fan
   icon_off: mdi-fan

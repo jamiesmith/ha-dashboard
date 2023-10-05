@@ -37,7 +37,7 @@ patio_label:
 #
 palm_tree_lights:
   widget_type: switch
-  entity: switch.palm_tree_switch
+  entity: switch.palm_tree_js_switch
   title: Palm Tree
   icon_on: mdi-palm-tree
   icon_off: mdi-palm-tree
@@ -56,9 +56,9 @@ cabinet_lighting:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
-foyer_outlet_switch_2:
+foyer_outlet_js_switch_2:
   widget_type: switch
-  entity: switch.foyer_outlet_switch_2
+  entity: switch.foyer_outlet_js_switch_2
   title: Foyer Lamp
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb

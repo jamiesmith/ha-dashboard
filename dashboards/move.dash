@@ -17,7 +17,7 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), foyer_outlet_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, move_label
+  - clock(2x1), foyer_outlet_js_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, move_label
   - weather_now(2x2), move_sonos(2x2), family_room_sonos(2x2), move_volume_up(2x1)
   - move_volume_down(2x1)
   - family_room_turn_off(2x1), move_add_family_room, drop_family_room
@@ -61,16 +61,16 @@ cabinet_lighting:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
-foyer_outlet_switch_2:
+foyer_outlet_js_switch_2:
   widget_type: switch
-  entity: switch.foyer_outlet_switch_2
+  entity: switch.foyer_outlet_js_switch_2
   title: Foyer Lamp
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 palm_tree_lights:
   widget_type: switch
-  entity: switch.palm_tree_switch
+  entity: switch.palm_tree_js_switch
   title: Palm Tree
   icon_on: mdi-palm-tree
   icon_off: mdi-palm-tree

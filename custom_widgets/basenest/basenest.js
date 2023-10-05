@@ -5,6 +5,7 @@ function basenest(widget_id, url, skin, parameters)
     // so for consistency ...
 
     self = this
+    console.log("parameters.nest_entity =>", parameters.nest_entity);
 
     // Initialization
 
@@ -45,17 +46,19 @@ function basenest(widget_id, url, skin, parameters)
 	//
     if ("nest_entity" in parameters)
     {
-		// console.log("parameters.nest_entity =>", parameters.nest_entity);
+	console.log("parameters =>", parameters);
         monitored_entities.push({"entity": parameters.nest_entity, "initial": self.OnNestAvailable, "update": self.OnNestUpdate});
     }
 
-    if ("state_entity" in parameters)
+    if ("state_entity" in parameters && parameters.state_entity)
     {
+	console.log("state_entity parameters =>", parameters);
         monitored_entities.push({"entity": parameters.state_entity, "initial": self.OnStateAvailable, "update": self.OnStateUpdate});
     }
 
-    if ("fan_entity" in parameters)
+    if ("fan_entity" in parameters && parameters.fan_entity)
     {
+	console.log("fan_entity parameters =>", parameters);
         monitored_entities.push({"entity": parameters.fan_entity, "initial": self.OnFanAvailable, "update": self.OnFanUpdate});
     }
     

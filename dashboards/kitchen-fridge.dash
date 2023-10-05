@@ -99,7 +99,7 @@ nav_to_say_it:
 
 liquor_cabinet_toggle:
   widget_type: switch
-  entity: switch.liquor_cabinet_switch
+  entity: switch.liquor_cabinet_js_switch
   title: Liquor Cabinet
   icon_on: mdi-glass-cocktail
   icon_off: mdi-glass-cocktail
@@ -109,7 +109,7 @@ liquor_cabinet_toggle:
 
 espresso_machine_toggle:
   widget_type: switch
-  entity: switch.espresso_machine_switch
+  entity: switch.espresso_machine_js_switch
   title: Espresso Machine
   icon_on: fa-coffee
   icon_off: fa-coffee
@@ -119,7 +119,7 @@ espresso_machine_toggle:
 
 coffee_light_toggle:
   widget_type: switch
-  entity: switch.short_cabinets_lower_switch
+  entity: switch.short_cabinets_lower_js_switch
   title: Coffee Bar Light
   icon_on: mdi-coffee-maker
   icon_off: mdi-coffee-maker

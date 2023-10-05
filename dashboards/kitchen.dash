@@ -17,7 +17,7 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level, liquor_cabinet_toggle, foyer_outlet_switch_2, accent_lighting, party_lights, landscape_lights  
+  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_outlet_js_switch_2, accent_lighting_on, party_lights, landscape_lights  
   - weather_now(2x2), family_room_sonos(2x2), family_room_theater_roon(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up(2x1)
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
   - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, drop_patio, bar_table, big_screen_movie_time, family_room_volume_down(2x1)
@@ -62,6 +62,14 @@ accent_lighting:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
+accent_lighting_on:  
+  title: Accent Lights On
+  title2: FORCE
+  icon_on: mdi-lightning-bolt-outline
+  icon_off: mdi-lightning-bolt-outline
+  widget_type: script
+  entity: "script.turn_on_accent_lighting"
+
 holiday_lights:
   widget_type: switch
   entity: group.holiday_all
@@ -78,14 +86,14 @@ party_lights:
 
 family_room_apple_tv:
   widget_type: switch
-  entity: switch.family_room_apple_tv_switch
+  entity: switch.family_room_apple_tv_js_switch
   title: Family Room AppleTV
   icon_on: mdi-apple
   icon_off: mdi-apple
 
 toggle_espresso_machine:
   widget_type: switch
-  entity: switch.espresso_machine_switch
+  entity: switch.espresso_machine_js_switch
   title: Espresso Machine
   icon_on: fa-coffee
   icon_off: fa-coffee
@@ -118,16 +126,16 @@ cabinet_lighting_lower:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
-foyer_outlet_switch_2:
+foyer_outlet_js_switch_2:
   widget_type: switch
-  entity: switch.foyer_outlet_switch_2
+  entity: switch.foyer_outlet_js_switch_2
   title: Foyer Lamp
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
   
 liquor_cabinet_toggle:
   widget_type: switch
-  entity: switch.liquor_cabinet_switch
+  entity: switch.liquor_cabinet_js_switch
   title: Liquor Cabinet
   icon_on: mdi-glass-cocktail
   icon_off: mdi-glass-cocktail
@@ -135,7 +143,7 @@ liquor_cabinet_toggle:
 morning_room_lamp:
   widget_type: light
 #  entity: switch.morning_room_lamp_switch
-  entity: light.morning_room_sconce
+  entity: light.morning_room_js_sconce
   title: Morning Room
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -161,7 +169,7 @@ landscape_lights:
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
-kitchen_light_level:
+kitchen_light_level_js:
   widget_type: light
   title: Kitchen Light
   icon_on: fa-lightbulb
@@ -169,7 +177,7 @@ kitchen_light_level:
   units: " %"
   precision: 0
   shorten: 1
-  entity: light.kitchen_light_level
+  entity: light.kitchen_light_level_js
 
 office_strip_level:
   widget_type: light
@@ -325,21 +333,18 @@ small_garage_door:
 # Climate
 #
 upstairs_nest:
+  title: Upstairs
   widget_type: nest
   nest_entity: climate.upstairs
-  state_entity: sensor.upstairs_thermostat_hvac_state
-  fan_entity: binary_sensor.upstairs_thermostat_fan
-  title: Upstairs
   step: 1
   units: "F"
   precision: 0
 
 downstairs_nest:
-  widget_type: nest
-  nest_entity: climate.downstairs
-  state_entity: sensor.downstairs_thermostat_hvac_state
-  fan_entity: binary_sensor.downstairs_thermostat_fan
   title: Downstairs
+  widget_type: nest
+  entity: climate.downstairs
+  nest_entity: climate.downstairs
   step: 1
   units: "F"
   precision: 0  

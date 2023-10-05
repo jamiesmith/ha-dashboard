@@ -49,7 +49,7 @@ dust_collector:
 
 wall_fan_toggle:
   widget_type: switch
-  entity: switch.garage_wall_fan_switch
+  entity: switch.garage_wall_fan_js_switch
   title: Wall Fan Toggle
   icon_on: mdi-fan
   icon_off: mdi-fan
@@ -58,7 +58,7 @@ wall_fan_toggle:
 
 portable_fan_toggle:
   widget_type: switch
-  entity: switch.garage_portable_fan_switch
+  entity: switch.garage_portable_fan_js_switch
   title: Portable Fan Toggle
   icon_on: mdi-fan
   icon_off: mdi-fan
@@ -107,7 +107,7 @@ garage_media_play_pause:
   
 garage_candles:
   widget_type: switch
-  entity: switch.holiday_garage_candles_switch
+  entity: switch.holiday_garage_candles_js_switch
   title: Garage Candles
   icon_on: mdi-candle
   icon_off: mdi-candle
