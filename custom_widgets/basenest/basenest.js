@@ -1,11 +1,10 @@
 function basenest(widget_id, url, skin, parameters)
 {
-
     // Will be using "self" throughout for the various flavors of "this"
     // so for consistency ...
 
     self = this
-    console.log("parameters.nest_entity =>", parameters.nest_entity);
+    // console.log("parameters.nest_entity =>", parameters.nest_entity);
 
     // Initialization
 
@@ -46,19 +45,19 @@ function basenest(widget_id, url, skin, parameters)
 	//
     if ("nest_entity" in parameters)
     {
-	console.log("parameters =>", parameters);
+	// console.log("parameters =>", parameters);
         monitored_entities.push({"entity": parameters.nest_entity, "initial": self.OnNestAvailable, "update": self.OnNestUpdate});
     }
 
     if ("state_entity" in parameters && parameters.state_entity)
     {
-	console.log("state_entity parameters =>", parameters);
+	// console.log("state_entity parameters =>", parameters);
         monitored_entities.push({"entity": parameters.state_entity, "initial": self.OnStateAvailable, "update": self.OnStateUpdate});
     }
 
     if ("fan_entity" in parameters && parameters.fan_entity)
     {
-	console.log("fan_entity parameters =>", parameters);
+	// console.log("fan_entity parameters =>", parameters);
         monitored_entities.push({"entity": parameters.fan_entity, "initial": self.OnFanAvailable, "update": self.OnFanUpdate});
     }
     
@@ -84,28 +83,28 @@ function basenest(widget_id, url, skin, parameters)
 
     function OnStateHandler(self, state)
     {
-	self.state = state.attributes.hvac_action;
+	self.state = state.attributes.hvac_action.substring(0, 4);
 
 	self.set_field(self, "state", self.state);
 
-	if (self.state === "heating")
-	{
-	    console.log("In State === heating")
-            self.set_field(self, "heat_icon_style", self.css.icon_style_active)
-            self.set_icon(self, "heat_icon", self.icons.heat_icon)
-	}
-	else if (self.state === "cooling")
-	{
-	    console.log("In State === cooling")
-            self.set_field(self, "cool_icon_style", self.css.icon_style_active)
-            self.set_icon(self, "cool_icon", self.icons.cool_icon)
-	}
-	else if (self.state === "idle")
-	{
-	    console.log("In State === idle")
-            self.set_field(self, "idle_icon_style", self.css.icon_style_inactive)
-            self.set_icon(self, "idle_icon", self.icons.idle_icon)
-	}
+	// if (self.state === "heating")
+	// {
+	//     console.log("In State === heating")
+        //     self.set_field(self, "heat_icon_style", self.css.icon_style_active)
+        //     self.set_icon(self, "heat_icon", self.icons.heat_icon)
+	// }
+	// else if (self.state === "cooling")
+	// {
+	//     console.log("In State === cooling")
+        //     self.set_field(self, "cool_icon_style", self.css.icon_style_active)
+        //     self.set_icon(self, "cool_icon", self.icons.cool_icon)
+	// }
+	// else if (self.state === "idle")
+	// {
+	//     console.log("In State === idle")
+        //     self.set_field(self, "idle_icon_style", self.css.icon_style_inactive)
+        //     self.set_icon(self, "idle_icon", self.icons.idle_icon)
+	// }
 
 	// set_state_view(self, self.state);
     }
