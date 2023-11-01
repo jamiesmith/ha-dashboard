@@ -82,72 +82,98 @@ function basenest(widget_id, url, skin, parameters)
     // state is the initial state
     // Methods
 
+    function OnStateHandler(self, state)
+    {
+	self.state = state.attributes.hvac_action;
+
+	self.set_field(self, "state", self.state);
+
+	if (self.state === "heating")
+	{
+	    console.log("In State === heating")
+            self.set_field(self, "heat_icon_style", self.css.icon_style_active)
+            self.set_icon(self, "heat_icon", self.icons.heat_icon)
+	}
+	else if (self.state === "cooling")
+	{
+	    console.log("In State === cooling")
+            self.set_field(self, "cool_icon_style", self.css.icon_style_active)
+            self.set_icon(self, "cool_icon", self.icons.cool_icon)
+	}
+	else if (self.state === "idle")
+	{
+	    console.log("In State === idle")
+            self.set_field(self, "idle_icon_style", self.css.icon_style_inactive)
+            self.set_icon(self, "idle_icon", self.icons.idle_icon)
+	}
+
+	// set_state_view(self, self.state);
+    }
+    
     function OnStateAvailable(self, state)
     {
-		self.state = state.state;
-
-		// TODO: This seems right, just need to get the HTML and icon working
-		//
-		self.set_field(self, "state", state.state);
-
-		set_state_view(self, state);
+	OnStateHandler(self, state)
     }
-
+    
     function OnStateUpdate(self, state)
     {
-		// TODO: This seems right, just need to get the HTML and icon working
-		//
-		self.set_field(self, "state", state.state);
+	OnStateHandler(self, state)
+    }
 
-		set_state_view(self, state);
+    function OnFanHandler(self, state)
+    {
+	// console.log("OnFanAvailable self:", self);
+	// console.log("OnFanAvailable state:", state);
+
+	// This doesn't seem to add much value to the display
+	//	
+	return;
+	
+	self.fan = state.attributes.fan_mode;
+	
+	// TODO: This seems right, just need to get the HTML and icon working
+	//
+	self.set_field(self, "fan", self.fan);
+	
+	set_fan_view(self, self.fan);
     }
 
     function OnFanAvailable(self, state)
     {
-		// console.log("OnFanAvailable self:", self);
-		// console.log("OnFanAvailable state:", state);
-		self.fan = state.state;
+	// console.log("OnFanAvailable self:", self);
+	// console.log("OnFanAvailable state:", state);
 
-		// TODO: This seems right, just need to get the HTML and icon working
-		//
-		self.set_field(self, "fan", state.fan);
-
-		set_fan_view(self, state);
+	OnFanHandler(self, state)
     }
 
     function OnFanUpdate(self, state)
     {
-		// console.log("OnFanUpdate self:", self);
-		// console.log("OnFanUpdate state:", state);
-
-		// TODO: This seems right, just need to get the HTML and icon working
-		//
-		self.set_field(self, "fan", state.state);
-
-		set_fan_view(self, state);
+	// console.log("OnFanUpdate self:", self);
+	// console.log("OnFanUpdate state:", state);
+	OnFanHandler(self, state)
     }
 	
     function OnNestAvailable(self, state)
     {
-		self.state = state.state;
-		self.min = state.attributes.min_temp
-		self.max = state.attributes.max_temp
-
-		self.min_heat = state.attributes.min_temp
-		self.max_heat = 75
-
-		self.min_cool = 60
-		self.max_cool = state.attributes.max_temp
-
-		// self.level = state.attributes.temperature
-		self.level = state.attributes.current_temperature
-
-		self.heat_level = state.attributes.target_temp_low
-		self.cool_level = state.attributes.target_temp_high
-
-		self.set_field(self, "unit", state.attributes.unit_of_measurement)
-
-		set_nest_view(self, state)
+	self.state = state.attributes.hvac_action;
+	self.min = state.attributes.min_temp
+	self.max = state.attributes.max_temp
+	
+	self.min_heat = state.attributes.min_temp
+	self.max_heat = 75
+	
+	self.min_cool = 60
+	self.max_cool = state.attributes.max_temp
+	
+	// self.level = state.attributes.temperature
+	self.level = state.attributes.current_temperature
+	
+	self.heat_level = state.attributes.target_temp_low
+	self.cool_level = state.attributes.target_temp_high
+	
+	self.set_field(self, "unit", state.attributes.unit_of_measurement)
+	
+	set_nest_view(self, state)
     }
 
     function OnNestUpdate(self, state)

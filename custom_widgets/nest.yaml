@@ -16,7 +16,14 @@ fields:
   level2: ""
   cool_level: ""
   heat_level: ""
-icons: []
+  heat_icon_style: ""
+  cool_icon_style: ""
+  idle_icon_style: ""
+
+icons:
+  heat_icon: mdi-fire
+  cool_icon: mdi-fan
+  idle_icon: mdi-sleep
 
 css: []
   

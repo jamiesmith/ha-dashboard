@@ -350,6 +350,8 @@ upstairs_nest:
   title: Upstairs
   widget_type: nest
   nest_entity: climate.upstairs
+  fan_entity: climate.upstairs
+  state_entity: climate.upstairs
   step: 1
   units: "F"
   precision: 0
@@ -359,6 +361,8 @@ downstairs_nest:
   widget_type: nest
   entity: climate.downstairs
   nest_entity: climate.downstairs
+  fan_entity: climate.downstairs
+  state_entity: climate.downstairs
   step: 1
   units: "F"
   precision: 0  
