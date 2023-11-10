@@ -21,7 +21,7 @@ global_parameters:
 layout:
   - patio_pl_classic_rewind, patio_pl_eagles, patio_next_track, patio_ceiling_fan, porch_lights, fan_heater, patio_volume_up_5
   - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_imagine_dragons, patio_pl_alt_nation, patio_pl_the_spectrum, jamie_patio_mode, patio_volume_down_5
-  - patio_pl_tom_petty_radio, patio_pl_fall_out_boy, patio_pl_jimmy_buffett_radio, patio_pl_jimmy_buffett, ed_sheeran_equals, patio_pl_yacht_rock_radio, patio_turn_off
+  - patio_pl_tom_petty_radio, patio_pl_rockwall, patio_pl_fall_out_boy, patio_pl_jimmy_buffett_radio, patio_pl_jimmy_buffett, ed_sheeran_equals, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, nav_to_say_it, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 
@@ -562,6 +562,14 @@ patio_pl_holiday_traditions:
   playlist: "751 - Holiday Traditions"
   logo: "/custom_css/img/holiday-traditions.png"
   
+patio_pl_rockwall:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Rockwall"
+  playlist: "Rockwall"
+  logo: "/custom_css/img/rockwall.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
 patio_pl_holly:
   widget_type: playlist
   entity: media_player.patio
