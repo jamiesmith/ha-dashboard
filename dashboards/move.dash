@@ -42,21 +42,21 @@ move_label:
 #
 party_lights:
   widget_type: switch
-  entity: group.party_lights
+  entity: switch.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
 
 accent_lighting:
   widget_type: switch
-  entity: group.accent_lighting
+  entity: light.accent_lighting
   title: Accent Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 cabinet_lighting:
   widget_type: switch
-  entity: group.cabinet_lighting
+  entity: switch.cabinet_lighting
   title: Cabinet Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -84,7 +84,7 @@ morning_room_lamp:
 
 landscape_lights:
   widget_type: switch
-  entity: group.landscape_lights
+  entity: switch.landscape_lights
   title: Landscape Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -293,7 +293,7 @@ move_pl_classic_vinyl:
   entity: media_player.move
   title: "Classic Vinyl"
   playlist: "26 - Classic Vinyl"
-  logo: "/custom_css/img/classic-vinyl.png"
+  logo: "/custom_css/img/classic-vinyl.svg"
   
 move_pl_deep_tracks:
   widget_type: playlist

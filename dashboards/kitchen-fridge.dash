@@ -24,7 +24,7 @@ layout:
 
 bar_table:
   widget_type: switch
-  entity: group.bar_table
+  entity: switch.bar_table_js_switch
   title: Bar Table
   widget_style: "font-size: 150%;"
   icon_on: mdi-bottle-wine
@@ -76,7 +76,7 @@ holiday_lighting_on:
 
 accent_lighting:
   widget_type: switch
-  entity: group.accent_lighting
+  entity: light.accent_lighting
   title: Accent Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -206,7 +206,7 @@ would_you_like_an_espresso:
 
 cabinet_lighting:
   widget_type: switch
-  entity: group.cabinet_lighting
+  entity: switch.cabinet_lighting
   title: Cabinet Lighting
   # JRS-TMP icon_on: fa-lightbulb
   # JRS-TMP icon_off: fa-lightbulb

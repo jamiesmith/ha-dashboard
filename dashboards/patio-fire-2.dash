@@ -19,7 +19,7 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_the_coffee_house, patio_pl_jazz24, patio_pl_real_jazz, patio_pl_bluesville, jamie_patio_mode, patio_ceiling_fan_light, patio_volume_up_10
+  - patio_pl_the_coffee_house, patio_pl_jazz24, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_classic_vinyl_just_music, patio_ceiling_fan_light, patio_volume_up_10
   - patio_pl_classic_vinyl, patio_pl_hamilton, patio_pl_dave_matthews, patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_volume_down_10
   - patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_e_street_radio, fan_off, fan_low, fan_medium, fan_high
   - nav_to_previous_dash, patio_pl_imagine_dragons, nav_to_patio, nav_to_index, bambu_printer, reload, nav_to_next_dash
@@ -157,7 +157,7 @@ nav_to_next_dash:
 
 party_lights:
   widget_type: switch
-  entity: group.party_lights
+  entity: switch.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
@@ -183,14 +183,14 @@ nav_to_sonos_matrix:
 #
 accent_lighting:
   widget_type: switch
-  entity: group.accent_lighting
+  entity: light.accent_lighting
   title: Accent Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 cabinet_lighting:
   widget_type: switch
-  entity: group.cabinet_lighting
+  entity: switch.cabinet_lighting
   title: Cabinet Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -211,7 +211,7 @@ morning_room_lamp:
 
 landscape_lights:
   widget_type: switch
-  entity: group.landscape_lights
+  entity: switch.landscape_lights
   title: Landscape Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -425,12 +425,19 @@ patio_pl_classic_rewind:
   playlist: "25 - Classic Rewind"
   logo: "/custom_css/img/classic-rewind.png"
   
+patio_pl_classic_vinyl_just_music:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Just Music"
+  playlist: "Classic Vinyl Just Music"
+  logo: "/custom_css/img/Classic-Vinyl-Just-Music.svg"
+
 patio_pl_classic_vinyl:
   widget_type: playlist
   entity: media_player.patio
   title: "Classic Vinyl"
   playlist: "26 - Classic Vinyl"
-  logo: "/custom_css/img/classic-vinyl.png"
+  logo: "/custom_css/img/classic-vinyl.svg"
   
 patio_pl_deep_tracks:
   widget_type: playlist

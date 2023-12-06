@@ -265,7 +265,7 @@ garage_pl_classic_vinyl:
   entity: media_player.garage
   title: "Classic Vinyl"
   playlist: "26 - Classic Vinyl"
-  logo: "/custom_css/img/classic-vinyl.png"
+  logo: "/custom_css/img/classic-vinyl.svg"
   
 garage_pl_deep_tracks:
   widget_type: "playlist"

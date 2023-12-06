@@ -17,15 +17,15 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_lamp, accent_lighting_on, party_lights, landscape_lights  
-  - weather_now(2x2), family_room_sonos(2x2), family_room_theater_roon(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
+  - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_lamp, accent_lighting, party_lights, landscape_lights  
+  - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
   - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, drop_patio, bar_table, big_screen_movie_time, family_room_volume_down_5, family_room_volume_down
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, look_good
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_phil_collins_radio, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
-#  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+#  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
   widget_type: navigate
@@ -57,7 +57,7 @@ family_room_now_playing:
 #
 accent_lighting:
   widget_type: switch
-  entity: group.accent_lighting
+  entity: light.accent_lighting
   title: Accent Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -72,14 +72,14 @@ accent_lighting_on:
 
 holiday_lights:
   widget_type: switch
-  entity: group.holiday_all
+  entity: switch.holiday_all
   title: Holiday Lights
   icon_on: mdi-candle
   icon_off: mdi-candle
 
 party_lights:
   widget_type: switch
-  entity: group.party_lights
+  entity: switch.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
@@ -100,28 +100,28 @@ toggle_espresso_machine:
 
 holiday_lights_family_room:
   widget_type: switch
-  entity: group.holiday_lighting_family_room
+  entity: switch.holiday_lighting_family_room
   title: Tree & Garland
   icon_on: fa-tree
   icon_off: fa-tree
   
 cabinet_lighting:
   widget_type: switch
-  entity: group.cabinet_lighting
+  entity: switch.cabinet_lighting
   title: Cabinet Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 cabinet_lighting_upper:
   widget_type: switch
-  entity: group.cabinet_lighting_upper
+  entity: switch.cabinet_lighting_upper
   title: Upper Cabinet Lights
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 cabinet_lighting_lower:
   widget_type: switch
-  entity: group.cabinet_lighting_lower
+  entity: switch.cabinet_lighting_lower
   title: Lower Cabinet Lights
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -150,7 +150,7 @@ morning_room_lamp:
 
 bar_table:
   widget_type: switch
-  entity: group.bar_table
+  entity: switch.bar_table_js_switch
   title: Bar Table
   icon_on: mdi-bottle-wine
   icon_off: mdi-bottle-wine
@@ -164,7 +164,7 @@ living_room_cabinets:
 
 landscape_lights:
   widget_type: switch
-  entity: group.landscape_lights
+  entity: switch.landscape_lights
   title: Landscape Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -291,7 +291,6 @@ office_sonos:
 family_room_sonos:
   widget_type: media_player
   entity: media_player.family_room
-  roon_entity: media_player.family_room_sonos_roon
   truncate_name: 64
   title: Family Room Sonos
 
@@ -305,7 +304,7 @@ patio_sonos:
   widget_type: media_player
   entity: media_player.patio
   truncate_name: 64
-  title: Patio
+  title: Patio Sonos
 
 garage_sonos:
   widget_type: media_player
@@ -528,7 +527,7 @@ family_room_pl_classic_vinyl:
   entity: media_player.family_room
   title: "Classic Vinyl"
   playlist: "26 - Classic Vinyl"
-  logo: "/custom_css/img/classic-vinyl.png"
+  logo: "/custom_css/img/classic-vinyl.svg"
   
 family_room_pl_deep_tracks:
   widget_type: playlist

@@ -21,7 +21,7 @@ layout:
   - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
   - patio_pl_unplugged, patio_pl_poprocks, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_jimmy_buffett_radio, patio_pl_desperado, shut_down_office
-  - patio_pl_rockwall, patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
+  - patio_pl_rockwall, patio_pl_classic_vinyl_just_music, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
 patio_now_playing:
@@ -65,21 +65,21 @@ patio_label:
 #
 party_lights:
   widget_type: switch
-  entity: group.party_lights
+  entity: switch.party_lights
   title: Party Lights
   icon_on: fa-toggle-on
   icon_off: fa-toggle-off
 
 accent_lighting:
   widget_type: switch
-  entity: group.accent_lighting
+  entity: light.accent_lighting
   title: Accent Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
 
 cabinet_lighting:
   widget_type: switch
-  entity: group.cabinet_lighting
+  entity: switch.cabinet_lighting
   title: Cabinet Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -161,7 +161,7 @@ morning_room_lamp:
 
 landscape_lights:
   widget_type: switch
-  entity: group.landscape_lights
+  entity: switch.landscape_lights
   title: Landscape Lighting
   icon_on: fa-lightbulb
   icon_off: fa-lightbulb
@@ -281,14 +281,14 @@ patio_sonos:
   dump_capabilities: 1
   widget_type: media_player
   entity: media_player.patio
-  roon_entity: media_player.patio_sonos_roon
+  # roon_entity: media_player.patio_sonos_roon
   truncate_name: 64
   title: Patio
 
 family_room_sonos:
   widget_type: media_player
   entity: media_player.family_room
-  roon_entity: media_player.family_room_sonos_roon
+  # roon_entity: media_player.family_room_sonos_roon
   truncate_name: 64
   title: Family Room
 
@@ -482,7 +482,7 @@ patio_pl_classic_vinyl:
   entity: media_player.patio
   title: "Classic Vinyl"
   playlist: "26 - Classic Vinyl"
-  logo: "/custom_css/img/classic-vinyl.png"
+  logo: "/custom_css/img/classic-vinyl.svg"
   
 patio_pl_deep_tracks:
   widget_type: playlist
@@ -546,6 +546,13 @@ patio_pl_70s_on_7:
   title: "70s on 7"
   playlist: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
+
+patio_pl_classic_vinyl_just_music:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Just Music"
+  playlist: "Classic Vinyl Just Music"
+  logo: "/custom_css/img/Classic-Vinyl-Just-Music.svg"
   
 patio_pl_80s_on_8:
   widget_type: playlist
