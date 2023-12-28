@@ -21,7 +21,7 @@ global_parameters:
 layout:
   - patio_pl_classic_rewind, patio_pl_eagles, patio_next_track, patio_ceiling_fan, porch_lights, fan_heater, patio_volume_up_5
   - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_imagine_dragons, patio_pl_alt_nation, patio_pl_the_spectrum, jamie_patio_mode, patio_volume_down_5
-  - patio_pl_tom_petty_radio, patio_pl_rockwall, patio_pl_fall_out_boy, patio_pl_jimmy_buffett_radio, patio_pl_jimmy_buffett, ed_sheeran_equals, patio_turn_off
+  - patio_pl_tom_petty_radio, patio_pl_rockwall, patio_pl_fall_out_boy, patio_pl_jimmy_buffett_radio, patio_pl_jimmy_buffett, patio_pl_life_with_john_mayer, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, nav_to_say_it, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 
@@ -649,3 +649,11 @@ jamie_patio_mode:
   entity: "script.jamie_patio_mode"
   icon_style_active: "font-size: 500%"
   icon_style_inactive: "font-size: 500%"
+
+patio_pl_life_with_john_mayer:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "14 - Life with John Mayer"
+  playlist: "14 - Life with John Mayer"
+  logo: "/custom_css/img/LifeWithJohnMayer.svg"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"

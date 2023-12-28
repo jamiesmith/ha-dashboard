@@ -20,12 +20,12 @@ layout:
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_lamp, accent_lighting, party_lights, landscape_lights  
   - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
   - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
-  - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, drop_patio, bar_table, big_screen_movie_time, family_room_volume_down_5, family_room_volume_down
+  - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, family_room_pl_life_with_john_mayer, bar_table, big_screen_movie_time, family_room_volume_down_5, family_room_volume_down
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, look_good
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_phil_collins_radio, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-#  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
-  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+#  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
   widget_type: navigate
@@ -768,3 +768,21 @@ family_room_pl_ed_sheeran_autumn:
   title: "Autumn Variations"
   playlist: "Ed Sheeran - Autumn Variations"
   logo: "/custom_css/img/autumn-variations.jpg"
+
+family_room_pl_rockwall:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Rockwall"
+  playlist: "Rockwall"
+  logo: "/custom_css/img/rockwall.png"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
+family_room_pl_life_with_john_mayer:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "14 - Life with John Mayer"
+  playlist: "14 - Life with John Mayer"
+  logo: "/custom_css/img/LifeWithJohnMayer.svg"
+  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
+  
