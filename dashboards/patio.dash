@@ -17,8 +17,8 @@ global_parameters:
 
 layout:
   - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_ceiling_fan, patio_ceiling_fan_light, temp_fan
-  - weather_now(2x2), patio_sonos(2x2), family_room_sonos(2x2), patio_volume_up_5(2x1), patio_volume_up_10, nav_to_say_it
-  - patio_volume_down_5(2x1), patio_volume_down_10, cocktail
+  - weather_now(2x2), patio_sonos(2x2), patio_next_track(1x2), family_room_sonos(2x2), patio_volume_up_5, patio_volume_up_10, nav_to_say_it
+  - patio_volume_down_5, patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
   - patio_pl_unplugged, patio_pl_poprocks, patio_pl_peter_gabriel_radio, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_jimmy_buffett_radio, patio_pl_desperado, shut_down_office
   - patio_pl_rockwall, patio_pl_classic_vinyl_just_music, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
@@ -37,6 +37,13 @@ nav_to_patio_fire:
   dashboard: patio-fire
   icon_inactive: mdi-fire
   icon_active: mdi-fire
+
+patio_next_track:
+  title: Patio Next Track
+  icon_on: fa-step-forward
+  icon_off: fa-step-forward
+  widget_type: script
+  entity: "script.patio_next_track"
 
 nav_to_sonos_matrix:
   widget_type: navigate
@@ -284,6 +291,7 @@ patio_sonos:
   # roon_entity: media_player.patio_sonos_roon
   truncate_name: 64
   title: Patio
+  step: 2
 
 family_room_sonos:
   widget_type: media_player

@@ -1,6 +1,8 @@
 #!/bin/bash
 
 rooms="family_room patio move garage office"
+icon_style="font-size: 600%; margin-top: -10px"
+
 function fixName
 {
     echo "$@" | tr "_" " " | sed -e "s/\b\(.\)/\u\1/g"
@@ -12,7 +14,7 @@ function getIcon
 	    icon="fa-couch"
 	    ;;
 	patio)
-	    icon="mdi-fire"
+	    icon="mdi-palm-tree"
 	    ;;
 	move)
 	    icon="mdi-speaker"
@@ -75,6 +77,8 @@ drop_${add_to}:
   widget_type: script
   icon_on: mdi-speaker-off
   icon_off: mdi-speaker-off
+  icon_style_active: "$icon_style"
+  icon_style_inactive: "$icon_style"
   entity: "script.drop_${add_to}"
 
 ${add_to}_label:
@@ -96,6 +100,8 @@ ${add_to}_add_${to_add}:
 #  title2: (To ${add_to})
   icon_on: $(getIcon $to_add)
   icon_off: $(getIcon $to_add)
+  icon_style_active: "$icon_style"
+  icon_style_inactive: "$icon_style"
   widget_type: script
   entity: "script.${add_to}_add_${to_add}"
 EOF
@@ -113,6 +119,8 @@ nav_to_index:
   dashboard: index
   icon_inactive: fa-list
   icon_active: fa-list
+  icon_style_active: "$icon_style"
+  icon_style_inactive: "$icon_style"
   sticky: 1
 
 EOF

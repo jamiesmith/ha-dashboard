@@ -186,28 +186,6 @@ small_garage_door:
   icon_off: mdi-garage
   state_text: 1
 
-# Climate
-#
-upstairs_nest:
-  widget_type: nest
-  nest_entity: climate.upstairs
-  state_entity: sensor.upstairs_thermostat_hvac_state
-  fan_entity: binary_sensor.upstairs_thermostat_fan
-  title: Upstairs
-  step: 1
-  units: "F"
-  precision: 0
-
-downstairs_nest:
-  widget_type: nest
-  nest_entity: climate.downstairs
-  state_entity: sensor.downstairs_thermostat_hvac_state
-  fan_entity: binary_sensor.downstairs_thermostat_fan
-  title: Downstairs
-  step: 1
-  units: "F"
-  precision: 0  
-
 
 # Subpanel Nav
 #  

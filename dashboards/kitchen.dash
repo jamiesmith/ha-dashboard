@@ -18,14 +18,14 @@ global_parameters:
 
 layout:
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_lamp, accent_lighting, party_lights, landscape_lights  
-  - weather_now(2x2), family_room_sonos(2x2), patio_sonos(2x2), cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
-  - holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
-  - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, family_room_pl_life_with_john_mayer, bar_table, big_screen_movie_time, family_room_volume_down_5, family_room_volume_down
+  - weather_now(2x2), family_room_sonos(2x2), family_room_next_track, family_room_add_patio, cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
+  - drop_family_room, patio_add_family_room, holiday_lights, holiday_lights_family_room, family_room_toggle_mute, family_room_turn_off
+  - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, bar_table, big_screen_movie_time, are_you_walking, family_room_volume_down_5, family_room_volume_down
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, look_good
-  - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_phil_collins_radio, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
+  - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_tortured_poets, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-#  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
-  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+#  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
   widget_type: navigate
@@ -37,6 +37,13 @@ nav_to_say_it:
   timeout: 5
   return: kitchen
   sticky: 1
+
+are_you_walking:
+  widget_type: mqttpublish
+  title: "Are you walking?"
+  topic: "say/amy"
+  payload: "Are you walking?"
+  logo: "/custom_css/img/dog.png"
 
 big_screen_movie_time:
   widget_type: script
@@ -254,9 +261,11 @@ family_room_previous_track:
 family_room_add_patio:
   title: Add Patio
   title2: (To Family Room)
-  icon_on: mdi-speaker
-  icon_off: mdi-speaker
+  icon_on: mdi-palm-tree
+  icon_off: mdi-palm-tree
   widget_type: script
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
   entity: "script.family_room_add_patio"
 
 drop_patio:
@@ -667,6 +676,14 @@ family_room_pl_phil_collins_radio:
   shuffle: "true"
   playlist: "Mostly Phil"
   logo: "/custom_css/img/PhilCollins.jpg"
+
+family_room_pl_tortured_poets:
+  widget_type: playlist
+  entity: media_player.family_room
+  title: "Tortured Poets"
+  shuffle: "true"
+  playlist: "The Tortured Poets Department: The Anthology"
+  logo: "/custom_css/img/TorturedPoetsAnthology.jpg"
   
 family_room_pl_imagine_dragons:
   widget_type: playlist
@@ -786,3 +803,25 @@ family_room_pl_life_with_john_mayer:
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
   
+family_room_next_track:
+  title: Family Room
+  title2: Next Track
+  icon_on: fa-step-forward
+  icon_off: fa-step-forward
+  widget_type: script
+  entity: "script.family_room_sonos_next_track"
+
+patio_add_family_room:
+  title: Add FR
+  title2: (to patio)
+  icon_on: fa-couch
+  icon_off: fa-couch
+  widget_type: script
+  entity: "script.patio_add_family_room"
+
+drop_family_room:
+  title: DROP Family Room
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_family_room"
