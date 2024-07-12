@@ -37,7 +37,7 @@
 .widget-basenest-{{id}} .heat-icon {
 	position: absolute;
 	bottom: 0px;
-	font-size: 20px;
+	font-size: 40px;
 	width: 32px;
 	color: white;
 }
@@ -45,7 +45,7 @@
 .widget-basenest-{{id}} .cool-icon {
 	position: absolute;
 	bottom: 0px;
-	font-size: 20px;
+	font-size: 40px;
 	width: 32px;
 	color: white;
 }
@@ -76,7 +76,7 @@
 
 .widget-basenest-{{id}} .heat-icon.minus i {
 	padding-top: 10px;
-	padding-right: 30px;
+	padding-right: 40px;
 }
 
 .widget-basenest-{{id}} .heat-icon.plus {
@@ -84,8 +84,8 @@
 }
 
 .widget-basenest-{{id}} .heat-icon.plus i {
-	padding-bottom:  30px;
-	padding-right: 30px;
+	padding-bottom:  50px;
+	padding-right: 40px;
 }
 
 /* cool */
@@ -96,7 +96,7 @@
 
 .widget-basenest-{{id}} .cool-icon.minus i {
 	padding-top: 10px;
-	padding-left: 30px;
+	padding-left: 10px;
 }
 
 .widget-basenest-{{id}} .cool-icon.plus {
@@ -104,6 +104,6 @@
 }
 
 .widget-basenest-{{id}} .cool-icon.plus i {
-	padding-bottom:  30px;
-	padding-left: 30px;
+	padding-bottom:  50px;
+	padding-left: 10px;
 }

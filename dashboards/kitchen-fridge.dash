@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - you_sit_on_a_throne_of_lies, sorry_out_of_that, look_good, can_i_get_you_something, what_can_i_get_you
-  - bar_table, accent_lighting, cabinet_lighting, liquor_cabinet_toggle, coffee_light_toggle
+  - bar_table, living_room_cabinets, cabinet_lighting, liquor_cabinet_toggle, coffee_light_toggle
   - nav_to_say_it, nav_to_sonos_matrix, holiday_lighting_on, accent_lighting_on, reload
 
 
@@ -29,6 +29,17 @@ bar_table:
   widget_style: "font-size: 150%;"
   icon_on: mdi-bottle-wine
   icon_off: mdi-bottle-wine
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+
+living_room_cabinets:
+  widget_type: light
+  entity: light.living_room_cabinets_dimmer_js_level
+  title: Living Room
+  title2: Cabinets
+  widget_style: "font-size: 150%;"
+  icon_on: mdi-bookshelf
+  icon_off: mdi-bookshelf
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
 
