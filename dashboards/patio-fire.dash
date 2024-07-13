@@ -353,14 +353,14 @@ patio_pl_tortured_poets:
   entity: media_player.patio
   title: "Tortured Poets"
   shuffle: "true"
-  playlist: "The Tortured Poets Department: The Anthology"
+  favorite: "The Tortured Poets Department: The Anthology"
   logo: "/custom_css/img/TorturedPoetsAnthology.jpg"
 
 patio_pl_eagles:
   widget_type: playlist
   entity: media_player.patio
   title: "The Eagles"
-  playlist: "Eagles"
+  playlist: "The Eagles"
   shuffle: "true"
   logo: "/custom_css/img/TheEagles.jpg"
 
@@ -370,119 +370,119 @@ patio_pl_grateful_dead:
   widget_type: playlist
   entity: media_player.patio
   title: "Grateful Dead"
-  playlist: "23 - Grateful Dead"
+  favorite: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
   
 patio_pl_hair_nation:
   widget_type: playlist
   entity: media_player.patio
   title: "Hair Nation"
-  playlist: "39 - Hair Nation"
+  favorite: "39 - Hair Nation"
   logo: "/custom_css/img/HairNation.svg"
   
 patio_pl_classic_rewind:
   widget_type: playlist
   entity: media_player.patio
   title: "Classic Rewind"
-  playlist: "25 - Classic Rewind"
+  favorite: "25 - Classic Rewind"
   logo: "/custom_css/img/classic-rewind.png"
   
 patio_pl_classic_vinyl:
   widget_type: playlist
   entity: media_player.patio
   title: "Classic Vinyl"
-  playlist: "26 - Classic Vinyl"
+  favorite: "26 - Classic Vinyl"
   logo: "/custom_css/img/classic-vinyl.svg"
   
 patio_pl_deep_tracks:
   widget_type: playlist
   entity: media_player.patio
   title: "Deep Tracks"
-  playlist: "27 - Deep Tracks"
+  favorite: "27 - Deep Tracks"
   logo: "/custom_css/img/deep-tracks.png"
   
 patio_pl_the_coffee_house:
   widget_type: playlist
   entity: media_player.patio
   title: "The Coffee House"
-  playlist: "14 - The Coffee House"
+  favorite: "14 - The Coffee House"
   logo: "/custom_css/img/coffee-house.png"
   
 patio_pl_tom_petty_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "Tom Petty Radio"
-  playlist: "31 - Tom Petty Radio"
+  favorite: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
 patio_pl_rockbar:
   widget_type: playlist
   entity: media_player.patio
   title: "RockBar"
-  playlist: "313 - RockBar"
+  favorite: "313 - RockBar"
   logo: "/custom_css/img/rockbar.png"
   
 patio_pl_dave_matthews:
   widget_type: playlist
   entity: media_player.patio
   title: "Dave Matthews"
-  playlist: "30 - Dave Matthews Band Radio"
+  favorite: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
 patio_pl_50s_on_5:
   widget_type: playlist
   entity: media_player.patio
   title: "50s on 5"
-  playlist: "5 - 50s on 5"
+  favorite: "5 - 50s on 5"
   logo: "/custom_css/img/50s.png"
   
 patio_pl_60s_on_6:
   widget_type: playlist
   entity: media_player.patio
   title: "60s on 6"
-  playlist: "6 - 60s on 6"
+  favorite: "6 - 60s on 6"
   logo: "/custom_css/img/60s.png"
   
 patio_pl_70s_on_7:
   widget_type: playlist
   entity: media_player.patio
   title: "70s on 7"
-  playlist: "7 - 70s on 7"
+  favorite: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
 
 ed_sheeran_equals:
   widget_type: playlist
   entity: media_player.patio
   title: "Ed Sheeran Equals"
-  playlist: "Equals"
+  favorite: "Equals"
   logo: "/custom_css/img/ed_sheeran_equals.png"
   
 patio_pl_80s_on_8:
   widget_type: playlist
   entity: media_player.patio
   title: "80s on 8"
-  playlist: "8 - 80s on 8"
+  favorite: "8 - 80s on 8"
   logo: "/custom_css/img/80s.png"
   
 patio_pl_90s_on_9:
   widget_type: playlist
   entity: media_player.patio
   title: "90s on 9"
-  playlist: "9 - 90s on 9"
+  favorite: "9 - 90s on 9"
   logo: "/custom_css/img/90s.png"
   
 patio_pl_real_jazz:
   widget_type: playlist
   entity: media_player.patio
   title: "Real Jazz"
-  playlist: "67 - Real Jazz"
+  favorite: "67 - Real Jazz"
   logo: "/custom_css/img/real-jazz.png"
   
 patio_pl_bluesville:
   widget_type: playlist
   entity: media_player.patio
   title: "Bluesville"
-  playlist: "74 - B.B. King's Bluesville"
+  favorite: "74 - B.B. King's Bluesville"
   logo: "/custom_css/img/bluesville.png"
   
 # Skip Bach Cello Suites
@@ -490,7 +490,7 @@ patio_pl_bryson_tiller_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "Bryson Tiller Radio"
-  playlist: "Bryson Tiller Radio"
+  favorite: "Bryson Tiller Radio"
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
@@ -498,14 +498,14 @@ patio_pl_jimmy_buffett_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "Margaritaville"
-  playlist: "24 - Buffett"
+  favorite: "24 - Buffett"
   logo: "/custom_css/img/margaritaville.png"
 
 patio_pl_jimmy_buffett:
   widget_type: playlist
   entity: media_player.patio
   title: "Jimmy Buffett"
-  playlist: "Jimmy Buffett"
+  favorite: "Jimmy Buffett"
   shuffle: "true"
   logo: "/custom_css/img/jimmy-buffett.png"
   
@@ -513,14 +513,14 @@ patio_pl_unplugged:
   widget_type: playlist
   entity: media_player.patio
   title: "Unplugged"
-  playlist: "Unplugged"
+  favorite: "Unplugged"
   logo: "/custom_css/img/unplugged.png"
   
 patio_pl_fall_out_boy:
   widget_type: playlist
   entity: media_player.patio
   title: "Fall Out Boy"
-  playlist: "Fall Out Boy Radio"
+  favorite: "Fall Out Boy Radio"
   shuffle: "true"
   logo: "/custom_css/img/fall-out-boy.png"
 
@@ -528,7 +528,7 @@ patio_pl_taylor_swift:
   widget_type: playlist
   entity: media_player.patio
   title: "Taylor Swift Radio"
-  playlist: "13 - Taylors Version"
+  favorite: "13 - Taylors Version"
   shuffle: "true"
   logo: "/custom_css/img/fall-out-boy.png"
 
@@ -536,7 +536,7 @@ patio_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "Peter Gabriel Radio"
-  playlist: "Peter Gabriel Radio Tidal"
+  favorite: "Peter Gabriel Radio Tidal"
   shuffle: "true"
   logo: "/custom_css/img/peter-gabriel.png"
   
@@ -544,7 +544,7 @@ patio_pl_imagine_dragons:
   widget_type: playlist
   entity: media_player.patio
   title: "Imagine Dragons"
-  playlist: "Imagine Dragons Radio"
+  favorite: "Imagine Dragons Radio"
   shuffle: "true"
   logo: "/custom_css/img/imagine-dragons.png"
 
@@ -552,14 +552,14 @@ patio_pl_holiday_traditions:
   widget_type: playlist
   entity: media_player.patio
   title: "Holiday Traditions"
-  playlist: "751 - Holiday Traditions"
+  favorite: "751 - Holiday Traditions"
   logo: "/custom_css/img/holiday-traditions.png"
   
 patio_pl_rockwall:
   widget_type: playlist
   entity: media_player.patio
   title: "Rockwall"
-  playlist: "Rockwall"
+  favorite: "Rockwall"
   logo: "/custom_css/img/rockwall.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
@@ -567,7 +567,7 @@ patio_pl_holly:
   widget_type: playlist
   entity: media_player.patio
   title: "Holly"
-  playlist: "752 - Holly"
+  favorite: "752 - Holly"
   logo: "/custom_css/img/holly.png"
   
 # Skip 753 - Holiday Pops
@@ -575,63 +575,63 @@ patio_pl_poprocks:
   widget_type: playlist
   entity: media_player.patio
   title: "PopRocks"
-  playlist: "12 - PopRocks"
+  favorite: "12 - PopRocks"
   logo: "/custom_css/img/poprocks.png"
   
 patio_pl_bob_marley:
   widget_type: playlist
   entity: media_player.patio
   title: "Bob Marley"
-  playlist: "19 - Bob Marley"
+  favorite: "19 - Bob Marley"
   logo: "/custom_css/img/bob-marley.png"
   
 patio_pl_e_street_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "E Street Radio"
-  playlist: "20 - E Street Radio"
+  favorite: "20 - E Street Radio"
   logo: "/custom_css/img/e-street-radio.png"
   
 patio_pl_buffett:
   widget_type: playlist
   entity: media_player.patio
   title: "Buffett"
-  playlist: "24 - Buffett"
+  favorite: "24 - Buffett"
   logo: "/custom_css/img/buffett.png"
 
 patio_pl_the_spectrum:
   widget_type: playlist
   entity: media_player.patio
   title: "The Spectrum"
-  playlist: "28 - The Spectrum"
+  favorite: "28 - The Spectrum"
   logo: "/custom_css/img/spectrum.png"
   
 patio_pl_yacht_rock_radio:
   widget_type: playlist
   entity: media_player.patio
   title: "Yacht Rock Radio"
-  playlist: "311 - Yacht Rock Radio"
+  favorite: "311 - Yacht Rock Radio"
   logo: "/custom_css/img/yacht-rock.png"
   
 patio_pl_alt_nation:
   widget_type: playlist
   entity: media_player.patio
   title: "Alt Nation"
-  playlist: "36 - Alt Nation"
+  favorite: "36 - Alt Nation"
   logo: "/custom_css/img/alt-nation.png"
   
 patio_pl_hamilton:
   widget_type: playlist
   entity: media_player.patio
   title: "Hamilton"
-  playlist: "Hamilton"
+  favorite: "Hamilton"
   logo: "/custom_css/img/hamilton.jpg"
   
 move_pl_jazz24:
   widget_type: playlist
   entity: media_player.move
   title: "Jazz 24: Move"
-  playlist: "Jazz24"
+  favorite: "Jazz24"
   logo: "/custom_css/img/jazz24.png"
 
 jamie_patio_mode:
@@ -647,6 +647,6 @@ patio_pl_life_with_john_mayer:
   widget_type: playlist
   entity: media_player.patio
   title: "14 - Life with John Mayer"
-  playlist: "14 - Life with John Mayer"
+  favorite: "14 - Life with John Mayer"
   logo: "/custom_css/img/LifeWithJohnMayer.svg"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"

@@ -272,105 +272,105 @@ office_sonos_pl_grateful_dead:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Grateful Dead"
-  playlist: "23 - Grateful Dead"
+  favorite: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
   
 office_sonos_pl_classic_rewind:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Classic Rewind"
-  playlist: "25 - Classic Rewind"
+  favorite: "25 - Classic Rewind"
   logo: "/custom_css/img/classic-rewind.png"
   
 office_sonos_pl_classic_vinyl:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Classic Vinyl"
-  playlist: "26 - Classic Vinyl"
+  favorite: "26 - Classic Vinyl"
   logo: "/custom_css/img/classic-vinyl.svg"
   
 office_sonos_pl_deep_tracks:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Deep Tracks"
-  playlist: "27 - Deep Tracks"
+  favorite: "27 - Deep Tracks"
   logo: "/custom_css/img/deep-tracks.png"
   
 office_sonos_pl_the_coffee_house:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "The Coffee House"
-  playlist: "14 - The Coffee House"
+  favorite: "14 - The Coffee House"
   logo: "/custom_css/img/coffee-house.png"
   
 office_sonos_pl_tom_petty_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Tom Petty Radio"
-  playlist: "31 - Tom Petty Radio"
+  favorite: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
 office_sonos_pl_rockbar:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "RockBar"
-  playlist: "313 - RockBar"
+  favorite: "313 - RockBar"
   logo: "/custom_css/img/rockbar.png"
   
 office_sonos_pl_dave_matthews:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Dave Matthews"
-  playlist: "30 - Dave Matthews Band Radio"
+  favorite: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
 office_sonos_pl_50s_on_5:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "50s on 5"
-  playlist: "5 - 50s on 5"
+  favorite: "5 - 50s on 5"
   logo: "/custom_css/img/50s.png"
   
 office_sonos_pl_60s_on_6:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "60s on 6"
-  playlist: "6 - 60s on 6"
+  favorite: "6 - 60s on 6"
   logo: "/custom_css/img/60s.png"
   
 office_sonos_pl_70s_on_7:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "70s on 7"
-  playlist: "7 - 70s on 7"
+  favorite: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
   
 office_sonos_pl_80s_on_8:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "80s on 8"
-  playlist: "8 - 80s on 8"
+  favorite: "8 - 80s on 8"
   logo: "/custom_css/img/80s.png"
   
 office_sonos_pl_90s_on_9:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "90s on 9"
-  playlist: "9 - 90s on 9"
+  favorite: "9 - 90s on 9"
   logo: "/custom_css/img/90s.png"
   
 office_sonos_pl_real_jazz:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Real Jazz"
-  playlist: "67 - Real Jazz"
+  favorite: "67 - Real Jazz"
   logo: "/custom_css/img/real-jazz.png"
   
 office_sonos_pl_bluesville:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Bluesville"
-  playlist: "74 - B.B. King's Bluesville"
+  favorite: "74 - B.B. King's Bluesville"
   logo: "/custom_css/img/bluesville.png"
   
 # Skip Bach Cello Suites
@@ -378,7 +378,7 @@ office_sonos_pl_bryson_tiller_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Bryson Tiller Radio"
-  playlist: "Bryson Tiller Radio"
+  favorite: "Bryson Tiller Radio"
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
@@ -386,14 +386,14 @@ office_sonos_pl_jimmy_buffett_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Jimmy Buffett"
-  playlist: "24 - Buffett"
+  favorite: "24 - Buffett"
   logo: "/custom_css/img/margaritaville.png"
 
 office_sonos_pl_jimmy_buffett:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Jimmy Buffett"
-  playlist: "Jimmy Buffett"
+  favorite: "Jimmy Buffett"
   shuffle: "true"
   logo: "/custom_css/img/jimmy-buffett.png"
   
@@ -401,14 +401,14 @@ office_sonos_pl_unplugged:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Unplugged"
-  playlist: "Unplugged"
+  favorite: "Unplugged"
   logo: "/custom_css/img/unplugged.png"
   
 office_sonos_pl_fall_out_boy:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Fall Out Boy"
-  playlist: "Fall Out Boy Radio"
+  favorite: "Fall Out Boy Radio"
   logo: "/custom_css/img/fall-out-boy.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
@@ -416,14 +416,14 @@ office_sonos_pl_peter_gabriel_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Peter Gabriel Radio"
-  playlist: "Peter Gabriel Radio"
+  favorite: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
 office_sonos_pl_imagine_dragons:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Imagine Dragons"
-  playlist: "Imagine Dragons Radio"
+  favorite: "Imagine Dragons Radio"
   logo: "/custom_css/img/imagine-dragons.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
@@ -431,14 +431,14 @@ office_sonos_pl_holiday_traditions:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Holiday Traditions"
-  playlist: "751 - Holiday Traditions"
+  favorite: "751 - Holiday Traditions"
   logo: "/custom_css/img/holiday-traditions.png"
   
 office_sonos_pl_holly:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Holly"
-  playlist: "752 - Holly"
+  favorite: "752 - Holly"
   logo: "/custom_css/img/holly.png"
   
 # Skip 753 - Holiday Pops
@@ -446,28 +446,28 @@ office_sonos_pl_poprocks:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "PopRocks"
-  playlist: "12 - PopRocks"
+  favorite: "12 - PopRocks"
   logo: "/custom_css/img/poprocks.png"
   
 office_sonos_pl_bob_marley:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Bob Marley"
-  playlist: "19 - Bob Marley"
+  favorite: "19 - Bob Marley"
   logo: "/custom_css/img/bob-marley.png"
   
 office_sonos_pl_e_street_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "E Street Radio"
-  playlist: "20 - E Street Radio"
+  favorite: "20 - E Street Radio"
   logo: "/custom_css/img/e-street-radio.png"
   
 office_sonos_pl_buffett:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Buffett"
-  playlist: "24 - Buffett"
+  favorite: "24 - Buffett"
   logo: "/custom_css/img/buffett.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
@@ -475,27 +475,27 @@ office_sonos_pl_the_spectrum:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "The Spectrum"
-  playlist: "28 - The Spectrum"
+  favorite: "28 - The Spectrum"
   logo: "/custom_css/img/spectrum.png"
   
 office_sonos_pl_yacht_rock_radio:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Yacht Rock Radio"
-  playlist: "311 - Yacht Rock Radio"
+  favorite: "311 - Yacht Rock Radio"
   logo: "/custom_css/img/yacht-rock.png"
   
 office_sonos_pl_alt_nation:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Alt Nation"
-  playlist: "36 - Alt Nation"
+  favorite: "36 - Alt Nation"
   logo: "/custom_css/img/alt-nation.png"
   
 office_sonos_pl_hamilton:
   widget_type: playlist
   entity: media_player.office_sonos
   title: "Hamilton"
-  playlist: "Hamilton"
+  favorite: "Hamilton"
   logo: "/custom_css/img/hamilton.jpg"
   

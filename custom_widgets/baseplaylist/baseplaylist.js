@@ -10,9 +10,22 @@ function baseplaylist(widget_id, url, skin, parameters)
     self.widget_id = widget_id;
     
     // Parameters may come in useful later on
-    self.parameters = parameters;
-    self.playlist = parameters.fields.playlist;
+    //
+    self.playlist = "";
+    self.favorite = "";
     self.shuffle = "";
+
+    self.parameters = parameters;
+    
+    if ("playlist" in parameters.fields)
+    {
+	self.playlist = parameters.fields.playlist;
+    }
+    if ("favorite" in parameters.fields)
+    {
+	self.favorite = parameters.fields.favorite;
+    }
+
     if ("shuffle" in parameters.fields)
     {
 	self.shuffle = parameters.fields.shuffle;
@@ -83,11 +96,27 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     function OnButtonClick(self)
     {
-	console.log("OBC", self.playlist);
-	args = self.parameters.post_service_playlist
+	// Overloaded. If it's got both, use the favorite
+	//
+	if (self.favorite)
+	{
+	    console.log("got a favorite: " + self.favorite);
+	    args = self.parameters.post_service_favorite
+	    
+	    args["source"] = self.favorite
+	    console.log("Starting FAVORITE => ", args);
+	    
+	    self.call_service(self, args);
+	    
+	}
+	else if (self.playlist)
+	{
+	    console.log("got a playlist", self.playlist);
+	    args = self.parameters.post_service_playlist
 	
-	args["source"] = self.playlist
-	console.log("Starting Playlist => ", args);
+	    args["media_content_id"] = self.playlist
+	    console.log("Starting Playlist => ", args);
+	}
 	
 	self.call_service(self, args);
 	if (self.shuffle != "")
