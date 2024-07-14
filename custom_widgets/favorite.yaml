@@ -1,23 +1,17 @@
-widget_type: baseplaylist
+widget_type: basefavorite
 entity: "{{entity}}"
 state_active: "on"
 state_inactive: "off"
 enable: 1
-post_service_playlist:
-    service: media_player/play_media
+post_service_favorite:
+    service: media_player/select_source
     entity_id: "{{entity}}"
-    media_content_type: playlist
-    enqueue: replace
 post_service_shuffle:
     service: media_player/shuffle_set
-    entity_id: "{{entity}}"
-post_serviceclear_playlist:
-    service: media_player/clear_playlist
     entity_id: "{{entity}}"
 fields:
   title: "{{title}}"
   logo: "{{logo}}"
-  playlist: "{{playlist}}"
   favorite: "{{favorite}}"
   shuffle: "{{shuffle}}"
   image_style: ""

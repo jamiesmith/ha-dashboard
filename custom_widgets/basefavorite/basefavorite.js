@@ -1,4 +1,4 @@
-function baseplaylist(widget_id, url, skin, parameters)
+function basefavorite(widget_id, url, skin, parameters)
 {
     // Will be using "self" throughout for the various flavors of "this"
     // so for consistency ...
@@ -11,14 +11,14 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     // Parameters may come in useful later on
     //
-    self.playlist = "";
-    self.shuffle = "false";
+    self.favorite = "";
+    self.shuffle = "";
 
     self.parameters = parameters;
     
-    if ("playlist" in parameters.fields)
+    if ("favorite" in parameters.fields)
     {
-	self.playlist = parameters.fields.playlist;
+	self.favorite = parameters.fields.favorite;
     }
 
     if ("shuffle" in parameters.fields)
@@ -91,25 +91,21 @@ function baseplaylist(widget_id, url, skin, parameters)
     
     function OnButtonClick(self)
     {
-	console.log("got a playlist", self.playlist);
-	args = self.parameters.post_service_playlist
+	console.log("got a favorite: " + self.favorite);
+	args = self.parameters.post_service_favorite
 	
-	args["media_content_id"] = self.playlist
-	if (self.playlist.includes("ALBUM"))
-	{
-	    console.log("trying to override content type");
-	    args["media_content_type"] = "album";
-	}
-	console.log("Starting Playlist => ", args);
+	args["source"] = self.favorite
+	console.log("Starting FAVORITE => ", args);
 	
 	self.call_service(self, args);
-	console.log("Shuffle is: " + self.shuffle);
+	    
+	
+	self.call_service(self, args);
 	if (self.shuffle != "")
 	{
 	    args2 = self.parameters.post_service_shuffle;
 	    args2["shuffle"] = self.shuffle;
 	    self.call_service(self, args2)
-	    console.log("setting shuffle => ", args2);
 	}
     }
     

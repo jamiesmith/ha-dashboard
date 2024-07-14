@@ -1,0 +1,27 @@
+.widget-basefavorite-{{id}} .title {
+	position: absolute;
+	top: 5px;
+	width: 100%;
+}
+
+.widget-basefavorite-{{id}} .outer-image {
+    position: absolute;
+    top: 23px;
+    bottom: 0px;
+    left: 12px;
+    right: 12px;
+    z-index: 0;
+    border: none;
+}
+
+.widget-basefavorite-{{id}} .logo {
+    max-height: 100%;
+    border: none;
+    margin: auto;
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    
+}
