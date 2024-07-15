@@ -1,6 +1,7 @@
 #
 # Main arguments, all optional
 #
+
 title: Kitchen Panel
 widget_dimensions: [120, 110]
 widget_size: [1, 1]
@@ -17,11 +18,12 @@ global_parameters:
       step: 5
 
 layout:
+  - include: family-room-playlists
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_lamp, accent_lighting, party_lights, landscape_lights  
   - weather_now(2x2), family_room_sonos(2x2), family_room_next_track, family_room_add_patio, cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
   - drop_family_room, patio_add_family_room, holiday_lights, holiday_lights_family_room, family_room_volume_down_5, family_room_volume_down
   - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, bar_table, big_screen_movie_time, are_you_walking, family_room_toggle_mute, family_room_turn_off
-  - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, look_good
+  - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, nav_to_camera
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_tortured_poets, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
   - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
@@ -35,6 +37,17 @@ nav_to_say_it:
   icon_inactive: fa-bullhorn
   icon_active: fa-bullhorn
   timeout: 5
+  return: kitchen
+  sticky: 1
+
+nav_to_camera:
+  widget_type: navigate
+  title: Cameras
+  title2: Dashboard
+  dashboard: camera
+  icon_inactive: fa-camera
+  icon_active: fa-camera
+  timeout: 10
   return: kitchen
   sticky: 1
 
@@ -500,13 +513,13 @@ what_can_i_get_you:
   payload: "What can I get you?"
   logo: "/custom_css/img/question_mark.png"
   
-family_room_pl_eagles:
-  widget_type: playlist
-  entity: media_player.family_room
-  title: "The Eagles"
-  shuffle: "false"
-  playlist: "The Eagles"
-  logo: "/custom_css/img/TheEagles.jpg"
+# JRS-TMP family_room_pl_eagles:
+# JRS-TMP   widget_type: playlist
+# JRS-TMP   entity: media_player.family_room
+# JRS-TMP   title: "The Eagles"
+# JRS-TMP   shuffle: "false"
+# JRS-TMP   playlist: "The Eagles"
+# JRS-TMP   logo: "/custom_css/img/TheEagles.jpg"
 
 # Generated Favorites
 # 

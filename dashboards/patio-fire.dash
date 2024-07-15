@@ -357,11 +357,10 @@ patio_pl_tortured_poets:
   logo: "/custom_css/img/TorturedPoetsAnthology.jpg"
 
 patio_pl_eagles:
-  widget_type: favorite
+  widget_type: playlist
   entity: media_player.patio
   title: "The Eagles"
-  favorite: "The Eagles"
-  shuffle: "true"
+  playlist: "The Eagles"
   logo: "/custom_css/img/TheEagles.jpg"
 
 # Generated Favorites

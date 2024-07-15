@@ -1,0 +1,43 @@
+#
+# Main arguments, all optional
+#
+title: Camera Panel
+widget_dimensions: [120, 105]
+widget_size: [1, 1]
+widget_margins: [2, 2]
+scalable: true
+columns: 10
+global_parameters:
+  use_comma: 0 
+  precision: 1 
+  namespace: default
+  devices:
+    media_player:
+      step: 5
+
+layout:
+  - front_door_camera(5x4), front_door_package_camera(5x4)
+  -
+  -
+  -
+  - garage_camera(5x4)
+
+front_door_camera:
+  widget_type: camera
+  base_url: http://192.168.1.80:8123
+  entity: camera.g4_doorbell_pro_high
+
+driveway_camera:
+  widget_type: camera
+  base_url: http://192.168.1.80:8123
+  entity: camera.driveway_camera_high
+
+front_door_package_camera:
+  widget_type: camera
+  base_url: http://192.168.1.80:8123
+  entity: camera.g4_doorbell_pro_package_camera
+
+garage_camera:
+  widget_type: camera
+  base_url: http://192.168.1.80:8123
+  entity: camera.garage_camera_high

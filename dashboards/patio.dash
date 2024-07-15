@@ -24,6 +24,7 @@ layout:
   - patio_pl_rockwall, patio_pl_classic_vinyl_just_music, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
+
 patio_now_playing:
   title: Now Playing
   widget_type: entitypicture
