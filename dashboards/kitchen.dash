@@ -26,7 +26,7 @@ layout:
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, nav_to_camera
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_tortured_poets, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_deep_tracks, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_classic_rewind_deep_cuts, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 #  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
@@ -42,7 +42,7 @@ nav_to_say_it:
 
 nav_to_camera:
   widget_type: navigate
-  title: Cameras
+  title: Camera
   title2: Dashboard
   dashboard: camera
   icon_inactive: fa-camera
@@ -170,10 +170,9 @@ morning_room_lamp:
 
 bar_table:
   widget_type: switch
-  entity: switch.bar_table_js_switch
+  entity: light.bar_table
   title: Bar Table
-  icon_on: mdi-bottle-wine
-  icon_off: mdi-bottle-wine
+  icon: mdi-bottle-wine
 
 living_room_cabinets:
   widget_type: switch
@@ -557,6 +556,13 @@ family_room_pl_deep_tracks:
   title: "Deep Tracks"
   favorite: "27 - Deep Tracks"
   logo: "/custom_css/img/deep-tracks.png"
+
+family_room_pl_classic_rewind_deep_cuts:
+  widget_type: favorite
+  entity: media_player.family_room
+  title: "Deep Cuts"
+  favorite: "Classic Rewind Deep Cuts"
+  logo: "/custom_css/img/classic-rewind-deep-cuts.jpeg"
   
 family_room_pl_the_coffee_house:
   widget_type: favorite

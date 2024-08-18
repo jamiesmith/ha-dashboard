@@ -4,7 +4,7 @@ function basenest(widget_id, url, skin, parameters)
     // so for consistency ...
 
     self = this
-    // console.log("parameters.nest_entity =>", parameters.nest_entity);
+    console.log("parameters.nest_entity =>", parameters.nest_entity);
 
     // Initialization
 
@@ -196,7 +196,9 @@ function basenest(widget_id, url, skin, parameters)
 	args = self.parameters.post_service
 	args["target_temp_low"] = self.heat_level
 	args["target_temp_high"] = self.cool_level
-	
+
+	console.log("Calling service: ", args);
+
 	self.call_service(self, args)
     }
 
@@ -211,6 +213,8 @@ function basenest(widget_id, url, skin, parameters)
 	args["target_temp_low"] = self.heat_level
 	args["target_temp_high"] = self.cool_level
 	
+	console.log("Calling service: ", args);
+
 	self.call_service(self, args)
     }
 
@@ -226,6 +230,8 @@ function basenest(widget_id, url, skin, parameters)
 	args["target_temp_low"] = self.heat_level
 	args["target_temp_high"] = self.cool_level
 	
+	console.log("Calling service: ", args);
+
 	self.call_service(self, args)
     }
 
@@ -240,6 +246,8 @@ function basenest(widget_id, url, skin, parameters)
 	args["target_temp_low"] = self.heat_level
 	args["target_temp_high"] = self.cool_level
 	
+	console.log("Calling service: ", args);
+
 	self.call_service(self, args)
     }
 
