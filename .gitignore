@@ -3,3 +3,4 @@ apps/*
 **/._*
 secrets.yaml
 .DS_Store
+certs
