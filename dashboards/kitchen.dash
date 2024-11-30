@@ -26,8 +26,8 @@ layout:
   - downstairs_nest(2x1), family_room_pl_eagles, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, nav_to_camera
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_tortured_poets, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_classic_rewind_deep_cuts, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
-#  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+#  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_classic_rewind_deep_cuts, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
   widget_type: navigate
@@ -716,28 +716,28 @@ family_room_pl_holiday_traditions:
   widget_type: favorite
   entity: media_player.family_room
   title: "Holiday Traditions"
-  favorite: "751 - Holiday Traditions"
+  favorite: "CH 71 - Holiday Traditions"
   logo: "/custom_css/img/HolidayTradionsLogo.png"
   
 family_room_pl_holly:
   widget_type: favorite
   entity: media_player.family_room
   title: "Holly"
-  favorite: "752 - Holly"
+  favorite: "CH 79 - Holly"
   logo: "/custom_css/img/HollyLogo.png"
 
 family_room_pl_acoustic_christmas:
   widget_type: favorite
   entity: media_player.family_room
   title: "Acoustic Christmas"
-  favorite: "781 - Acoustic Christmas"
+  favorite: "Acoustic Christmas"
   logo: "/custom_css/img/AcousticChristmas.png"
 
 family_room_pl_hallmark_christmas:
   widget_type: favorite
   entity: media_player.family_room
   title: "Hallmark Radio"
-  favorite: "105 - Hallmark Channel Radio"
+  favorite: "CH 105 - Hallmark Radio"
   logo: "/custom_css/img/HallmarkChannelRadio.svg"
   
 # Skip 753 - Holiday Pops
