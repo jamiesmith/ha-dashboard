@@ -20,7 +20,7 @@ layout:
   -
   -
   -
-  - garage_camera(5x4)
+  - garage_camera(5x4), barbie_sitter_camera(5x4)
 
 front_door_camera:
   widget_type: camera
@@ -41,3 +41,9 @@ garage_camera:
   widget_type: camera
   base_url: http://192.168.1.80:8123
   entity: camera.garage_camera_high
+
+barbie_sitter_camera:
+  widget_type: camera
+  base_url: http://192.168.1.80:8123
+  entity: camera.g4_instant_high_resolution_channel
+

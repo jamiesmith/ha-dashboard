@@ -1,4 +1,3 @@
-version: '2.1'
 services:
   appdaemon:
     image: acockburn/appdaemon:4.4.2
@@ -9,3 +8,19 @@ services:
     volumes:
       - './:/conf'
       - './certs:/certs'
+
+    env_file: .env
+    
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.appdaemon.rule=Host(`${TRAEFIK_HOST}`)"
+      - "traefik.http.routers.appdaemon.entrypoints=https"
+      - "traefik.http.routers.appdaemon.tls=true"
+      - "traefik.http.routers.appdaemon.tls.certresolver=cloudflare"
+      - "traefik.http.services.appdaemon.loadbalancer.server.port=5050"
+
+    networks:
+      - traefik
+networks:
+  traefik:
+    external: true

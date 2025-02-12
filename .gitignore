@@ -4,3 +4,4 @@ apps/*
 secrets.yaml
 .DS_Store
 certs
+.env

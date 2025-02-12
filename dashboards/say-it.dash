@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
-  - ily, would_you_like_an_espresso
+  - ily, would_you_like_an_espresso, fish_paste
   - sorry_out_of_that, I_look_good, you_look_good
   - nav_to_index
 
@@ -29,6 +29,13 @@ you_look_good:
   topic: "say/amy"
   payload: "You look real good today"
   logo: "/custom_css/img/look-good.png"
+
+fish_paste:
+  widget_type: mqttpublish
+  title: "Holy Fishpaste"
+  topic: "say/amy"
+  payload: "Holy fishpaste, thats a guy"
+  logo: "/custom_css/img/spongebob.png"
 
 I_look_good:
   widget_type: mqttpublish
