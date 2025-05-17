@@ -20,7 +20,7 @@ layout:
   - clock(2x1), foyer_outlet_js_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, office_label
   - weather_now(2x3), office_sonos(2x2), family_room_sonos(2x2), office_volume_up(2x1)
   - office_volume_down(2x1)
-  - family_room_turn_off(2x1), office_add_family_room, drop_family_room, office_sonos_pl_eagles
+  - family_room_turn_off(2x1), office_add_family_room, drop_family_room, office_sonos_pl_eagles, office_receiver
   - office_sonos_pl_unplugged, office_sonos_pl_fall_out_boy, office_sonos_pl_peter_gabriel_radio, office_sonos_pl_imagine_dragons, office_sonos_pl_jimmy_buffett, office_sonos_pl_50s_on_5, office_sonos_pl_60s_on_6, office_sonos_pl_70s_on_7
   - office_sonos_pl_80s_on_8, office_sonos_pl_90s_on_9, office_sonos_pl_poprocks, office_sonos_pl_real_jazz, office_sonos_pl_bluesville, office_sonos_pl_dave_matthews
   - office_sonos_pl_classic_rewind, office_sonos_pl_classic_vinyl, office_sonos_pl_deep_tracks, office_sonos_pl_grateful_dead, office_sonos_pl_tom_petty_radio, office_sonos_pl_yacht_rock_radio, spacer, nav_to_index, nav_to_kitchen, reload
@@ -37,6 +37,13 @@ nav_to_index:
 office_label:
   widget_type: label
   title: Office
+
+office_receiver:
+  widget_type: switch
+  entity: switch.office_receiver_js_switch
+  title: Office Receiver
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
 
 # Lighting
 #
@@ -70,8 +77,8 @@ foyer_outlet_js_switch_2:
 
 palm_tree_lights:
   widget_type: switch
-  entity: switch.palm_tree_js_switch
-  title: Palm Tree
+  entity: switch.palm_trees
+  title: Palm Trees
   icon_on: mdi-palm-tree-on
   icon_off: mdi-palm-tree
 

@@ -70,8 +70,8 @@ foyer_outlet_js_switch_2:
 
 palm_tree_lights:
   widget_type: switch
-  entity: switch.palm_tree_js_switch
-  title: Palm Tree
+  entity: switch.palm_trees
+  title: Palm Trees
   icon_on: mdi-palm-tree
   icon_off: mdi-palm-tree
 

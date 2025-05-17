@@ -16,11 +16,11 @@ global_parameters:
       step: 5
 
 layout:
-  - front_door_camera(5x4), front_door_package_camera(5x4)
+  - front_door_camera(6x4), front_door_package_camera(3x2)
+  - 
+  - garage_camera(3x2)
   -
-  -
-  -
-  - garage_camera(5x4), barbie_sitter_camera(5x4)
+  - driveway_camera(5x4), barbie_sitter_camera(5x4)
 
 front_door_camera:
   widget_type: camera
