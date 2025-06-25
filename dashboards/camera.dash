@@ -26,24 +26,29 @@ front_door_camera:
   widget_type: camera
   base_url: http://192.168.1.80:8123
   entity: camera.g4_doorbell_pro_high
+  refresh: 1
 
 driveway_camera:
   widget_type: camera
   base_url: http://192.168.1.80:8123
   entity: camera.driveway_camera_high
+  refresh: 1
 
 front_door_package_camera:
   widget_type: camera
   base_url: http://192.168.1.80:8123
   entity: camera.g4_doorbell_pro_package_camera
+  refresh: 1
 
 garage_camera:
   widget_type: camera
   base_url: http://192.168.1.80:8123
   entity: camera.garage_camera_high
+  refresh: 1
 
 barbie_sitter_camera:
   widget_type: camera
   base_url: http://192.168.1.80:8123
   entity: camera.g4_instant_high_resolution_channel
+  refresh: 1
 

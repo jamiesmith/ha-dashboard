@@ -455,7 +455,7 @@ weather_now:
   # forecast: 1
   sensors:
     temperature: sensor.pirate_weather_temperature
-    icon: sensor.dark_sky_icon
+    icon: sensor.pirateweather_icon
     temperature: sensor.pirate_weather_temperature
     apparent_temperature: sensor.pirate_weather_apparent_temperature
     humidity: sensor.pirate_weather_humidity

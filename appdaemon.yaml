@@ -1,4 +1,6 @@
-logs:
+# Getting an error with this in here still, but seems to work without it now
+#
+# logs:
   
 appdaemon:
   threads: 10
@@ -18,13 +20,15 @@ appdaemon:
   time_zone: America/New_York
     
 hadashboard:
-   dash_url: "http://192.168.1.80:5050"
+   dash_url: "http://0.0.0.0:5050"
    dash_dir: /conf/dashboards
    dash_force_compile: 1
    dash_compile_on_start: 1
      
 http:
-  url: "http://192.168.1.80:5050"
+  # Switching to 0 because of an error, but it seems to work
+  # url: "http://192.168.1.80:5050"
+  url: "http://0.0.0.0:5050"
   
 api:
 admin:  

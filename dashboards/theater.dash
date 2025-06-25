@@ -16,30 +16,18 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(2x1), watch_apple_tv, watch_apple_tv_big_screen
-  - spacer
-  - big_screen_movie_time
-  - play_sonos, play_roon, sync_tracks
-  - family_room_pl_test
+  - include: denon
+  - clock(2x1), big_screen_movie_time, spacer, home_theater_denon_info
+  - home_theater_denon_volume_up, home_theater_denon_volume_up_5, home_theater_denon_toggle_mute, spacer, home_theater_denon_hdmi_out_lg
+  - home_theater_denon_volume_down, home_theater_denon_volume_down_5, home_theater_denon_volume_80, spacer, home_theater_denon_hdmi_out_projector
+  - home_theater_denon_qs_apple_tv, home_theater_denon_qs_roku_4k, home_theater_denon_qs_bluray, home_theater_denon_qs_ps5, home_theater_denon_input_switch
+  - home_theater_denon_surround_movie, home_theater_denon_surround_dolby_digital, home_theater_denon_surround_dts, home_theater_denon_surround_auro3d
+  - home_theater_denon_surround_music, home_theater_denon_surround_direct, home_theater_denon_surround_pure_direct, home_theater_denon_surround_multi_channel_stereo
+#  - home_theater_denon_input_roon, home_theater_denon_qs_sonos
 
 clock:
   widget_type: clock
   show_seconds: 1
-
-watch_apple_tv:
-  title: Watch Apple TV
-  icon_on: mdi-apple
-  icon_off: mdi-apple
-  widget_type: script
-  entity: "script.watch_apple_tv"
-  
-watch_apple_tv_big_screen:
-  title: Big-Screen
-  title2: Apple TV
-  icon_on: mdi-projector
-  icon_off: mdi-projector
-  widget_type: script
-  entity: "script.watch_apple_tv_big_screen"
 
 big_screen_movie_time:
   widget_type: script
@@ -48,24 +36,9 @@ big_screen_movie_time:
   icon_on: mdi-projector
   icon_off: mdi-projector
 
-play_sonos:
+home_theater_denon_toggle_mute:  
+  title: Mute
+  icon_on: mdi-volume-off
+  icon_off: mdi-volume-off
   widget_type: script
-  entity: script.theater_sonos_scene
-  title: Sonos
-  icon_on: mdi-music
-  icon_off: mdi-music
-
-play_roon:
-  widget_type: script
-  entity: script.theater_roon_scene
-  title: Roon
-  icon_on: mdi-music
-  icon_off: mdi-music
-
-sync_tracks:
-  widget_type: script
-  entity: script.compare_track_back
-  title: Prev Track
-  icon_on: mdi-music
-  icon_off: mdi-music
-  
+  entity: "script.family_room_receiver_toggle_mute"
