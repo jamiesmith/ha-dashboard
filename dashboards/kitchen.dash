@@ -23,7 +23,7 @@ layout:
   - weather_now(2x2), family_room_sonos(2x2), family_room_next_track, family_room_add_patio, cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
   - drop_family_room, patio_add_family_room, holiday_lights, holiday_lights_family_room, family_room_volume_down_5, family_room_volume_down
   - upstairs_nest(2x1), family_room_now_playing(2x2), family_room_pl_hair_nation, bar_table, big_screen_movie_time, are_you_walking, family_room_toggle_mute, family_room_turn_off
-  - downstairs_nest(2x1), family_room_pl_classic_rewind_deep_cuts, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, nav_to_camera
+  - downstairs_nest(2x1), family_room_pl_hamilton, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, nav_to_camera
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_tortured_poets, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
   - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_eagles, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
@@ -799,6 +799,7 @@ family_room_pl_hamilton:
   entity: media_player.family_room
   title: "Hamilton"
   favorite: "Hamilton"
+  shuffle: "false"
   logo: "/custom_css/img/hamilton.jpg"
   
 family_room_pl_ed_sheeran_autumn:

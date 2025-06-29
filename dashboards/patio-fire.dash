@@ -39,8 +39,8 @@ nav_to_say_it:
   sticky: 1
 
 fan_heater:
-  widget_type: switch
-  entity: switch.patio_temp_fan_js_switch
+  widget_type: script
+  entity: "script.patio_fan_speed_high"
   title: Fan / Heater
   icon_on: mdi-fan
   icon_off: mdi-fan
