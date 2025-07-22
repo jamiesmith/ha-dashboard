@@ -40,7 +40,7 @@ nav_to_say_it:
 
 fan_heater:
   widget_type: script
-  entity: "script.patio_fan_speed_high"
+  entity: "switch.patio_temp_fan_js_switch"
   title: Fan / Heater
   icon_on: mdi-fan
   icon_off: mdi-fan

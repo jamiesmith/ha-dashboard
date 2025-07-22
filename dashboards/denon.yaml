@@ -123,13 +123,13 @@ home_theater_denon_surround_multi_channel_stereo:
   icon_off: mdi-speaker-multiple
 home_theater_denon_volume_up:
   widget_type: script
-  entity: "script.home_theater_denon_volume_up"
+  entity: "script.family_room_receiver_volume_up"
   icon_on: fa-volume-up
   icon_off: fa-volume-up
   title: Volume Up
 home_theater_denon_volume_down:
   widget_type: script
-  entity: "script.home_theater_denon_volume_down"
+  entity: "script.family_room_receiver_volume_down"
   icon_on: fa-volume-down
   icon_off: fa-volume-down
   title: Volume Down

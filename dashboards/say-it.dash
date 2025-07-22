@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
-  - ily, would_you_like_an_espresso, fish_paste
+  - ily, would_you_like_an_espresso, fish_paste, great_googly
   - sorry_out_of_that, I_look_good, you_look_good
   - nav_to_index
 
@@ -43,6 +43,13 @@ I_look_good:
   topic: "say/amy"
   payload: "I look good today"
   logo: "/custom_css/img/look-good.png"
+
+great_googly:
+  widget_type: mqttpublish
+  title: "GGM"
+  topic: "say/amy"
+  payload: "Great googly moogly"
+  logo: "/custom_css/img/ferocious-beast.png"
 
 nav_to_index:
   widget_type: navigate

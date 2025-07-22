@@ -171,7 +171,7 @@ morning_room_lamp:
   icon_off: fa-lightbulb
 
 bar_table:
-  widget_type: switch
+  widget_type: light
   entity: light.bar_table
   title: Bar Table
   icon_on: mdi-glass-wine
