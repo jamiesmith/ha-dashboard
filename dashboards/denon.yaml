@@ -49,10 +49,36 @@ home_theater_denon_hdmi_out_lg:
   title2: TV
   icon_on: mdi-television-classic
   icon_off: mdi-television-classic
-home_theater_denon_qs_ps5_set:
+home_theater_denon_qs1_set:
   widget_type: script
-  entity: "script.home_theater_denon_qs_ps5_set"
-  title: PS5 Scene Set
+  entity: "script.home_theater_denon_qs1_set"
+  title: Scene 1 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+home_theater_denon_qs2_set:
+  widget_type: script
+  entity: "script.home_theater_denon_qs2_set"
+  title: Scene 2 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+home_theater_denon_qs3_set:
+  widget_type: script
+  entity: "script.home_theater_denon_qs3_set"
+  title: Scene 3 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+home_theater_denon_qs4_set:
+  widget_type: script
+  entity: "script.home_theater_denon_qs4_set"
+  title: Scene 4 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+home_theater_denon_qs5_set:
+  widget_type: script
+  entity: "script.home_theater_denon_qs5_set"
+  title: Scene 5 Set
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
 home_theater_denon_input_roon:
   widget_type: script
   entity: "script.home_theater_denon_input_roon"

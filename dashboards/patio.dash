@@ -466,7 +466,7 @@ patio_pl_eagles:
   widget_type: favorite
   entity: media_player.patio
   title: "The Eagles"
-  favorite: "The Eagles"
+  favorite: "Eagles - Tidal"
   shuffle: "true"
   logo: "/custom_css/img/TheEagles.jpg"
 

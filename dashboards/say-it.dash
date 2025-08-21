@@ -20,8 +20,22 @@ layout:
   - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
   - ily, would_you_like_an_espresso, fish_paste, great_googly
   - sorry_out_of_that, I_look_good, you_look_good
-  - nav_to_index
+  - nav_to_index, happy_hour, how_about_a_scotch
 
+
+happy_hour:
+  widget_type: mqttpublish
+  title: "Happy Hour"
+  topic: "say/amy"
+  payload: "Are we doing happy hour?"
+  logo: "/custom_css/img/happy-hour.png"
+
+how_about_a_scotch:
+  widget_type: mqttpublish
+  title: "Scotch?"
+  topic: "say/amy"
+  payload: "A scotch perhaps? Peated or unpeated?"
+  logo: "/custom_css/img/scotch.png"
 
 you_look_good:
   widget_type: mqttpublish
