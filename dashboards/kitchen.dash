@@ -26,7 +26,7 @@ layout:
   - downstairs_nest(2x1), family_room_pl_hamilton, family_room_pl_fall_out_boy, family_room_pl_peter_gabriel_radio, what_can_i_get_you, fish_paste, nav_to_camera
   - family_room_pl_80s_on_8, family_room_pl_tom_petty_radio, family_room_pl_tortured_poets, family_room_pl_alt_nation, family_room_pl_poprocks, family_room_pl_ed_sheeran_autumn, family_room_pl_imagine_dragons, nav_to_say_it, cocktail, family_room_apple_tv
 # Swapped with christmas row
-  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_eagles, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
+  - family_room_pl_classic_rewind, family_room_pl_classic_vinyl, family_room_pl_jimmy_buffett_radio, family_room_pl_jimmy_buffett, family_room_pl_eagles, family_room_pl_yacht_rock_radio, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 #  - family_room_pl_classic_rewind, family_room_pl_rockwall, family_room_pl_holiday_traditions, family_room_pl_holly, family_room_pl_acoustic_christmas, family_room_pl_hallmark_christmas, nav_to_index, nav_to_sonos_matrix, toggle_espresso_machine, reload
 
 nav_to_say_it:
@@ -254,7 +254,7 @@ family_room_turn_off:
   icon_on: mdi-power-on
   icon_off: mdi-power
   widget_type: script
-  entity: "script.family_room_turn_off"
+  entity: "script.theater_shut_down"
 
 family_room_next_track:  
   title: Next Track

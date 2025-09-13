@@ -1,12 +1,12 @@
-##
-## Main arguments, all optional
-##
+#
+# Main arguments, all optional
+#
 title: Office Panel
 widget_dimensions: [120, 110]
 widget_size: [1, 1]
-widget_margins: [5, 5]
+widget_margins: [2, 2]
 scalable: true
-columns: 8
+columns: 10
 global_parameters:
   use_comma: 0 
   precision: 1 
@@ -17,80 +17,13 @@ global_parameters:
       step: 5
 
 layout:
-  - clock(3x1), office_pl_deep_tracks, office_pl_rockwall, office_pl_poprocks, weather_now(2x2)
-  - office_sonos(2x2), office_next_track(1x2), office_pl_classic_rewind, office_pl_classic_vinyl, office_pl_alt_nation
-  - office_pl_tom_petty_radio, office_pl_bluesville, office_pl_hair_nation, dust_collector_on, dust_collector_off
-  - office_volume_up_5, office_media_play_pause, office_volume_up, office_pl_80s_on_8, family_room_add_office, office_light_toggle, foot_fan_toggle, nav_to_index
-  - office_volume_down_5, cocktail, office_volume_down, nav_to_sonos_matrix, drop_office, office_pl_yacht_rock_radio, office_turn_off, reload
-  
-office_pl_80s_on_8:
-  widget_type: favorite
-  entity: media_player.office_sonos
-  title: "80s on 8"
-  favorite: "8 - 80s on 8"
-  logo: "/custom_css/img/80s.png"
-
-office_next_track:
-  title: Office Next Track
-  icon_on: fa-step-forward
-  icon_off: fa-step-forward
-  widget_type: script
-  entity: "script.office_next_track"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-
-office_turn_off:
-  title: Shut down
-  title2: Office 
-  icon_on: mdi-power-on
-  icon_off: mdi-power
-  widget_type: script
-  entity: script.shut_down_office
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-
-dust_collector:
-  widget_type: fan
-  entity: fan.dc
-  title: Dust Collector Toggle
-  icon_on: fa-trash
-  icon_off: fa-trash
-
-foot_fan_toggle:
-  widget_type: switch
-  entity: switch.office_desk_fan_js_switch
-  title: Foot Fan Toggle
-  icon_on: mdi-fan
-  icon_off: mdi-fan
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-
-office_light_toggle:
-  widget_type: switch
-  entity: switch.office_ceiling_fan_light
-  title: Fan Light Toggle
-  icon_on: fa-lightbulb
-  icon_off: fa-lightbulb
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-
-dust_collector_on:
-  widget_type: script
-  entity: script.dust_collector_on
-  title: Dust Collector On
-  icon_on: fa-trash
-  icon_off: fa-trash
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-  
-dust_collector_off:
-  widget_type: script
-  entity: script.dust_collector_off
-  title: Dust Collector Off
-  icon_on: fa-trash
-  icon_off: fa-trash
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
+  - clock(2x1), foyer_outlet_js_switch_2, accent_lighting, landscape_lights, palm_tree_lights, party_lights, office_label
+  - weather_now(2x3), office_sonos(2x2), family_room_sonos(2x2), office_volume_up(2x1)
+  - office_volume_down(2x1)
+  - family_room_turn_off(2x1), office_add_family_room, drop_family_room, office_sonos_pl_eagles, office_receiver
+  - office_sonos_pl_unplugged, office_sonos_pl_fall_out_boy, office_sonos_pl_peter_gabriel_radio, office_sonos_pl_imagine_dragons, office_sonos_pl_jimmy_buffett, office_sonos_pl_50s_on_5, office_sonos_pl_60s_on_6, office_sonos_pl_70s_on_7
+  - office_sonos_pl_80s_on_8, office_sonos_pl_90s_on_9, office_sonos_pl_poprocks, office_sonos_pl_real_jazz, office_sonos_pl_bluesville, office_sonos_pl_dave_matthews
+  - office_sonos_pl_classic_rewind, office_sonos_pl_classic_vinyl, office_sonos_pl_deep_tracks, office_sonos_pl_grateful_dead, office_sonos_pl_tom_petty_radio, office_sonos_pl_yacht_rock_radio, spacer, nav_to_index, nav_to_kitchen, reload
 
 nav_to_index:
   widget_type: navigate
@@ -101,93 +34,86 @@ nav_to_index:
   icon_active: fa-list
   sticky: 1
 
-clock:
-  widget_type: clock
-  show_seconds: 1
+office_label:
+  widget_type: label
+  title: Office
 
-office_media_play_pause:
-  title: Play/Pause
-  icon_on: mdi-play-pause
-  icon_off: mdi-play-pause
-  widget_type: script
-  entity: "script.office_play_pause"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-  
-office_candles:
+office_receiver:
   widget_type: switch
-  entity: switch.holiday_office_candles_js_switch
-  title: Office Candles
-  icon_on: mdi-candle
-  icon_off: mdi-candle
+  entity: switch.office_receiver_js_switch
+  title: Office Receiver
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
 
-big_office_door:
-  widget_type: cover
-  entity: cover.big_door
-  title: Office
-  title2: Big Door
-  icon_on: mdi-office-open
-  icon_off: mdi-office
-  state_text: 1
+# Lighting
+#
+party_lights:
+  widget_type: switch
+  entity: switch.party_lights
+  title: Party Lights
+  icon_on: fa-toggle-on
+  icon_off: fa-toggle-off
 
-cocktail:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "Can I get you something?"
-  logo: "/custom_css/img/cocktail.png"
+accent_lighting:
+  widget_type: switch
+  entity: light.accent_lighting
+  title: Accent Lighting
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
-small_office_door:
-  widget_type: cover
-  entity: cover.small_door
-  title: Office
-  title2: Small Door
-  icon_on: mdi-office-open
-  icon_off: mdi-office
-  state_text: 1
+cabinet_lighting:
+  widget_type: switch
+  entity: switch.cabinet_lighting
+  title: Cabinet Lighting
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
-office_sonos:
-  widget_type: media_player
-  entity: media_player.office_sonos
-  truncate_name: 64
-  title: Office  
-  
-nav_to_weather:
-  widget_type: navigate
-  title: Weather
-  title2: Dashboard
-  dashboard: weather
-  timeout: 10
-  return: office
-  icon_inactive: mdi-weather-partlycloudy
-  icon_active: mdi-weather-sunny
+foyer_outlet_js_switch_2:
+  widget_type: switch
+  entity: switch.foyer_outlet_js_switch_2
+  title: Foyer Lamp
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
-office_volume_up_5:
-  title: Volume Up (5)
-  icon_on: fa-volume-up
-  icon_off: fa-volume-up
-  widget_type: script
-  entity: "script.office_volume_up_5"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
+palm_tree_lights:
+  widget_type: switch
+  entity: switch.palm_trees
+  title: Palm Trees
+  icon_on: mdi-palm-tree-on
+  icon_off: mdi-palm-tree
 
-office_volume_down_5:  
-  title: Volume down (5)
-  icon_on: fa-volume-down
-  icon_off: fa-volume-down
-  widget_type: script
-  entity: "script.office_volume_down_5"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
+morning_room_lamp:
+  widget_type: switch
+  entity: switch.morning_room_lamp_switch
+  title: Morning Room Lamp
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
 
+landscape_lights:
+  widget_type: switch
+  entity: switch.landscape_lights
+  title: Landscape Lighting
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
+
+office_light_level:
+  widget_type: light
+  title: Office Light Level
+  icon_on: fa-lightbulb
+  icon_off: fa-lightbulb
+  units: " %"
+  precision: 0
+  shorten: 1
+  entity: light.office_light_level
+
+# Media
+#
 office_volume_up:  
   title: Volume Up
   icon_on: fa-volume-up
   icon_off: fa-volume-up
   widget_type: script
   entity: "script.office_volume_up"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
 
 office_volume_down:  
   title: Volume down
@@ -195,21 +121,156 @@ office_volume_down:
   icon_off: fa-volume-down
   widget_type: script
   entity: "script.office_volume_down"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
 
-nav_to_main:
+office_toggle_mute:  
+  title: Mute
+  icon_on: mdi-volume-off
+  icon_off: mdi-volume-off
+  widget_type: script
+  entity: "script.office_toggle_mute"
+
+family_room_turn_off:
+  title: Turn Off
+  title2: Family Room
+  icon_on: mdi-power-on
+  icon_off: mdi-power
+  widget_type: script
+  entity: "script.family_room_turn_off"
+
+
+# Grouping Options
+#  
+
+office_add_family_room:
+  title: Add Family Room
+  title2: (To Office)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.office_add_family_room"
+
+drop_family_room:
+  title: Drop Family Room
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.drop_family_room"
+  
+family_room_add_garage:
+  title: Add Garage
+  title2: (To Family Room)
+  icon_on: mdi-speaker
+  icon_off: mdi-speaker
+  widget_type: script
+  entity: "script.family_room_add_garage"
+
+drop_garage:
+  title: Drop Garage
+  widget_type: script
+  icon_on: mdi-speaker-off
+  icon_off: mdi-speaker-off
+  entity: "script.family_room_drop_garage"
+
+office_sonos:
+  widget_type: media_player
+  entity: media_player.office_sonos
+  truncate_name: 64
+  title: Office
+
+family_room_sonos:
+  widget_type: media_player
+  entity: media_player.family_room
+  truncate_name: 64
+  title: Family Room
+
+garage_sonos:
+  widget_type: media_player
+  entity: media_player.garage
+  truncate_name: 64
+  title: Garage  
+
+# Misc
+#
+clock:
+  widget_type: clock
+  show_seconds: 1
+
+family_room_label:
+  widget_type: label
+  title: Sonos!
+  text: Family Room
+
+# Garage Doors
+#
+
+big_garage_door:
+  widget_type: cover
+  entity: cover.big_door
+  title: Garage
+  title2: Big Door
+  icon_on: mdi-garage-open
+  icon_off: mdi-garage
+  state_text: 1
+
+small_garage_door:
+  widget_type: cover
+  entity: cover.small_door
+  title: Garage
+  title2: Small Door
+  icon_on: mdi-garage-open
+  icon_off: mdi-garage
+  state_text: 1
+
+# Climate
+#
+upstairs_nest:
+  widget_type: nest
+  nest_entity: climate.upstairs
+  state_entity: sensor.upstairs_thermostat_hvac_state
+  fan_entity: binary_sensor.upstairs_thermostat_fan
+  title: Upstairs
+  step: 1
+  units: "F"
+  precision: 0
+
+downstairs_nest:
+  widget_type: nest
+  nest_entity: climate.downstairs
+  state_entity: sensor.downstairs_thermostat_hvac_state
+  fan_entity: binary_sensor.downstairs_thermostat_fan
+  title: Downstairs
+  step: 1
+  units: "F"
+  precision: 0  
+
+
+# Subpanel Nav
+#  
+nav_to_weather:
   widget_type: navigate
-  title: Main
+  title: Weather
   title2: Dashboard
-  dashboard: main
-  timeout: 10
+  dashboard: weather
+  timeout: 8
   return: office
-  icon_inactive: mdi-home-assistant
+  icon_inactive: mdi-weather-partlycloudy
   icon_active: mdi-weather-sunny
+
+nav_to_kitchen:
+  widget_type: navigate
+  title: Kitchen
+  title2: Dashboard
+  dashboard: kitchen
+  icon_inactive: mdi-fridge
+  icon_active: mdi-fridge
   
 weather_now:
   widget_type: weather
+  title: Zoo
+  title2: Zoo
+  # prefer_icons: 1
+  # show_forecast: 1
+  # forecast: 1
   sensors:
     temperature: sensor.pirate_weather_temperature
     icon: sensor.dark_sky_icon
@@ -233,127 +294,108 @@ reload:
   title: Reload
   icon_active: fa-sync-alt
   icon_inactive: fa-sync-alt
-  
-family_room_add_office:
-  title: Add Office
-  title2: (To Family Room)
-  icon_on: mdi-speaker
-  icon_off: mdi-speaker
-  widget_type: script
-  entity: "script.family_room_add_office"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
-
-drop_office:
-  title: Drop Office
-  widget_type: script
-  icon_on: mdi-speaker-off
-  icon_off: mdi-speaker-off
-  entity: "script.drop_office"
-  icon_style_active: "font-size: 400%"
-  icon_style_inactive: "font-size: 400%"
 
 # Generated Favorites
 # 
-office_pl_grateful_dead:
+office_sonos_pl_grateful_dead:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Grateful Dead"
   favorite: "23 - Grateful Dead"
   logo: "/custom_css/img/grateful-dead.png"
   
-office_pl_classic_rewind:
+office_sonos_pl_classic_rewind:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Classic Rewind"
   favorite: "25 - Classic Rewind"
   logo: "/custom_css/img/classic-rewind.png"
   
-office_pl_classic_vinyl:
+office_sonos_pl_classic_vinyl:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Classic Vinyl"
   favorite: "26 - Classic Vinyl"
   logo: "/custom_css/img/classic-vinyl.svg"
   
-office_pl_deep_tracks:
-  widget_type: "favorite"
-  entity: "media_player.office_sonos"
+office_sonos_pl_deep_tracks:
+  widget_type: favorite
+  entity: media_player.office_sonos
   title: "Deep Tracks"
   favorite: "27 - Deep Tracks"
   logo: "/custom_css/img/deep-tracks.png"
   
-office_pl_the_coffee_house:
+office_sonos_pl_the_coffee_house:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "The Coffee House"
   favorite: "14 - The Coffee House"
   logo: "/custom_css/img/coffee-house.png"
   
-office_pl_tom_petty_radio:
+office_sonos_pl_tom_petty_radio:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Tom Petty Radio"
   favorite: "31 - Tom Petty Radio"
   logo: "/custom_css/img/tom-petty.png"
   
-office_pl_rockbar:
+office_sonos_pl_rockbar:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "RockBar"
   favorite: "313 - RockBar"
   logo: "/custom_css/img/rockbar.png"
   
-office_pl_dave_matthews:
+office_sonos_pl_dave_matthews:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Dave Matthews"
   favorite: "30 - Dave Matthews Band Radio"
   logo: "/custom_css/img/dmb.png"
   
-office_pl_50s_on_5:
+office_sonos_pl_50s_on_5:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "50s on 5"
   favorite: "5 - 50s on 5"
   logo: "/custom_css/img/50s.png"
   
-office_pl_60s_on_6:
+office_sonos_pl_60s_on_6:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "60s on 6"
   favorite: "6 - 60s on 6"
   logo: "/custom_css/img/60s.png"
   
-office_pl_70s_on_7:
+office_sonos_pl_70s_on_7:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "70s on 7"
   favorite: "7 - 70s on 7"
   logo: "/custom_css/img/70s.png"
   
-office_pl_80s_on_8:
+office_sonos_pl_80s_on_8:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "80s on 8"
   favorite: "8 - 80s on 8"
   logo: "/custom_css/img/80s.png"
   
-office_pl_90s_on_9:
+office_sonos_pl_90s_on_9:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "90s on 9"
   favorite: "9 - 90s on 9"
   logo: "/custom_css/img/90s.png"
   
-office_pl_real_jazz:
+office_sonos_pl_real_jazz:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Real Jazz"
   favorite: "67 - Real Jazz"
   logo: "/custom_css/img/real-jazz.png"
   
-office_pl_bluesville:
+office_sonos_pl_bluesville:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Bluesville"
@@ -361,7 +403,7 @@ office_pl_bluesville:
   logo: "/custom_css/img/bluesville.png"
   
 # Skip Bach Cello Suites
-office_pl_bryson_tiller_radio:
+office_sonos_pl_bryson_tiller_radio:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Bryson Tiller Radio"
@@ -369,14 +411,14 @@ office_pl_bryson_tiller_radio:
   logo: "/custom_css/img/bryson-tiller.png"
   
 # Skip Hozier Radio
-office_pl_jimmy_buffett_radio:
+office_sonos_pl_jimmy_buffett_radio:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Jimmy Buffett"
   favorite: "24 - Buffett"
   logo: "/custom_css/img/margaritaville.png"
 
-office_pl_jimmy_buffett:
+office_sonos_pl_jimmy_buffett:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Jimmy Buffett"
@@ -384,29 +426,14 @@ office_pl_jimmy_buffett:
   shuffle: "true"
   logo: "/custom_css/img/jimmy-buffett.png"
   
-office_pl_unplugged:
-  widget_type: favorite
-  entity: media_player.office_sonos
-  title: "Unplugged"
-  favorite: "Unplugged"
-  logo: "/custom_css/img/unplugged.png"
-  
-office_pl_fall_out_boy:
-  widget_type: favorite
-  entity: media_player.office_sonos
-  title: "Fall Out Boy"
-  favorite: "Fall Out Boy Radio"
-  logo: "/custom_css/img/fall-out-boy.png"
-  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
-
-office_pl_peter_gabriel_radio:
+office_sonos_pl_peter_gabriel_radio:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Peter Gabriel Radio"
   favorite: "Peter Gabriel Radio"
   logo: "/custom_css/img/peter-gabriel.png"
   
-office_pl_imagine_dragons:
+office_sonos_pl_imagine_dragons:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Imagine Dragons"
@@ -414,14 +441,14 @@ office_pl_imagine_dragons:
   logo: "/custom_css/img/imagine-dragons.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
-office_pl_holiday_traditions:
+office_sonos_pl_holiday_traditions:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Holiday Traditions"
   favorite: "751 - Holiday Traditions"
   logo: "/custom_css/img/holiday-traditions.png"
   
-office_pl_holly:
+office_sonos_pl_holly:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Holly"
@@ -429,28 +456,28 @@ office_pl_holly:
   logo: "/custom_css/img/holly.png"
   
 # Skip 753 - Holiday Pops
-office_pl_poprocks:
+office_sonos_pl_poprocks:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "PopRocks"
   favorite: "12 - PopRocks"
   logo: "/custom_css/img/poprocks.png"
   
-office_pl_bob_marley:
+office_sonos_pl_bob_marley:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Bob Marley"
   favorite: "19 - Bob Marley"
   logo: "/custom_css/img/bob-marley.png"
   
-office_pl_e_street_radio:
+office_sonos_pl_e_street_radio:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "E Street Radio"
   favorite: "20 - E Street Radio"
   logo: "/custom_css/img/e-street-radio.png"
   
-office_pl_buffett:
+office_sonos_pl_buffett:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Buffett"
@@ -458,56 +485,53 @@ office_pl_buffett:
   logo: "/custom_css/img/buffett.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
 
-office_pl_the_spectrum:
+office_sonos_pl_the_spectrum:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "The Spectrum"
   favorite: "28 - The Spectrum"
   logo: "/custom_css/img/spectrum.png"
   
-office_pl_yacht_rock_radio:
+office_sonos_pl_yacht_rock_radio:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Yacht Rock Radio"
   favorite: "311 - Yacht Rock Radio"
   logo: "/custom_css/img/yacht-rock.png"
   
-office_pl_alt_nation:
+office_sonos_pl_alt_nation:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Alt Nation"
   favorite: "36 - Alt Nation"
   logo: "/custom_css/img/alt-nation.png"
   
-office_pl_hamilton:
+office_sonos_pl_hamilton:
   widget_type: favorite
   entity: media_player.office_sonos
   title: "Hamilton"
   favorite: "Hamilton"
   logo: "/custom_css/img/hamilton.jpg"
   
-nav_to_sonos_matrix:
-  widget_type: navigate
-  title: Sonos
-  title2: Matrix
-  dashboard: sonos-matrix
-  timeout: 10
-  return: office
-  icon_inactive: fa-headphones
-  icon_active: fa-headphones
-  sticky: 1
-
-office_pl_hair_nation:
-  widget_type: favorite
+office_sonos_pl_eagles:
+  widget_type: playlist
   entity: media_player.office_sonos
-  title: "Hair Nation"
-  favorite: "39 - Hair Nation"
-  logo: "/custom_css/img/HairNation.svg"
+  title: "The Eagles"
+  playlist: "The Eagles"
+#  shuffle: "true"
+  logo: "/custom_css/img/TheEagles.jpg"
 
-office_pl_rockwall:
-  widget_type: favorite
+office_sonos_pl_fall_out_boy:
+  widget_type: playlist
   entity: media_player.office_sonos
-  title: "Rockwall"
-  favorite: "Rockwall"
-  logo: "/custom_css/img/rockwall.png"
+  title: "Fall Out Boy"
+  playlist: "A:ALBUMARTIST/Fall Out Boy"
+  logo: "/custom_css/img/fall-out-boy.png"
   image_style: "top: 10; bottom: 0; left: 0; right: 0;"
+
+office_sonos_pl_unplugged:
+  widget_type: playlist
+  entity: media_player.office_sonos
+  title: "Unplugged"
+  playlist: "A:ALBUM/Eric Claptopn/Unplugged"
+  logo: "/custom_css/img/unplugged.png"
