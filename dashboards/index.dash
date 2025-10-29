@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - nav_to_kitchen, nav_to_move, nav_to_move_phone, nav_to_camera, nav_to_weather, nav_to_say_it
-  - nav_to_garage, nav_to_patio-fire, nav_to_office, nav_to_patio, nav_to_phone, nav_to_test
+  - nav_to_garage, nav_to_patio-fire, nav_to_office, nav_to_patio, nav_to_phone, nav_to_garage_mini
   - nav_to_sonos_matrix, nav_to_theater, can_i_get_you_something, are_you_walking, nav_to_kitchen_fridge, not_time_to_eat
 
 nav_to_garage:
@@ -26,6 +26,15 @@ nav_to_garage:
   title: garage
   title2: Dashboard
   dashboard: garage
+  icon_inactive: mdi-garage
+  icon_active: mdi-garage
+  sticky: 1
+
+nav_to_garage_mini:
+  widget_type: navigate
+  title: garage mini
+  title2: Dashboard
+  dashboard: garage-mini
   icon_inactive: mdi-garage
   icon_active: mdi-garage
   sticky: 1

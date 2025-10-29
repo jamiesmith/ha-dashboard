@@ -18,11 +18,18 @@ global_parameters:
 
 layout:
   - clock(3x1), garage_pl_deep_tracks, garage_pl_rockwall, garage_pl_poprocks, weather_now(2x2)
-  - garage_sonos(2x2), garage_next_track(1x2), garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_pl_alt_nation
-  - garage_pl_tom_petty_radio, garage_pl_bluesville, garage_pl_hair_nation, dust_collector_on, dust_collector_off
+  - garage_sonos(2x2), garage_next_track, garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_pl_alt_nation
+  - xtool_f1_toggle, garage_pl_tom_petty_radio, garage_pl_bluesville, garage_pl_hair_nation, dust_collector_on, dust_collector_off
   - garage_volume_up_5, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, family_room_add_garage, portable_fan_toggle, wall_fan_toggle, nav_to_index
   - garage_volume_down_5, cocktail, garage_volume_down, nav_to_sonos_matrix, drop_garage, garage_pl_yacht_rock_radio, garage_turn_off, reload
   
+xtool_f1_toggle:
+  widget_type: switch
+  entity: switch.xtool_f1
+  title: xTool F1
+  icon_on: fa-skull
+  icon_off: fa-skull
+
 garage_pl_80s_on_8:
   widget_type: favorite
   entity: media_player.garage

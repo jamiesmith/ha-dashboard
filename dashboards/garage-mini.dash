@@ -1,7 +1,7 @@
 ##
 ## Main arguments, all optional
 ##
-title: Garage Panel
+title: Garage Mini Panel
 widget_dimensions: [108, 94]
 widget_size: [1, 1]
 widget_margins: [5, 5]
@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - garage_pl_deep_tracks, garage_pl_rockwall, garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_volume_up
-  - dust_collector_on, dust_collector_off, garage_pl_tom_petty_radio, drop_garage, garage_volume_down_5
+  - dust_collector_on, dust_collector_off, xtool_f1_toggle, garage_pl_tom_petty_radio, garage_volume_down_5
   - wall_fan_toggle, portable_fan_toggle, garage_next_track, garage_media_play_pause, reload
   
 garage_pl_80s_on_8:
@@ -56,6 +56,13 @@ wall_fan_toggle:
   title: Wall Fan
   icon_on: mdi-fan
   icon_off: mdi-fan
+
+xtool_f1_toggle:
+  widget_type: switch
+  entity: switch.xtool_f1
+  title: xTool F1
+  icon_on: fa-skull
+  icon_off: fa-skull
 
 portable_fan_toggle:
   widget_type: switch

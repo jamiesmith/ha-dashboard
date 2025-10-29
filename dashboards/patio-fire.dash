@@ -20,8 +20,8 @@ global_parameters:
 
 layout:
   - patio_pl_classic_rewind, patio_pl_eagles, patio_next_track, patio_ceiling_fan, porch_lights, fan_heater, patio_volume_up_5
-  - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_imagine_dragons, patio_pl_alt_nation, patio_pl_tortured_poets, jamie_patio_mode, patio_volume_down_5
-  - patio_pl_tom_petty_radio, patio_pl_rockwall, patio_pl_taylor_swift, patio_pl_jimmy_buffett_radio, patio_pl_jimmy_buffett, patio_pl_life_with_john_mayer, patio_turn_off
+  - patio_pl_80s_on_8, patio_pl_poprocks, patio_pl_taylor_swift_albums, patio_pl_tortured_poets, patio_pl_showgirl,  jamie_patio_mode, patio_volume_down_5
+  - patio_pl_tom_petty_radio, patio_pl_alt_nation, patio_pl_taylor_swift, patio_pl_imagine_dragons, patio_pl_jimmy_buffett, patio_pl_life_with_john_mayer, patio_turn_off
   - nav_to_previous_dash, patio_pl_peter_gabriel_radio, nav_to_say_it, nav_to_index, nav_to_sonos_matrix, reload, nav_to_next_dash
 
 
@@ -355,6 +355,22 @@ patio_pl_tortured_poets:
   shuffle: "true"
   favorite: "The Tortured Poets Department: The Anthology"
   logo: "/custom_css/img/TorturedPoetsAnthology.jpg"
+
+patio_pl_taylor_swift_albums:
+  widget_type: playlist
+  entity: media_player.patio
+  title: "Taylor Swift Albums"
+  shuffle: "false"
+  playlist: "Taylor Swift Albums"
+  logo: "/custom_css/img/TaylorSwift.png"
+
+patio_pl_showgirl:
+  widget_type: favorite
+  entity: media_player.patio
+  title: "Life of a Showgirl"
+  shuffle: "false"
+  favorite: "Life of a Showgirl"
+  logo: "/custom_css/img/showgirl.jpg"
 
 patio_pl_eagles:
   widget_type: playlist
