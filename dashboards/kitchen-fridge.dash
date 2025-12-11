@@ -18,7 +18,7 @@ global_parameters:
 
 layout:
   - you_sit_on_a_throne_of_lies, sorry_out_of_that, look_good, can_i_get_you_something, what_can_i_get_you
-  - bar_table, living_room_cabinets, cabinet_lighting, liquor_cabinet_toggle, coffee_light_toggle
+  - holiday_shrubs, living_room_cabinets, cabinet_lighting, liquor_cabinet_toggle, coffee_light_toggle
   - nav_to_say_it, nav_to_sonos_matrix, holiday_lighting_on, accent_lighting_on, reload
 
 
@@ -29,6 +29,16 @@ bar_table:
   widget_style: "font-size: 150%;"
   icon_on: mdi-bottle-wine
   icon_off: mdi-bottle-wine
+  icon_style_active: "font-size: 600%"
+  icon_style_inactive: "font-size: 600%"
+
+holiday_shrubs:
+  widget_type: switch
+  entity: switch.holiday_lights_shrubs
+  title: Shrubs
+  widget_style: "font-size: 150%;"
+  icon_on: mdi-string-lights
+  icon_off: mdi-string-lights
   icon_style_active: "font-size: 600%"
   icon_style_inactive: "font-size: 600%"
 
