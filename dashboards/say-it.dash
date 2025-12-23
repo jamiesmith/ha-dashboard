@@ -17,10 +17,9 @@ global_parameters:
       step: 5
 
 layout:
-  - can_i_get_you_something, what_can_i_get_you, are_you_walking, you_sit_on_a_throne_of_lies, not_time_to_eat
-  - ily, would_you_like_an_espresso, fish_paste, great_googly
-  - sorry_out_of_that, I_look_good, you_look_good
-  - nav_to_index, happy_hour, how_about_a_scotch
+  - can_i_get_you_something, what_can_i_get_you, sorry_out_of_that, are_you_walking, you_sit_on_a_throne_of_lies
+  - ily, would_you_like_an_espresso, fish_paste, great_googly, not_time_to_eat
+  - I_look_good, you_look_good, happy_hour, how_about_a_scotch, nav_to_index
 
 
 happy_hour:
