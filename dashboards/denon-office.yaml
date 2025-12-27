@@ -1,0 +1,165 @@
+layout:
+
+office_denon_qs_apple_tv:
+  widget_type: script
+  entity: "script.office_denon_qs_apple_tv"
+  icon_on: mdi-apple
+  icon_off: mdi-apple
+  title: Apple TV
+  title2: (TV)
+office_denon_qs_roku_4k:
+  widget_type: script
+  entity: "script.office_denon_qs_roku_4k"
+  title: Roku 4k
+  title2: (TV)
+  icon_on: mdi-video-4k-box
+  icon_off: mdi-video-4k-box
+office_denon_qs_bluray:
+  widget_type: script
+  entity: "script.office_denon_qs_bluray"
+  title: BluRay
+  title2: (TV)
+  icon_on: mdi-disc-player
+  icon_off: mdi-disc-player
+office_denon_qs_sonos:
+  widget_type: script
+  entity: "script.office_denon_qs_sonos"
+  title: Sonos
+  title2: Scene
+  icon_on: mdi-speaker-wireless
+  icon_off: mdi-speaker-wireless
+office_denon_qs_ps5:
+  widget_type: script
+  entity: "script.office_denon_qs_ps5"
+  title: PlayStation 5
+  title2: (TV)
+  icon_on: mdi-gamepad-variant
+  icon_off: mdi-gamepad-variant
+office_denon_qs1_set:
+  widget_type: script
+  entity: "script.office_denon_qs1_set"
+  title: Scene 1 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+office_denon_qs2_set:
+  widget_type: script
+  entity: "script.office_denon_qs2_set"
+  title: Scene 2 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+office_denon_qs3_set:
+  widget_type: script
+  entity: "script.office_denon_qs3_set"
+  title: Scene 3 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+office_denon_qs4_set:
+  widget_type: script
+  entity: "script.office_denon_qs4_set"
+  title: Scene 4 Save
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+office_denon_qs5_set:
+  widget_type: script
+  entity: "script.office_denon_qs5_set"
+  title: Scene 5 Set
+  icon_on: mdi-content-save
+  icon_off: mdi-content-save
+office_denon_input_roon:
+  widget_type: script
+  entity: "script.office_denon_input_roon"
+  title: Listen to
+  title2: Roon
+  icon_on: mdi-music-box-outline
+  icon_off: mdi-music-box-outline
+office_denon_input_switch:
+  widget_type: script
+  entity: "script.office_denon_input_switch"
+  title: Play Switch
+  title2: (TV)
+  icon_on: mdi-nintendo-game-boy
+  icon_off: mdi-nintendo-game-boy
+office_denon_info:
+  widget_type: script
+  entity: "script.office_denon_info"
+  title: Info
+  icon_on: mdi-information
+  icon_off: mdi-information
+office_denon_surround_movie:
+  widget_type: script
+  entity: "script.office_denon_surround_movie"
+  title: Surround Movie
+  icon_on: mdi-surround-sound
+  icon_off: mdi-surround-sound
+office_denon_surround_music:
+  widget_type: script
+  entity: "script.office_denon_surround_music"
+  title: Surround Music
+  icon_on: mdi-music-clef-treble
+  icon_off: mdi-music-clef-treble  
+office_denon_surround_direct:
+  widget_type: script
+  entity: "script.office_denon_surround_direct"
+  title: Surround Direct
+  icon_on: mdi-music-note-eighth
+  icon_off: mdi-music-note-eighth
+office_denon_surround_pure_direct:
+  widget_type: script
+  entity: "script.office_denon_surround_pure_direct"
+  title: Surround Pure Direct
+  icon_on: mdi-music-circle
+  icon_off: mdi-music-circle
+office_denon_surround_dolby_digital:
+  widget_type: script
+  entity: "script.office_denon_surround_dolby_digital"
+  title: Dolby Digital
+  icon_on: mdi-dolby
+  icon_off: mdi-dolby
+office_denon_surround_dts:
+  widget_type: script
+  entity: "script.office_denon_surround_dts"
+  title: DTS Surround
+  icon_on: mdi-surround-sound-5-1-2
+  icon_off: mdi-surround-sound-5-1-2
+office_denon_surround_auro3d:
+  widget_type: script
+  entity: "script.office_denon_surround_auro3d"
+  title: Auro 3d
+  icon_on: mdi-rotate-3d
+  icon_off: mdi-rotate-3d
+office_denon_surround_multi_channel_stereo:
+  widget_type: script
+  entity: "script.office_denon_surround_multi_channel_stereo"
+  title: Surround Multi Channel Stereo
+  icon_on: mdi-speaker-multiple
+  icon_off: mdi-speaker-multiple
+office_denon_volume_up:
+  widget_type: script
+  entity: "script.family_room_receiver_volume_up"
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+  title: Volume Up
+office_denon_volume_down:
+  widget_type: script
+  entity: "script.family_room_receiver_volume_down"
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+  title: Volume Down
+office_denon_volume_80:
+  widget_type: script
+  entity: "script.office_denon_volume_80"
+  title: Volume 80
+  icon_on: mdi-volume-equal
+  icon_off: mdi-volume-equal
+office_denon_volume_down_5:
+  widget_type: script
+  entity: "script.office_denon_volume_down_5"
+  icon_on: fa-volume-down
+  icon_off: fa-volume-down
+  title: Volume Down 5
+office_denon_volume_up_5:
+  widget_type: script
+  entity: "script.office_denon_volume_up_5"
+  icon_on: fa-volume-up
+  icon_off: fa-volume-up
+  title: Volume Up 5

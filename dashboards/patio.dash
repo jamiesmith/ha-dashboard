@@ -20,7 +20,7 @@ layout:
   - weather_now(2x2), patio_sonos(2x2), patio_next_track(1x2), family_room_sonos(2x2), patio_volume_up_5, patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5, patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
-  - patio_pl_unplugged, patio_pl_poprocks, patio_pl_peter_gabriel_radio, patio_pl_classic_rewind_deep_cuts, patio_pl_jimmy_buffett, patio_pl_jimmy_buffett_radio, patio_pl_desperado, shut_down_office
+  - patio_pl_unplugged, patio_pl_poprocks, patio_pl_peter_gabriel_radio, patio_pl_classic_rewind_deep_cuts, patio_pl_jimmy_buffett, patio_pl_jimmy_buffett_radio, patio_pl_desperado, nav_to_camera
   - patio_pl_rockwall, patio_pl_classic_vinyl_just_music, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
   - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
 
@@ -739,3 +739,12 @@ patio_pl_hair_nation:
   title: "Hair Nation"
   favorite: "39 - Hair Nation"
   logo: "/custom_css/img/HairNation.svg"
+
+nav_to_camera:
+  widget_type: navigate
+  title: Camera
+  title2: Dashboard
+  dashboard: camera
+  icon_inactive: fa-camera
+  icon_active: fa-camera
+

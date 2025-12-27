@@ -16,7 +16,7 @@ global_parameters:
       step: 5
 
 layout:
-  - include: denon
+  - include: denon-family-room
   - clock(2x1), big_screen_movie_time, heating_pad, home_theater_denon_info
   - home_theater_denon_volume_up, home_theater_denon_volume_up_5, home_theater_denon_toggle_mute, spacer, home_theater_denon_hdmi_out_lg
   - home_theater_denon_volume_down, home_theater_denon_volume_down_5, home_theater_denon_volume_80, spacer, home_theater_denon_hdmi_out_projector

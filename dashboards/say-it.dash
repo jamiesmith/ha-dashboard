@@ -6,7 +6,7 @@ widget_dimensions: [140, 140]
 widget_size: [1, 1]
 widget_margins: [2, 2]
 scalable: true
-columns: 7
+columns: 5
 global_parameters:
   use_comma: 0 
   precision: 1 
