@@ -17,11 +17,15 @@ global_parameters:
       step: 5
 
 layout:
+  - include: denon-office
   - clock(3x1), office_pl_deep_tracks, office_pl_rockwall, office_pl_poprocks, weather_now(2x2)
   - office_sonos(2x2), office_next_track(1x2), office_pl_classic_rewind, office_pl_classic_vinyl, office_pl_alt_nation
-  - office_pl_tom_petty_radio, office_pl_bluesville, office_pl_hair_nation, dust_collector_on, dust_collector_off
+  - office_pl_tom_petty_radio, office_pl_bluesville, office_pl_hair_nation
   - office_volume_up_5, office_media_play_pause, office_volume_up, office_pl_80s_on_8, family_room_add_office, office_light_toggle, foot_fan_toggle, nav_to_index
   - office_volume_down_5, cocktail, office_volume_down, nav_to_sonos_matrix, drop_office, office_pl_yacht_rock_radio, office_turn_off, reload
+  - office_denon_surround_movie, office_denon_surround_dolby_digital, office_denon_surround_dts, office_denon_surround_auro3d
+  - office_denon_surround_music, office_denon_surround_direct, office_denon_surround_pure_direct, office_denon_surround_multi_channel_stereo, office_denon_surround_stereo
+  - office_denon_qs1_set, office_denon_qs2_set, office_denon_qs3_set, office_denon_qs4_set, office_denon_qs5_set
   
 office_pl_80s_on_8:
   widget_type: favorite

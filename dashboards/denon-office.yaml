@@ -1,40 +1,5 @@
 layout:
 
-office_denon_qs_apple_tv:
-  widget_type: script
-  entity: "script.office_denon_qs_apple_tv"
-  icon_on: mdi-apple
-  icon_off: mdi-apple
-  title: Apple TV
-  title2: (TV)
-office_denon_qs_roku_4k:
-  widget_type: script
-  entity: "script.office_denon_qs_roku_4k"
-  title: Roku 4k
-  title2: (TV)
-  icon_on: mdi-video-4k-box
-  icon_off: mdi-video-4k-box
-office_denon_qs_bluray:
-  widget_type: script
-  entity: "script.office_denon_qs_bluray"
-  title: BluRay
-  title2: (TV)
-  icon_on: mdi-disc-player
-  icon_off: mdi-disc-player
-office_denon_qs_sonos:
-  widget_type: script
-  entity: "script.office_denon_qs_sonos"
-  title: Sonos
-  title2: Scene
-  icon_on: mdi-speaker-wireless
-  icon_off: mdi-speaker-wireless
-office_denon_qs_ps5:
-  widget_type: script
-  entity: "script.office_denon_qs_ps5"
-  title: PlayStation 5
-  title2: (TV)
-  icon_on: mdi-gamepad-variant
-  icon_off: mdi-gamepad-variant
 office_denon_qs1_set:
   widget_type: script
   entity: "script.office_denon_qs1_set"
@@ -65,20 +30,6 @@ office_denon_qs5_set:
   title: Scene 5 Set
   icon_on: mdi-content-save
   icon_off: mdi-content-save
-office_denon_input_roon:
-  widget_type: script
-  entity: "script.office_denon_input_roon"
-  title: Listen to
-  title2: Roon
-  icon_on: mdi-music-box-outline
-  icon_off: mdi-music-box-outline
-office_denon_input_switch:
-  widget_type: script
-  entity: "script.office_denon_input_switch"
-  title: Play Switch
-  title2: (TV)
-  icon_on: mdi-nintendo-game-boy
-  icon_off: mdi-nintendo-game-boy
 office_denon_info:
   widget_type: script
   entity: "script.office_denon_info"
@@ -131,6 +82,12 @@ office_denon_surround_multi_channel_stereo:
   widget_type: script
   entity: "script.office_denon_surround_multi_channel_stereo"
   title: Surround Multi Channel Stereo
+  icon_on: mdi-speaker-multiple
+  icon_off: mdi-speaker-multiple
+office_denon_surround_stereo:
+  widget_type: script
+  entity: "script.office_denon_surround_stereo"
+  title: Stereo
   icon_on: mdi-speaker-multiple
   icon_off: mdi-speaker-multiple
 office_denon_volume_up:
