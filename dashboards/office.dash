@@ -4,7 +4,7 @@
 title: Office Panel
 widget_dimensions: [120, 110]
 widget_size: [1, 1]
-widget_margins: [5, 5]
+widget_margins: [2, 2]
 scalable: true
 columns: 8
 global_parameters:
