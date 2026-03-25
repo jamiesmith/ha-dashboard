@@ -17,18 +17,24 @@ global_parameters:
 
 layout:
   - include: denon-family-room
-  - clock(2x1), big_screen_movie_time, heating_pad, home_theater_denon_info
-  - home_theater_denon_volume_up, home_theater_denon_volume_up_5, home_theater_denon_toggle_mute, spacer, home_theater_denon_hdmi_out_lg
-  - home_theater_denon_volume_down, home_theater_denon_volume_down_5, home_theater_denon_volume_80, spacer, home_theater_denon_hdmi_out_projector
-  - home_theater_denon_qs_apple_tv, home_theater_denon_qs_roku_4k, home_theater_denon_qs_bluray, home_theater_denon_qs_ps5, home_theater_denon_input_switch
-  - home_theater_denon_surround_movie, home_theater_denon_surround_dolby_digital, home_theater_denon_surround_dts, home_theater_denon_surround_auro3d
-  - home_theater_denon_surround_music, home_theater_denon_surround_direct, home_theater_denon_surround_pure_direct, home_theater_denon_surround_multi_channel_stereo
-  - home_theater_denon_qs1_set, home_theater_denon_qs2_set, home_theater_denon_qs3_set, home_theater_denon_qs4_set, home_theater_denon_qs5_set
+  - clock(2x1), big_screen_movie_time, heating_pad, home_theater_denon_info, spacer, home_theater_denon_qs1_set
+  - home_theater_denon_volume_up, home_theater_denon_volume_up_5, home_theater_denon_toggle_mute, spacer, home_theater_denon_hdmi_out_lg, spacer, home_theater_denon_qs2_set
+  - home_theater_denon_volume_down, home_theater_denon_volume_down_5, home_theater_denon_volume_80, spacer, home_theater_denon_hdmi_out_projector, spacer, home_theater_denon_qs3_set
+  - home_theater_denon_qs_apple_tv, home_theater_denon_qs_roku_4k, home_theater_denon_qs_bluray, home_theater_denon_qs_ps5, home_theater_denon_input_switch, spacer, home_theater_denon_qs4_set
+  - home_theater_denon_surround_movie, home_theater_denon_surround_dolby_digital, home_theater_denon_surround_dts, home_theater_denon_surround_auro3d, spacer(2x1), home_theater_denon_qs5_set
+  - home_theater_denon_surround_music, home_theater_denon_surround_direct, home_theater_denon_surround_pure_direct, home_theater_denon_surround_multi_channel_stereo, spacer(2x1), appletv_select
 #  - home_theater_denon_input_roon, home_theater_denon_qs_sonos
 
 clock:
   widget_type: clock
   show_seconds: 1
+
+appletv_select:
+  widget_type: script
+  entity: script.appletv_select
+  title: Play / Pause
+  icon_on: mdi-play-pause
+  icon_off: mdi-play-pause
 
 big_screen_movie_time:
   widget_type: script
