@@ -1,0 +1,52 @@
+layout:
+
+appletv_left:
+  widget_type: script
+  entity: script.theater_appletv_left
+  title: Left
+  icon_on: mdi-arrow-left-bold
+  icon_off: mdi-arrow-left-bold
+
+appletv_right:
+  widget_type: script
+  entity: script.theater_appletv_right
+  title: Right
+  icon_on: mdi-arrow-right-bold
+  icon_off: mdi-arrow-right-bold
+appletv_up:
+  widget_type: script
+  entity: script.theater_appletv_up
+  title: Up
+  icon_on: mdi-arrow-up-bold
+  icon_off: mdi-arrow-up-bold
+appletv_down:
+  widget_type: script
+  entity: script.theater_appletv_down
+  title: Down
+  icon_on: mdi-arrow-down-bold
+  icon_off: mdi-arrow-down-bold
+appletv_menu:
+  widget_type: script
+  entity: script.theater_appletv_menu
+  title: Menu
+  icon_on: mdi-menu
+  icon_off: mdi-menu
+appletv_top_menu:
+  widget_type: script
+  entity: script.theater_appletv_top_menu
+  title: Top Menu
+  icon_on: mdi-menu-left
+  icon_off: mdi-menu-left
+
+appletv_select:
+  widget_type: script
+  entity: script.appletv_select
+  title: Select
+  icon_on: mdi-check-bold
+  icon_off: mdi-check-bold
+appletv_play_pause:
+  widget_type: script
+  entity: script.appletv_play_pause
+  title: Play / Pause
+  icon_on: mdi-play-pause
+  icon_off: mdi-play-pause

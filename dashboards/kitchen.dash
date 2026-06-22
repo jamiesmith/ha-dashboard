@@ -263,7 +263,7 @@ family_room_turn_off:
   title: Turn Off
   title2: Family Room
   icon_on: mdi-power-on
-  icon_off: mdi-power
+  icon_off: mdi-power-on
   widget_type: script
   entity: "script.theater_shut_down"
 

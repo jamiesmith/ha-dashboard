@@ -2,7 +2,8 @@ layout:
 
 home_theater_denon_qs_apple_tv:
   widget_type: script
-  entity: "script.home_theater_denon_qs_apple_tv"
+  # entity: "script.home_theater_denon_qs_apple_tv"
+  entity: "script.theater_watch_apple_tv"
   icon_on: mdi-apple
   icon_off: mdi-apple
   title: Apple TV
