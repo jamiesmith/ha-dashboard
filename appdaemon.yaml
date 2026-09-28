@@ -13,7 +13,7 @@ appdaemon:
       # ha_key: !secret http_password
       token: !secret hatoken
       namespace: default
-  disable_apps: 1
+#  disable_apps: 1
   latitude: !secret latitude
   longitude: !secret longitude
   elevation: 730

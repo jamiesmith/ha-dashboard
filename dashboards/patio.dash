@@ -2,7 +2,7 @@
 # Main arguments, all optional
 #
 title: Patio Panel
-widget_dimensions: [120, 105]
+widget_dimensions: [120, 110]
 widget_size: [1, 1]
 widget_margins: [2, 2]
 scalable: true
@@ -16,13 +16,14 @@ global_parameters:
       step: 5
 
 layout:
+  - include: garage-include
   - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_ceiling_fan, patio_ceiling_fan_light, temp_fan
   - weather_now(2x2), patio_sonos(2x2), patio_next_track(1x2), family_room_sonos(2x2), patio_volume_up_5, patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5, patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
   - patio_pl_unplugged, patio_pl_poprocks, patio_pl_peter_gabriel_radio, patio_pl_classic_rewind_deep_cuts, patio_pl_jimmy_buffett, patio_pl_jimmy_buffett_radio, patio_pl_desperado, nav_to_camera
-  - patio_pl_rockwall, patio_pl_classic_vinyl_just_music, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, are_you_walking, nav_to_sonos_matrix, nav_to_index
-  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_tom_petty_radio, patio_pl_yacht_rock_radio, patio_pl_the_spectrum, nav_to_patio_fire, nav_to_kitchen, reload
+  - patio_pl_classic_vinyl_just_music, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_pl_bluesville, patio_pl_dave_matthews, patio_pl_eagles, patio_pl_yacht_rock_radio, are_you_walking, nav_to_sonos_matrix, nav_to_index
+  - patio_pl_classic_rewind, patio_pl_classic_vinyl, patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_tom_petty_radio, big_garage_door, small_garage_door, nav_to_patio_fire, nav_to_kitchen, reload
 
 
 patio_now_playing:
@@ -320,24 +321,6 @@ family_room_label:
 
 # Garage Doors
 #
-
-big_garage_door:
-  widget_type: cover
-  entity: cover.big_door
-  title: Garage
-  title2: Big Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
-
-small_garage_door:
-  widget_type: cover
-  entity: cover.small_door
-  title: Garage
-  title2: Small Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
 
 # Climate
 #
@@ -747,4 +730,3 @@ nav_to_camera:
   dashboard: camera
   icon_inactive: fa-camera
   icon_active: fa-camera
-

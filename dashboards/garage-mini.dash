@@ -112,30 +112,12 @@ garage_candles:
   icon_on: mdi-candle
   icon_off: mdi-candle
 
-big_garage_door:
-  widget_type: cover
-  entity: cover.big_door
-  title: Garage
-  title2: Big Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
-
 cocktail:
   widget_type: mqttpublish
   title: "Cocktail"
   topic: "say/amy"
   payload: "Can I get you something?"
   logo: "/custom_css/img/cocktail.png"
-
-small_garage_door:
-  widget_type: cover
-  entity: cover.small_door
-  title: Garage
-  title2: Small Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
 
 garage_sonos:
   widget_type: media_player

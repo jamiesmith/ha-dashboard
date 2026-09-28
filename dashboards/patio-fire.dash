@@ -278,27 +278,6 @@ family_room_label:
   title: Sonos!
   text: Family Room
 
-# Garage Doors
-#
-
-big_garage_door:
-  widget_type: cover
-  entity: cover.big_door
-  title: Garage
-  title2: Big Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
-
-small_garage_door:
-  widget_type: cover
-  entity: cover.small_door
-  title: Garage
-  title2: Small Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
-
 # Subpanel Nav
 #  
 nav_to_weather:

@@ -19,7 +19,7 @@ global_parameters:
 layout:
   - clock(3x1), garage_pl_deep_tracks, garage_pl_rockwall, garage_pl_poprocks, weather_now(2x2)
   - garage_sonos(2x2), garage_next_track, garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_pl_alt_nation
-  - xtool_f1_toggle, garage_pl_tom_petty_radio, garage_pl_bluesville, garage_pl_hair_nation, dust_collector_on, dust_collector_off
+  - small_garage_door_power, garage_pl_tom_petty_radio, garage_pl_bluesville, garage_pl_hair_nation, dust_collector_on, dust_collector_off
   - garage_volume_up_5, garage_media_play_pause, garage_volume_up, garage_pl_80s_on_8, garage_exhaust_fan, portable_fan_toggle, wall_fan_toggle, nav_to_index
   - garage_volume_down_5, cocktail, garage_volume_down, nav_to_sonos_matrix, drop_garage, family_room_add_garage, garage_turn_off, reload
   
@@ -139,15 +139,6 @@ garage_candles:
   icon_on: mdi-candle
   icon_off: mdi-candle
 
-big_garage_door:
-  widget_type: cover
-  entity: cover.big_door
-  title: Garage
-  title2: Big Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
-
 cocktail:
   widget_type: mqttpublish
   title: "Cocktail"
@@ -155,10 +146,10 @@ cocktail:
   payload: "Can I get you something?"
   logo: "/custom_css/img/cocktail.png"
 
-small_garage_door:
-  widget_type: cover
-  entity: cover.small_door
-  title: Garage
+small_garage_door_power:
+  widget_type: switch
+  entity: switch.small_garage_door_power
+  title: Garage Power
   title2: Small Door
   icon_on: mdi-garage-open
   icon_off: mdi-garage

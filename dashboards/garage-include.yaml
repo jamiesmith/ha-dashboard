@@ -1,0 +1,26 @@
+layout:
+
+# Garage Doors
+#
+small_garage_door:
+  widget_type: cover
+  entity: cover.small_garage_door
+  title: Garage
+  title2: Small Door
+  icon_on: mdi-garage-open
+  icon_off: mdi-garage
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
+  # use_hass_icon: 1
+  state_text: 1
+
+big_garage_door:
+  widget_type: cover
+  entity: cover.big_garage_door
+  title: Garage
+  title2: Big Door
+  icon_on: mdi-garage-open-variant
+  icon_off: mdi-garage-variant
+  icon_style_active: "font-size: 400%"
+  icon_style_inactive: "font-size: 400%"
+  state_text: 1

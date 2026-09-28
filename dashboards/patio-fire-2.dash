@@ -19,7 +19,7 @@ global_parameters:
       step: 5
 
 layout:
-  - patio_pl_the_coffee_house, patio_pl_jazz24, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_classic_vinyl_just_music, patio_ceiling_fan_light, patio_volume_up_10
+  - patio_pl_the_coffee_house, patio_pl_real_jazz, patio_pl_bluesville, patio_pl_classic_vinyl_just_music, palm_tree_lights, patio_ceiling_fan_light, patio_volume_up_10
   - patio_pl_classic_vinyl, patio_pl_hamilton, patio_pl_dave_matthews, patio_pl_70s_on_7, patio_pl_80s_on_8, patio_pl_90s_on_9, patio_volume_down_10
   - patio_pl_deep_tracks, patio_pl_hair_nation, patio_pl_e_street_radio, fan_off, fan_low, fan_medium, fan_high
   - nav_to_previous_dash, patio_pl_imagine_dragons, nav_to_patio, nav_to_index, bambu_printer, reload, nav_to_next_dash
@@ -30,6 +30,15 @@ patio_ceiling_fan_light:
   title: Porch Fan Light
   icon_on: mdi-ceiling-light
   icon_off: mdi-ceiling-light
+  icon_style_active: "font-size: 500%"
+  icon_style_inactive: "font-size: 500%"
+
+palm_tree_lights:
+  widget_type: switch
+  entity: switch.palm_trees
+  title: Palm Trees
+  icon_on: mdi-palm-tree
+  icon_off: mdi-palm-tree
   icon_style_active: "font-size: 500%"
   icon_style_inactive: "font-size: 500%"
 
@@ -310,27 +319,6 @@ family_room_label:
   widget_type: label
   title: Sonos!
   text: Family Room
-
-# Garage Doors
-#
-
-big_garage_door:
-  widget_type: cover
-  entity: cover.big_door
-  title: Garage
-  title2: Big Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
-
-small_garage_door:
-  widget_type: cover
-  entity: cover.small_door
-  title: Garage
-  title2: Small Door
-  icon_on: mdi-garage-open
-  icon_off: mdi-garage
-  state_text: 1
 
 # Climate
 #

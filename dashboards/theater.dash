@@ -23,7 +23,7 @@ layout:
   - home_theater_denon_volume_down, home_theater_denon_volume_down_5, home_theater_denon_volume_80, spacer, home_theater_denon_hdmi_out_projector, spacer, home_theater_denon_qs3_set
   - home_theater_denon_qs_apple_tv, home_theater_denon_qs_roku_4k, home_theater_denon_qs_bluray, home_theater_denon_qs_ps5, home_theater_denon_input_switch, spacer, home_theater_denon_qs4_set
   - home_theater_denon_surround_movie, home_theater_denon_surround_dolby_digital, home_theater_denon_surround_dts, home_theater_denon_surround_auro3d, spacer(2x1), home_theater_denon_qs5_set
-  - home_theater_denon_surround_music, home_theater_denon_surround_direct, home_theater_denon_surround_pure_direct, home_theater_denon_surround_multi_channel_stereo, spacer, appletv_select, appletv_play_pause
+  - home_theater_denon_surround_music, home_theater_denon_surround_direct, home_theater_denon_surround_pure_direct, home_theater_denon_surround_multi_channel_stereo, family_room_turn_off, appletv_select, appletv_play_pause
   # JRS-TMP - spacer, appletv_up
   # JRS-TMP - appletv_left, spacer, appletv_right
   # JRS-TMP - spacer, appletv_down
@@ -34,6 +34,14 @@ layout:
 clock:
   widget_type: clock
   show_seconds: 1
+
+family_room_turn_off:
+  title: Turn Off
+  title2: Family Room
+  icon_on: mdi-power-on
+  icon_off: mdi-power-on
+  widget_type: script
+  entity: "script.theater_shut_down"
 
 big_screen_movie_time:
   widget_type: script
