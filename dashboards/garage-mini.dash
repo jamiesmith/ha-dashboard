@@ -1,3 +1,4 @@
+
 ##
 ## Main arguments, all optional
 ##
@@ -17,6 +18,7 @@ global_parameters:
       step: 5
 
 layout:
+  - include: announce
   - garage_pl_deep_tracks, garage_pl_rockwall, garage_pl_classic_rewind, garage_pl_classic_vinyl, garage_volume_up
   - dust_collector_on, dust_collector_off, xtool_f1_toggle, garage_pl_tom_petty_radio, garage_volume_down_5
   - wall_fan_toggle, portable_fan_toggle, garage_next_track, garage_media_play_pause, reload
@@ -111,13 +113,6 @@ garage_candles:
   title: Garage Candles
   icon_on: mdi-candle
   icon_off: mdi-candle
-
-cocktail:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "Can I get you something?"
-  logo: "/custom_css/img/cocktail.png"
 
 garage_sonos:
   widget_type: media_player

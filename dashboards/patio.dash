@@ -17,6 +17,7 @@ global_parameters:
 
 layout:
   - include: garage-include
+  - include: announce
   - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_ceiling_fan, patio_ceiling_fan_light, temp_fan
   - weather_now(2x2), patio_sonos(2x2), patio_next_track(1x2), family_room_sonos(2x2), patio_volume_up_5, patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5, patio_volume_down_10, cocktail
@@ -405,46 +406,6 @@ nav_to_say_it:
   icon_active: fa-bullhorn
   sticky: 1
   
-what_can_i_get_you:
-  widget_type: mqttpublish
-  title: "What?"
-  topic: "say/amy"
-  payload: "What can I get you?"
-  logo: "/custom_css/img/question_mark.png"
-
-ily:
-  widget_type: mqttpublish
-  title: "ily"
-  topic: "say/amy"
-  payload: "I love you"
-  logo: "/custom_css/img/heart.png"
-
-cocktail:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "bartender"
-  entity: script.mqtt_publish_bartender
-  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
-  logo: "/custom_css/img/cocktail.png"
-
-you_sit_on_a_throne_of_lies:
-  widget_type: mqttpublish
-  title: "Throne of lies"
-  topic: "say/amy"
-  payload: "lies"
-  entity: script.mqtt_publish_lies
-  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
-  logo: "/custom_css/img/throne.png"
-
-are_you_walking:
-  widget_type: mqttpublish
-  title: "Are you walking?"
-  topic: "say/amy"
-  payload: "Are you walking?"
-  image_style: "top: 10; bottom: 0; left: 0; right: 0;"
-  logo: "/custom_css/img/dog.png"
-
 patio_pl_eagles:
   widget_type: favorite
   entity: media_player.patio

@@ -20,6 +20,7 @@ global_parameters:
 layout:
   - include: family-room-playlists
   - include: garage-include
+  - include: announce
   - clock(2x1), morning_room_lamp, cabinet_lighting, kitchen_light_level_js, liquor_cabinet_toggle, foyer_lamp, accent_lighting, accent_lighting_on, landscape_lights  
   - weather_now(2x2), family_room_sonos(2x2), family_room_next_track, family_room_add_patio, cabinet_lighting_lower, cabinet_lighting_upper, family_room_volume_up_5, family_room_volume_up
   - drop_family_room, patio_add_family_room, holiday_lights, holiday_lights_family_room, family_room_volume_down_5, family_room_volume_down
@@ -51,13 +52,6 @@ nav_to_camera:
   timeout: 10
   return: kitchen
   sticky: 1
-
-are_you_walking:
-  widget_type: mqttpublish
-  title: "Are you walking?"
-  topic: "say/amy"
-  payload: "Are you walking?"
-  logo: "/custom_css/img/dog.png"
 
 holiday_shrubs:
   widget_type: switch
@@ -478,42 +472,6 @@ reload:
   title: Reload
   icon_active: fa-sync-alt
   icon_inactive: fa-sync-alt
-
-cocktail:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "Can I get you something?"
-  logo: "/custom_css/img/cocktail.png"
-
-look_good:
-  widget_type: mqttpublish
-  title: "Look Good"
-  topic: "say/amy"
-  payload: "You look real good today"
-  logo: "/custom_css/img/look-good.png"
-
-fish_paste:
-  widget_type: mqttpublish
-  title: "Holy Fishpaste"
-  topic: "say/amy"
-  payload: "Holy fishpaste, thats a guy"
-  logo: "/custom_css/img/spongebob.png"
-
-what_can_i_get_you:
-  widget_type: mqttpublish
-  title: "What?"
-  topic: "say/amy"
-  payload: "What can I get you?"
-  logo: "/custom_css/img/question_mark.png"
-  
-# JRS-TMP family_room_pl_eagles:
-# JRS-TMP   widget_type: playlist
-# JRS-TMP   entity: media_player.family_room
-# JRS-TMP   title: "The Eagles"
-# JRS-TMP   shuffle: "false"
-# JRS-TMP   playlist: "The Eagles"
-# JRS-TMP   logo: "/custom_css/img/TheEagles.jpg"
 
 # Generated Favorites
 # 

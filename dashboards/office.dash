@@ -18,6 +18,7 @@ global_parameters:
 
 layout:
   - include: denon-office
+  - include: announce
   - clock(3x1), office_pl_deep_tracks, office_pl_rockwall, office_pl_poprocks, weather_now(2x2)
   - office_sonos(2x2), office_next_track(1x2), office_pl_classic_rewind, office_pl_classic_vinyl, office_pl_alt_nation
   - office_pl_tom_petty_radio, office_pl_bluesville, office_pl_hair_nation
@@ -133,13 +134,6 @@ big_office_door:
   icon_on: mdi-office-open
   icon_off: mdi-office
   state_text: 1
-
-cocktail:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "Can I get you something?"
-  logo: "/custom_css/img/cocktail.png"
 
 small_office_door:
   widget_type: cover

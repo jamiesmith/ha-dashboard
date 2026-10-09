@@ -17,6 +17,7 @@ global_parameters:
       step: 5
 
 layout:
+  - include: announce
   - nav_to_kitchen, nav_to_move, nav_to_move_phone, nav_to_camera, nav_to_weather, nav_to_say_it
   - nav_to_garage, nav_to_patio-fire, nav_to_office, nav_to_patio, nav_to_phone, nav_to_garage_mini
   - nav_to_sonos_matrix, nav_to_theater, can_i_get_you_something, are_you_walking, nav_to_kitchen_fridge, not_time_to_eat
@@ -183,31 +184,4 @@ nav_to_say_it:
   icon_active: mdi-bullhorn
   sticky: 1
 
-can_i_get_you_something:
-  widget_type: mqttpublish
-  title: "Cocktail"
-  topic: "say/amy"
-  payload: "bartender"
-  logo: "/custom_css/img/cocktail.png"
-
-you_sit_on_a_throne_of_lies:
-  widget_type: mqttpublish
-  title: "Throne of lies"
-  topic: "say/amy"
-  payload: "you sit on a throne of lies"
-  logo: "/custom_css/img/throne.png"
-
-are_you_walking:
-  widget_type: mqttpublish
-  title: "Are you walking?"
-  topic: "say/amy"
-  payload: "Are you walking?"
-  logo: "/custom_css/img/dog.png"
-
-not_time_to_eat:
-  widget_type: mqttpublish
-  title: "Not time to eat"
-  topic: "say/amy"
-  payload: "it is not time to eat"
-  logo: "/custom_css/img/dog.png"
   

@@ -1,0 +1,22 @@
+title: Barbie Sitter
+widget_dimensions: [120, 105]
+widget_size: [1, 1]
+widget_margins: [2, 2]
+scalable: true
+columns: 10
+
+layout:
+  - barbie_sitter_full(10x6)
+  - back_to_cameras(2x1)
+
+barbie_sitter_full:
+  widget_type: camera
+  base_url: http://192.168.1.80:8123
+  entity: camera.g4_instant_high_resolution_channel
+  stream: 1
+
+back_to_cameras:
+  widget_type: navigate
+  title: Back
+  icon_inactive: mdi-arrow-left
+  dashboard: camera
