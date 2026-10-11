@@ -18,7 +18,7 @@ global_parameters:
 layout:
   - include: garage-include
   - include: announce
-  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, party_lights, patio_ceiling_fan, patio_ceiling_fan_light, temp_fan
+  - clock(2x1), porch_lights, accent_lighting, landscape_lights, palm_tree_lights, spacer, patio_ceiling_fan, patio_ceiling_fan_light, temp_fan
   - weather_now(2x2), patio_sonos(2x2), patio_next_track(1x2), family_room_sonos(2x2), patio_volume_up_5, patio_volume_up_10, nav_to_say_it
   - patio_volume_down_5, patio_volume_down_10, cocktail
   - patio_now_playing (2x2), family_room_turn_off(2x1), patio_add_family_room, drop_family_room, fan_low, fan_medium, fan_high, patio_turn_off
@@ -73,13 +73,6 @@ patio_label:
 
 # Lighting
 #
-party_lights:
-  widget_type: switch
-  entity: switch.party_lights
-  title: Party Lights
-  icon_on: fa-toggle-on
-  icon_off: fa-toggle-off
-
 accent_lighting:
   widget_type: switch
   entity: light.accent_lighting
